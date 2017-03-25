@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--Coding on 2017.02.14-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Logic Puzzle</title>
+    <link rel="stylesheet" href="logic puzzles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="title_container">
+      <div id="title">Einstein's Logic Puzzle</div>
+      <p id="intro">
+        Albert Einstein once posed a brain teaser that
+        he predicted only 2% of the worlds population
+        would be able to solve.</p>
+    </div>
+
+    <div id="ques_container">
+      <div class="ques_content">
+        <h3>Facts</h3>
+        <p class="ques_style">
+          1. 有5棟5種顏色的房子 </br>
+          2. 每一位房子的主人國籍都不同 </br>
+          3. 這5個人每人只喝一個牌子的飲料,只抽一個牌子的香煙,
+          只養一種寵物 </br>
+          4. 沒有人有相同的寵物,抽相同牌子的香煙,喝相同的飲料</br>
+        </p>
+      </div>
+
+      <div id="before_show">
+        If you click on the "Show" button, it will show the clues
+        and timer will start to go!
+      </div>
+
+      <button id="show">Show!</button>
+    </br>
+
+      <div id="timer">
+        <label id="minutes">00</label>:<label id="seconds">00</label>
+      </div>
+
+      <div class="clues_content">
+        <h3 id="note">Clues</h3>
+        <p class="clues_style">
+          1. 英國人住在紅房子裡 </br>
+          2. 瑞典人養了一條狗 </br>
+          3. 丹麥人喝茶 </br>
+          4. 綠房子在白房子左邊 </br>
+          5. 綠房子主人喝咖啡 </br>
+          6. 抽PALLMALL煙的人養了一隻鳥 </br>
+          7. 黃房子主人抽DUNHILL煙 </br>
+          8. 住在中間那間房子的人喝牛奶 </br>
+          9. 挪威人住在第一間房子 </br>
+          10.抽混合菸的人住在養貓人的旁邊 </br>
+          11.養馬人住在DUNHILL煙的人旁邊 </br>
+          12.抽BLUEMASTER煙的人喝啤酒 </br>
+          13.德國人抽PRINCE煙 </br>
+          14.挪威人住在藍房子旁邊 </br>
+          15.抽混合菸的人的鄰居喝礦泉水 </br>
+        </p>
+      </div>
+
+      <div class="problem">
+        問題是:誰養魚?
+      </div>
+    </div>
+
+    <div id="before_answer">
+      Choose your answer!
+    </div>
+
+    <div id="answer">
+      <a class="ans" href="answer2.html">英國人</a>
+      <a class="ans" href="answer2.html">瑞典人</a>
+      <a class="ans" href="answer2.html">丹麥人</a>
+      <a class="ans" href="answer2.html">挪威人</a>
+      <a class="ans" href="answer1.html">德國人</a>
+    </div>
+
+
+    <script>
+      $(document).ready(function(){
+
+        $("#show").click(function(){
+          $(".clues_content").show();
+          $("#timer").show();
+
+          var sec = 0;
+          function pad ( val ) { return val > 9 ? val : "0" + val; }
+          setInterval( function(){
+              $("#seconds").html(pad(++sec%60));
+              $("#minutes").html(pad(parseInt(sec/60,10)));
+          }, 1000);
+
+        });
+      });
+    </script>
+
+  </body>
+</html>

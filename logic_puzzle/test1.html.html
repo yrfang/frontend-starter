@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#show").click(function(){
+        $(".hey").show();
+        $(".hi").show();
+    });
+});
+</script>
+</head>
+<body>
+  <label id="minutes">00</label>:<label id="seconds">00</label>
+      <script type="text/javascript">
+      var sec = 0;
+      function pad ( val ) { return val > 9 ? val : "0" + val; }
+      setInterval( function(){
+          $("#seconds").html(pad(++sec%60));
+          $("#minutes").html(pad(parseInt(sec/60,10)));
+      }, 1000);
+      </script>
+<button id="show">Show</button>
+
+<div class="hey" style="display:none">If you click on the
+  "Hide" button, I will disappear.</div>
+
+</br>
+
+<div class="hi" style="display:none">
+  click on the
+</div>
+
+</body>
+</html>

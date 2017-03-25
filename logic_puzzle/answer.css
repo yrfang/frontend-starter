@@ -1,0 +1,47 @@
+body {
+  background-color: #373a40;
+  font-family: fantasy;
+  text-align: center;
+}
+
+h3 {
+  color: #fafafa;
+  font-size: 40px;
+  line-height: 25px;
+  margin: 70px auto 60px auto;
+}
+
+img {
+  width: 45%;
+  height: 45%;
+}
+
+#end {
+  color: white;
+  font-size: 18px;
+  margin: 30px auto 30px auto;
+  width: 400px;
+  background-color: #e4a8c1;
+  line-height: 35px;
+}
+
+/*RWD Youtube 以及 Vimeo*/
+
+.video-container {
+  position:relative;
+  padding-bottom:56.25%;
+  padding-top:30px;
+  height:0;
+  overflow:hidden;
+  width: 50%;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position:absolute;
+  top:0;
+  left:0;
+  width:56%;
+  height:32%;
+}
