@@ -1,0 +1,75 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+  height: 100vh;
+}
+
+#background_container {
+  background-image: url('grassland.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: -10;
+}
+
+#background_overlay {
+  position: absolute;
+  background-color: rgba(85,85,85,.5);
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -5;
+}
+
+header {
+  position: absolute;
+  margin-left: 10px;
+  top: 0;
+  height: 100vh;
+  padding: 20px;
+  height: 25px;
+}
+
+a {
+  margin-right: 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #6c6c6c;
+  cursor: pointer;
+}
+
+a:visited {
+  color: #6c6c6c;
+}
+
+a:hover {
+	color: #f6f43f;
+}
+
+#bell_container {
+  position: absolute;
+  top: 150px;
+  right: 250px;
+}
+#bell {
+  position: relative;
+  width: 100px;
+  height: 150px;
+  cursor: pointer;
+}
+
+#dog {
+	position: absolute;
+	left: 40%;
+	top: 45%;
+  width: 250px;
+  height: 300px;
+}

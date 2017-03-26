@@ -1,0 +1,147 @@
+body {
+  font-family: "Merriweather", Palatino, "Palatino Linotype", "Hoefler Text", Times, "Times New Roman", serif;
+  background-color: #e6ded6;
+  margin: 0;
+}
+
+header {
+  padding: 30px;
+  font-size: 18px;
+}
+
+#link_container {
+  text-align: center;
+  color: #5b5956;
+  margin-left: 30px;
+}
+
+#home, #blog {
+  margin-right: 20px;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+}
+
+#img_container {
+  margin: 50px 30px;
+}
+
+.container {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 3px;
+  border: solid 3px white;
+}
+
+.image {
+  display: block;
+  width: 200px;
+  height: 150px;
+  border-radius: 3px;
+}
+
+.overlay {
+  position: absolute;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  width: 200px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #6f7171;
+  border-radius: 3px;
+}
+
+.container:hover .overlay {
+  opacity: 0.8;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  padding-left: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  border-radius: 3px;
+}
+
+#top_text {
+	position: fixed;
+	top: 380px;
+  left: 100px;
+}
+
+#bottom_text {
+	position: absolute;
+	top: 2500px;
+	height: 2000px;
+  left: 100px;
+	width: 500px;
+}
+
+.message {
+	font-family: Monaco, Consolas, "Lucida Console", monospace;
+	font-size: 25px;
+	color: #333;
+	width: 680px;
+}
+
+#name {
+  width: 500px;
+  padding-left: 450px;
+  color: #878782;
+}
+
+#info_tab {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: #e36f10;
+  background-color: #606060;
+  border-radius: 0 0 0 5px;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 80px;
+  height: 50px;
+  padding-top: 60px;
+  color: #fafafa;
+  background-color: #303030;
+  z-index: 100;
+}
+
+h1 {
+  font-size: 20px;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+#info {
+  display: none;
+}
+
+.close {
+  position: fixed;
+  top: 20px;
+  right: 135px;
+  padding: 5px;
+  font-size: 20px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+#info_tab:hover {
+  background-color: #9f9f9f;
+  color: #fff;
+}

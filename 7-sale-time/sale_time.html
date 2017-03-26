@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--Start from 2017022-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="sale_time.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="sale_time.js"></script>
+    <title>Sale Time?</title>
+  </head>
+
+  <body id="sale_time">
+
+    <div id="container">
+
+      <h1 id="sale">Time for Sale?</h1>
+      <h2>Enter a birthdate and time to see if it's the sale time.</h2>
+
+      <form>
+        Birthdate: <input id="bdate" type="date" name="tdate" placeholder="mm/dd/yyyy">
+        Time: <input id="btime" type="time" name="ttime">
+        <input class="button" type="submit" name="" value="Ready?">
+      </form>
+
+      <ul>
+        <li class="bday_date"></li>
+        <li class="bday_age_year"></li>
+        <li class="bday_age_days"></li>
+        <li class="bday_age_hours"></li>
+      </ul>
+
+      <ul>
+        <li class="bday_age_weekDay"></li>
+        <li class="bday_age_hundDay"></li>
+        <li class="bday_age_thouDay"></li>
+        <li class="bday_age_tenKDay"></li>
+      </ul>
+
+    </div>
+
+    <footer>
+      <div id="links_container">
+        <a href="../1-homepage/home.html" id="home">Home</a>
+      </div>
+    </footer>
+
+  </body>
+
+</html>

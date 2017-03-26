@@ -1,0 +1,85 @@
+body {
+  font-family: Microsoft Sans Serif, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  text-align: center;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+header {
+  padding: 12px;
+  background-color: #d7b500;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+#title {
+  float: left;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #fff;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+#links_container {
+  float: right;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+#home, #blog {
+  margin-left: 20px;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  color: #fff;
+  text-decoration: none;
+}
+
+#container {
+  margin: 50px auto;
+  max-width: 400px;
+  height: 140px;
+  background-color: #bcf0dd;
+  opacity: 0.8;
+  box-shadow: -1px -1px 5px #636767,
+              1px 1px 5px #28302f;
+}
+
+#height {
+  margin-top: 30px;
+  width: 100px;
+}
+
+#weight {
+  margin: 10px;
+  width: 100px;
+}
+
+#submit {
+  margin: 10px;
+  background-color: #0f4138;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  padding: 8spx;
+}
+
+#submit:active {
+  background-color: #03e875;
+  box-shadow: 0 2px #666;
+  transform: translateY(2px);
+  border: none;
+}
+
+#result {
+  margin: 10px auto;
+  max-width: 70%;
+  height: 100px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #181e46;
+}
+
+#output, #comment {
+  margin-top: 10px;
+}

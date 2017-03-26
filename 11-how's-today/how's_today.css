@@ -1,0 +1,90 @@
+body {
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+    text-align: center;
+    letter-spacing: 2px;
+    background-color: #E5E8EF;
+    color: #444857;
+}
+
+#container {
+  align-items: center;
+  margin: 120px auto 150px auto;
+}
+
+#greeting_title {
+	text-align: center;
+	font-size: 40px;
+  font-weight: 100;
+  letter-spacing: 1px;
+	color: #1f97f2;
+}
+
+#advice {
+	margin: 50px auto 80px auto;
+	font-size: 25px;
+	width: 100%;
+	color: #40271d;
+	text-align: center;
+}
+
+form {
+	position: fixed;
+	top: 450px;
+	left: 35%;
+}
+
+#feeling {
+	width: 350px;
+	height: 30px;
+	font-size: 16px;
+	vertical-align: middle;
+	padding: 3px;
+  border-radius: 2.5px;
+	border: 1px solid #dbbeeb;
+}
+
+#submit_btn {
+	height: 38px;
+	width: 100px;
+	padding: 0;
+	font-size: 16px;
+	color: #f6f6e8;
+	background-color: #a424d1;
+	letter-spacing: 1px;
+	cursor: pointer;
+	vertical-align: middle;
+  border: none;
+  border-radius: 3px;
+}
+
+#submit_btn:active {
+	background-color: #a424d1;
+  border: none;
+}
+
+footer {
+  background: #96d593;
+  opacity: 0.5;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 0;
+  border: solid 1.5px #5a5d5b;
+  vertical-align: middle;
+}
+
+a {
+  margin-left: 10px;
+  text-decoration: none;
+  text-align: center;
+  color: #b43a91;
+}
+
+a:visited {
+  color: #b43a91;
+}
+
+a:hover {
+	color: #10368b;
+}

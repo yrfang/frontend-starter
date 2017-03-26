@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  font-family: Tahoma, sans-serif, serif;
+}
+
+#title {
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: lighter;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: lighter;
+}
+
+h3 {
+  font-size: 18px;
+  color: #737272;
+  font-weight: lighter;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@-webkit-keyframes travel {
+from { left: 0;     }
+to   { left: 640px; }
+}
+
+@-webkit-keyframes bounce {
+from, to  {
+  top: 0;
+  -webkit-animation-timing-function: ease-out;
+}
+50% {
+  top: 0;
+  -webkit-animation-timing-function: ease-in;
+}
+}
+
+@-webkit-keyframes spin {
+from {                                     }
+to   { -webkit-transform: rotateZ(360deg); }
+}
+
+/* keyframes definition for other browsers */
+
+@keyframes travel {
+from { left: 0;}
+to   { left: 640px; }
+}
+
+@keyframes bounce {
+0% {
+  bottom: 0;
+  animation-timing-function: ease-in;
+}
+50% {
+  bottom: 290px;
+  animation-timing-function: ease-out;
+}
+100% {
+  bottom: 0;
+  animation-timing-function: ease-in;
+}
+}
+
+@keyframes spin {
+from {
+  -moz-transform: rotate(0);
+  -o-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+}
+to {
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+}
+
+/* styles for the stage and animated elements */
+
+#stage {
+position: relative;
+margin: 20px auto;
+width: 700px;
+height: 350px;
+border: 2px solid #666;
+}
+
+#traveler {
+position: absolute;
+width: 60px;
+height: 350px;
+
+-webkit-animation-name: travel;
+-webkit-animation-timing-function: linear;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-direction: alternate;
+-webkit-animation-duration: 5.8s;
+
+animation-name: travel;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-duration: 5.8s;
+}
+
+#bouncer {
+position: absolute;
+width: 60px;
+height: 60px;
+border-radius: 50%;
+background-color: #107d5c;
+background: -webkit-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), #107d5c 50%) #107d5c;
+background: -moz-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), #107d5c 50%) #107d5c;
+background: -o-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), #107d5c 50%) #107d5c;
+background: -ms-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), #107d5c 50%) #107d5c;
+background: radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), #107d5c 50%) #107d5c;
+
+-webkit-animation-name: bounce, spin;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-duration: 5.2s;
+
+animation-name: bounce, spin;
+animation-iteration-count: infinite;
+animation-duration: 5.2s;
+
+cursor: pointer;
+}
+
+#instruction {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 30px;
+  width: 300px;
+  font-size: 24px;
+  color: #7a7d7d;
+}
+
+#replay {
+  display: none;
+  color: #bf6060;
+  text-decoration: none;
+}
+
+footer {
+  position: fixed;
+  margin: auto auto 0 auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 600px;
+  height: 20px;
+  padding: 8px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #0febca;
+}
+
+#links_container {
+  text-align: center;
+  margin-right: auto;
+  vertical-align: middle;
+  z-index: 100;
+}
+
+a {
+  margin-left: 20px;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  color: #fff;
+  text-decoration: none;
+  z-index: 500;
+}
+
+a:visited {
+  color: #fff;
+}
+
+a:hover {
+  color: #e614ab;
+}

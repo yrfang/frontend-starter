@@ -4,7 +4,7 @@ body {
 }
 
 header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -44,6 +44,7 @@ a:hover {
 
 #web_design {
   margin: 10px;
+  margin-bottom: 80px;
   margin-left: 50px;
   text-align: left;
   font-size: 20px;

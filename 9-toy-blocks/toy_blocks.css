@@ -1,0 +1,229 @@
+body {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  text-align: center;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+header {
+  padding: 18px;
+  background-color: #606060;
+}
+
+#title {
+  float: left;
+  font-size: 20px;
+  color: #1add69;
+  text-decoration: none;
+}
+
+#links_container {
+  float: right;
+  margin-right: 10px;
+}
+
+#home, #blog {
+  margin-left: 15px;
+  color: #1add69;
+  text-decoration: none;
+}
+
+.clear{
+    clear: both;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 60px;
+  color: #fafafa;
+  background-color: #303030;
+  z-index: 100;
+}
+
+#info {
+  display: none;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 50px;
+
+}
+
+#directions {
+  text-align: left;
+  margin: 40px auto;
+  width: 600px;
+}
+
+#object {
+  color: #1add69;
+}
+
+h2 {
+  line-height: 40px;
+}
+
+.close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 5px;
+  font-size: 20px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+#info_tab {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: #10e3d1;
+  background-color: #606060;
+  border-radius: 0 5px 0 0;
+  cursor: pointer;
+}
+
+#info_tab:hover {
+  background-color: #9f9f9f;
+  color: #fff;
+}
+
+#container {
+  margin: 100px auto 50px auto;
+  width: 80px;
+}
+
+.tridown {
+  cursor: pointer;
+  position: absolute;
+	top: 200px;
+	left: 200px;
+	width: 0;
+	height: 0;
+	border-top: 60px solid #ed9751;
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
+}
+
+.triup {
+  cursor: pointer;
+  position: absolute;
+	top: 200px;
+	left: 100px;
+	width: 0;
+	height: 0;
+  border-bottom: 60px solid #51ed99;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+}
+
+.triright {
+  cursor: pointer;
+  position: absolute;
+  top: 280px;
+  left: 150px;
+  border-bottom: 60px solid #edd451;
+  border-left: 60px solid transparent;
+}
+
+.trileft {
+  cursor: pointer;
+  position: absolute;
+  top: 280px;
+  left: 230px;
+  border-bottom: 60px solid #214515;
+  border-right: 60px solid transparent;
+}
+
+.rectup {
+  cursor: pointer;
+  position: absolute;
+  top: 280px;
+  left: 100px;
+  height: 120px;
+  width: 30px;
+  background-color: #40afd9;
+}
+
+.rectdown {
+  cursor: pointer;
+  position: absolute;
+  top: 370px;
+  left: 170px;
+  height: 30px;
+  width: 120px;
+  background-color: #8a63e9;
+}
+
+.square {
+  cursor: pointer;
+  position: absolute;
+  top: 420px;
+  left: 100px;
+  width: 80px;
+  height: 80px;
+  background-color: #de57c8;
+}
+
+.circle {
+  cursor: pointer;
+  position: absolute;
+  top: 420px;
+  left: 200px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #0400ba;
+}
+
+.quartcircle {
+  cursor: pointer;
+  position: absolute;
+  top: 530px;
+  left: 100px;
+  height: 80px;
+  width: 80px;
+  border-radius: 80px 0 0 0;
+  background-color: #453120;
+}
+
+.paraleft {
+  cursor: pointer;
+  position: absolute;
+  top: 520px;
+  left: 220px;
+  height: 40px;
+  width: 50px;
+    -webkit-transform: skew(25deg);
+    -moz-transform: skew(25deg);
+    -o-transform: skew(25deg);
+  background-color: #c22c11;
+}
+
+.pararight {
+  cursor: pointer;
+  position: absolute;
+  top: 570px;
+  left: 220px;
+  height: 40px;
+  width: 50px;
+    -webkit-transform: skew(-25deg);
+    -moz-transform: skew(-25deg);
+    -o-transform: skew(-25deg);
+  background-color: #5e8e4d;
+}
+
+#instruction {
+  cursor: pointer;
+  margin-top: 300px;
+  text-align: center;
+  font-size: 24px;
+  color: #d2d0e8;
+}
