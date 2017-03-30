@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="superhero_quiz.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="superhero_quiz.js"></script>
+    <title>Superhero Quiz</title>
+  </head>
+
+  <body id="superhero_quiz">
+
+    <header>
+      <h1>Are you a superhero or nobody?</h1>
+      <h1>測試你是否為超級英雄？</h1>
+      <h2>Take a short media/song quiz to know if it's possible to be a superhero?</h2>
+      <h2>請選擇你直覺符合題目情境的歌曲</h2>
+    </header>
+
+    <div id="container">
+
+      <form>
+        <div class="question_box">
+
+          <div class="question_text">
+            1. Are you a superhero?
+          </div>
+          <p><input type="radio" name="q1" value="1">Hero - Mariah Carey</p>
+          <p><input type="radio" name="q1" value="2">Stronger - Kelly Clarkson</p>
+          <p><input type="radio" name="q1" value="3">It’s My Life - Bon Jovi</p>
+          <p><input type="radio" name="q1" value="4">We are the Champions - Queen</p>
+        </div>
+
+        <div class="question_box">
+          <div class="question_text">
+            2. How do you feel today?
+          </div>
+          <p><input type="radio" name="q2" value="3">Skyscraper - Demi Lovato</p>
+          <p><input type="radio" name="q2" value="4">Not Afraid - Eminem</p>
+          <p><input type="radio" name="q2" value="2">Cold - Marin 5</p>
+          <p><input type="radio" name="q2" value="1">Girl Crush - Little Big Town</p>
+        </div>
+
+        <div class="question_box">
+          <div class="question_text">
+            3. Are you hungry?
+          </div>
+          <p><input type="radio" name="q3" value="2">On The Top of The World - Imagine Dragon</p>
+          <p><input type="radio" name="q3" value="1">In My Place - Coldplay</p>
+          <p><input type="radio" name="q3" value="3">Perfect Day - Lou Reed</p>
+          <p><input type="radio" name="q3" value="4">Here Comes the Sun - The Beatles</p>
+        </div>
+
+        <div class="question_box">
+          <div class="question_text">
+            4. Your motto?
+          </div>
+          <p><input type="radio" name="q4" value="4">Lovely Day - Bill Withers</p>
+          <p><input type="radio" name="q4" value="3">What a Wonderful World - Louis Armstrong</p>
+          <p><input type="radio" name="q4" value="2">Shape of You - Ed Sheeran</p>
+          <p><input type="radio" name="q4" value="1">Adventure of Lifetime -  Coldplay</p>
+        </div>
+
+        <div class="question_box">
+          <div class="question_text">
+            5. When you feel sad...
+          </div>
+          <p><input type="radio" name="q5" value="4">The Scientist - Coldplay</p>
+          <p><input type="radio" name="q5" value="1">I'll Be There For You - Friends</p>
+          <p><input type="radio" name="q5" value="2">Your Name - RADWIMPS</p>
+          <p><input type="radio" name="q5" value="3">Lost Star - Maroon 5</p>
+        </div>
+
+        <div class="question_box">
+          <div class="question_text">
+            6. Your big secret?
+          </div>
+          <p><input type="radio" name="q6" value="3">Apologize - Onerepublic</p>
+          <p><input type="radio" name="q6" value="2">Take A Bow - Rihanna</p>
+          <p><input type="radio" name="q6" value="4">Say Something - A Great Big World</p>
+          <p><input type="radio" name="q6" value="1">Stay With Me -  Sam Smith</p>
+        </div>
+
+        <div class="question_box">
+          <div class="question_text">
+            7. When you see your lover...
+          </div>
+          <p><input type="radio" name="q7" value="2">I'm Yours - Jason Mraz</p>
+          <p><input type="radio" name="q7" value="3">Hello - Adele</p>
+          <p><input type="radio" name="q7" value="1">Photograph - Ed Sheeran</p>
+          <p><input type="radio" name="q7" value="4">Love Yourself - Justin Bieber</p>
+        </div>
+
+        <div class="question_box">
+          <div class="question_text">
+            8. Can you imagine what's in my mind?
+          </div>
+          <p><input type="radio" name="q8" value="2">Radioactive - Imagine Dragon </p>
+          <p><input type="radio" name="q8" value="1">Never Give Up - Sia</p>
+          <p><input type="radio" name="q8" value="4">Let It All Go - Birdy and RHODES</p>
+          <p><input type="radio" name="q8" value="3">Over My Head - The Fray</p>
+        </div>
+
+        <div class="question_box">
+          <div class="question_text">
+            9. Calculating or networking?
+          </div>
+          <p><input type="radio" name="q9" value="1">Need The Sun To Break - James Bay</p>
+          <p><input type="radio" name="q9" value="2">Skinny Love - Birdy</p>
+          <p><input type="radio" name="q9" value="4">Yellow - Coldplay</p>
+          <p><input type="radio" name="q9" value="3">Million Reasons - Lady Gaga</p>
+        </div>
+
+        <div class="question_box">
+          <div class="question_text">
+            10. You are not a tree, move!
+          </div>
+          <p><input type="radio" name="q10" value="2">Fight strong - Rachel Platten</p>
+          <p><input type="radio" name="q10" value="1">Counting Stars - Onerepublic</p>
+          <p><input type="radio" name="q10" value="4">Sugar - Marron 5</p>
+          <p><input type="radio" name="q10" value="3">Viva La Vida - Coldplay</p>
+        </div>
+
+        <input id="submit_btn" type="submit" value="submit">
+
+      </form>
+    </div>
+
+    <footer>
+      <div id="links_container">
+        <a href="../1_homepage/home.html" id="home">Home</a>
+      </div>
+    </footer>
+
+  </body>
+</html>
