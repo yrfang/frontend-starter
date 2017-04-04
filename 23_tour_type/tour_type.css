@@ -1,0 +1,78 @@
+body {
+  font-family: 微軟正黑體, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  letter-spacing: 1.5px;
+  margin: 0;
+  width: 100vw;
+}
+
+header {
+  margin: 0 auto;
+  padding: 15px 0;
+  width: 100vw;
+  text-align: center;
+  background-color: #c18176;
+}
+
+#links_container a {
+  margin-right: 18px;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #44e75a;
+  background-color: #52261f;
+}
+
+#links_container a:visited {
+  color: #44e75a;
+}
+
+#title {
+  margin-right: 18px;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #44e75a;
+}
+
+#container {
+  margin: 0;
+}
+
+.item_container {
+  margin: 0;
+}
+
+#item1, #item3, #item5 {
+  margin: 0;
+  padding: 5% 10%;
+  background-color: #85d7a1;
+}
+
+#item2, #item4, #item6 {
+  padding: 5% 10%;
+  background-color: rgba(210,205,205,.5);
+}
+
+p {
+  font-size: 16px;
+}
+
+#submit {
+  margin: 0;
+  padding: 5% 10%;
+  background-color: #c18176;
+}
+
+#btn {
+  width: 80px;
+  height: 30px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4d825f;
+  cursor: pointer;
+  border: none;
+}
+
+#btn:focus {
+  outline: none;
+}
