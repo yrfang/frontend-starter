@@ -34,6 +34,14 @@ header {
   color: #44e75a;
 }
 
+header a {
+  text-decoration: none;
+}
+
+header a:visited {
+  color: #44e75a;
+}
+
 #container {
   margin: 0;
 }
@@ -42,14 +50,18 @@ header {
   margin: 0;
 }
 
-#item1, #item3, #item5 {
+input {
+  cursor: pointer;
+}
+
+#item1, #item3, #item5, #item7, #item9 {
   margin: 0;
-  padding: 5% 10%;
+  padding: 3% 10%;
   background-color: #85d7a1;
 }
 
-#item2, #item4, #item6 {
-  padding: 5% 10%;
+#item2, #item4, #item6, #item8, #item10 {
+  padding: 3% 10%;
   background-color: rgba(210,205,205,.5);
 }
 
@@ -59,7 +71,7 @@ p {
 
 #submit {
   margin: 0;
-  padding: 5% 10%;
+  padding: 3% 10%;
   background-color: #c18176;
 }
 
@@ -75,4 +87,27 @@ p {
 
 #btn:focus {
   outline: none;
+}
+
+#score {
+  color: #2a251b;
+  font-size: 40px;
+  text-align: center;
+	margin:20px;
+}
+
+#message {
+  color: #2a251b;
+  font-size: 24px;
+  text-align: center;
+  text-shadow: 1px 1px 0 #474747;
+  margin: 60px auto;
+}
+
+img {
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  width: 600px;
+  height: 400px;
 }
