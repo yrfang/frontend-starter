@@ -63,7 +63,7 @@ img {
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: red;
+  color: #fff;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -81,7 +81,7 @@ img {
 }
 
 .text {
-  color: #e63131;
+  color: #fff;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
@@ -91,7 +91,7 @@ img {
 }
 
 .numbertext {
-  color: #de1c1c;
+  color: #fff;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
