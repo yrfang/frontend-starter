@@ -1,0 +1,125 @@
+body {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  letter-spacing: 1.5px;
+  margin: 0;
+  width: 100vw;
+}
+
+header {
+  margin: 0 auto;
+  padding: 15px 0;
+  width: 100vw;
+  text-align: right;
+  background-color: #6665cc;
+  border-bottom: solid 7px;
+  border-color: #2ff64a;
+}
+
+#links_container a {
+  margin-right: 18px;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+}
+
+#links_container a:visited {
+  color: #fff;
+}
+
+#container {
+  margin: 50px auto 20px auto;
+  text-align: center;
+}
+
+#num_container {
+  margin: 10px auto;
+  height: 270px;
+  width: 210px;
+}
+
+.list {
+  background-color: #babae2;
+  font-size: 30px;
+  text-align: center;
+  cursor: pointer;
+  font-family: Geneva,Arial,Helvetica,sans-serif;
+  border: 1px solid gray;
+}
+
+#items .ui-selected {
+  background: #2a7d41;
+  color: white;
+  font-weight: bold;
+}
+
+#items {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#items li {
+  float: left;
+  margin: 2px;
+  padding: 2px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+}
+
+#call {
+  margin: auto;
+  margin-top: 0;
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+  color: #e74521;
+  background-color: #a1cbad;
+  border: 1px solid gray;
+  width: 184px;
+  padding: 10px;
+}
+
+#info {
+  margin: 20px auto;
+  font-size: 30px;
+  color: #2d2a2a;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  left: 50%;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: #fff;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+#confirm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  letter-spacing: 2px;
+  color: #fff;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
