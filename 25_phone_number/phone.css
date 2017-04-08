@@ -6,25 +6,31 @@ body {
 }
 
 header {
-  margin: 0 auto;
-  padding: 15px 0;
-  width: 100vw;
-  text-align: right;
+  padding: 10px;
+  height: 25px;
   background-color: #6665cc;
   border-bottom: solid 7px;
   border-color: #2ff64a;
 }
 
-#links_container a {
-  margin-right: 18px;
-  padding: 5px;
+header #title {
+  float: left;
+  margin-left: 15px;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+}
+
+header a {
+  float: right;
+  margin-right: 15px;
   text-decoration: none;
   font-size: 18px;
   color: #fff;
 }
 
-#links_container a:visited {
-  color: #fff;
+header a:hover, header #title:hover {
+  color: #fc6b91;
 }
 
 #container {
@@ -96,7 +102,7 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0,0,0,0.8);
   z-index: 2;
   cursor: pointer;
 }
@@ -107,7 +113,7 @@ header {
   width: 100%;
   left: 50%;
   font-size: 40px;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   color: #fff;
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
@@ -118,7 +124,7 @@ header {
   top: 50%;
   left: 50%;
   font-size: 50px;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   color: #fff;
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
