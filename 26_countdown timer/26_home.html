@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--20170409-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="countdown_timer.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="countdown_timer.js"></script>
+    <title>Countdwon Timer</title>
+  </head>
+  <body>
+
+    <header>
+      <div id="links_container">
+        <span id='title'>Coundwon Timer</span>
+        <span><a href="../1_homepage/home.html">Home</a></span>
+      </div>
+    </header>
+
+    <div id="user_setting">
+      <input type="text" name="year" placeholder="2018" id="user_years">Year&nbsp;&nbsp;
+      <input type="text" name="month" placeholder="06" id="user_months">Month&nbsp;&nbsp;
+      <input type="text" name="day" placeholder="12" id="user_days">Day&nbsp;&nbsp;
+    </br></br>
+      <input type="text" name="hour" placeholder="15" id="user_hours">Hour&nbsp;&nbsp;
+      <input type="text" name="minute" placeholder="24" id="user_minutes">Minute&nbsp;&nbsp;
+      <input type="text" name="second" placeholder="30" id="user_seconds">Second
+      <div id="start">
+        <input type="button" name="start" value="Countdown" id="btn">
+      </div>
+    </div>
+
+    <div class="countdown">
+      <p class="timer">
+        <span id="days"></span>
+        <span id="hours"></span>
+        <span id="minutes"></span>
+        <span id="seconds"></span>
+      </p>
+      <p class="unit">
+        <span>days</span>
+        <span>hours</span>
+        <span>minutes</span>
+        <span>seconds</span>
+      </p>
+    </div>
+
+  </body>
+</html>

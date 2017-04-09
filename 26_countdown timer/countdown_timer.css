@@ -1,0 +1,94 @@
+body {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  letter-spacing: 1.5px;
+  margin: 0;
+  width: 100vw;
+  background-color: #1f1f1f;
+}
+
+header {
+  padding: 12px;
+  height: 25px;
+  color: #ccc;
+}
+
+header #title {
+  float: left;
+  margin-left: 15px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+header a {
+  cursor: pointer;
+  float: right;
+  margin-right: 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #ccc;
+}
+
+header a:hover {
+  color: #f9b857;
+}
+
+#user_setting {
+  margin: 50px auto;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+}
+
+#user_setting input {
+  margin-right: 5px;
+  text-align: center;
+  font-size: 20px;
+  width: 60px;
+  height: 25px;
+}
+
+#start input {
+  cursor: pointer;
+  margin: 50px auto;
+  margin-bottom: 0;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  background-color: #a4cb13;
+  border: none;
+}
+
+#start input:focus {
+  outline: none;
+}
+
+.countdown {
+  width: 100%;
+  float: left;
+  margin: 10px auto;
+}
+
+.timer {
+  font-size: 72px;
+  margin: 30px auto;
+  margin-bottom: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.timer span {
+  margin-right: 10px;
+}
+
+.unit {
+  margin: 10px auto;
+  text-align: center;
+}
+
+.unit span {
+  margin-left: 60px;
+  font-size: 18px;
+  color: #fff;
+}
