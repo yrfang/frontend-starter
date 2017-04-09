@@ -74,6 +74,10 @@ header a:hover, header #title:hover {
   line-height: 60px;
 }
 
+#clear {
+  font-size: 20px;
+}
+
 #call {
   margin: auto;
   margin-top: 0;

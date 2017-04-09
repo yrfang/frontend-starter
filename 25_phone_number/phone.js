@@ -7,7 +7,7 @@ $(document).ready(function() {
             var index = $("#items li").index(this);
 
             if (index === 9) {
-              numbers += "*";
+              numbers = "";
             } else if (index === 10) {
               numbers += 0;
             } else if (index === 11) {
