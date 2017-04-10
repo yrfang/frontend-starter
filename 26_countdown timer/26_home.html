@@ -18,16 +18,12 @@
     </header>
 
     <div id="user_setting">
-      <input type="text" name="year" placeholder="2018" id="user_years">Year&nbsp;&nbsp;
-      <input type="text" name="month" placeholder="06" id="user_months">Month&nbsp;&nbsp;
-      <input type="text" name="day" placeholder="12" id="user_days">Day&nbsp;&nbsp;
-    </br></br>
-      <input type="text" name="hour" placeholder="15" id="user_hours">Hour&nbsp;&nbsp;
-      <input type="text" name="minute" placeholder="24" id="user_minutes">Minute&nbsp;&nbsp;
-      <input type="text" name="second" placeholder="30" id="user_seconds">Second
-      <div id="start">
-        <input type="button" name="start" value="Countdown" id="btn">
-      </div>
+
+      <form>
+        Choose : <input type="date" name="tdate" placeholder="mm/dd/yyyy" autocomplete="off" id="time">
+        <input type="submit" name="" value="Ready?" id="btn">
+      </form>
+
     </div>
 
     <div class="countdown">
@@ -37,12 +33,14 @@
         <span id="minutes"></span>
         <span id="seconds"></span>
       </p>
-      <p class="unit">
+      <p id="test"></p>
+<!--      <p class="unit">
         <span>days</span>
         <span>hours</span>
         <span>minutes</span>
         <span>seconds</span>
       </p>
+-->
     </div>
 
   </body>

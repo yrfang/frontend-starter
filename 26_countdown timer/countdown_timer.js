@@ -1,70 +1,66 @@
 $(document).ready(function() {
 
-  $('#btn').click(function() {
+  $('form').on('submit', function(event, timeEnd) {
+    event.preventDefault();
 
-    var user_years = $('#user_years').val();
-    var user_months = $('#user_months').val();
-    var user_days = $('#user_days').val();
-    var user_hours = $('#user_hours').val();
-    var user_minutes = $('#user_minutes').val();
-    var user_seconds = $('#user_seconds').val();
+    var year;
+    var month;
+    var day;
+    var dateEnd;
+    var timeEnd;
+    var timer;
 
-    console.log(user_years);
-    console.log(user_months);
-    console.log(user_days);
-    console.log(user_hours);
-    console.log(user_minutes);
-    console.log(user_seconds);
+    if ( $('#time').val() == 0) {
+      $('.timer').text('Not Available !');
+    } else {
+
+      dateEnd = $('#time').val();
+      console.log(dateEnd);
+
+      if (dateEnd.indexOf("/") >= 0) {
+        dateEnd = dateEnd.split("/");  //[month, day, year]
+        var year = dateEnd[2];
+        var month = (dateEnd[0])-1;
+        var day = dateEnd[1];
+      }
+      else {
+        endDate = dateEnd.split("-");  //[year, month, day]
+        var year = dateEnd[0];
+        var month = (dateEnd[1])-1;
+        var day = dateEnd[2];
+      }
+
+      timeEnd = new Date(dateEnd);
+      timeEnd = timeEnd.getTime();
+      console.log(timeEnd);
+
+      $('.timer').text(timeEnd);
+
+      timer = setInterval(calculate, 1000);
+    }
 
   });
 
-  function countdown(dateEnd) {
-  var timer, days, hours, minutes, seconds;
-
-  dateEnd = new Date(dateEnd);
-  dateEnd = dateEnd.getTime();
-
-  console.log(dateEnd);
-
-  if ( isNaN(dateEnd) ) {
-    return;
-  }
-
-  timer = setInterval(calculate, 1000);
-
   function calculate() {
+    var days;
+    var timeEnd;
     var dateStart = new Date();
     var dateStart = new Date(dateStart.getUTCFullYear(),
-                             dateStart.getUTCMonth(),
-                             dateStart.getUTCDate(),
-                             dateStart.getUTCHours(),
-                             dateStart.getUTCMinutes(),
-                             dateStart.getUTCSeconds());
-    var timeRemaining = parseInt((dateEnd - dateStart.getTime()) / 1000)
+                            dateStart.getUTCMonth(),
+                            dateStart.getUTCDate());
+    var timeRemaining = parseInt((timeEnd - dateStart.getTime()) / 1000)
 
     if ( timeRemaining >= 0 ) {
       days    = parseInt(timeRemaining / 86400);
       timeRemaining   = (timeRemaining % 86400);
-      hours   = parseInt(timeRemaining / 3600);
-      timeRemaining   = (timeRemaining % 3600);
-      minutes = parseInt(timeRemaining / 60);
-      timeRemaining   = (timeRemaining % 60);
-      seconds = parseInt(timeRemaining);
 
-      document.getElementById("days").innerHTML    = parseInt(days, 10);
-      document.getElementById("hours").innerHTML   = ("0" + hours).slice(-2);
-      document.getElementById("minutes").innerHTML = ("0" + minutes).slice(-2);
-      document.getElementById("seconds").innerHTML = ("0" + seconds).slice(-2);
-    } else {
+      $('#test').parseInt(days, 10);
+      
+      } else {
       return;
-    }
-  }
+      }
+   }
 
-}
-
-
-
-countdown('01/19/2018 15:14:07');
 
 
 });
