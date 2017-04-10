@@ -13,6 +13,7 @@ $(document).ready(function() {
     console.log(user_months);
     console.log(user_days);
     console.log(user_hours);
+    console.log(user_minutes);
     console.log(user_seconds);
 
   });
@@ -22,6 +23,8 @@ $(document).ready(function() {
 
   dateEnd = new Date(dateEnd);
   dateEnd = dateEnd.getTime();
+
+  console.log(dateEnd);
 
   if ( isNaN(dateEnd) ) {
     return;
@@ -57,7 +60,6 @@ $(document).ready(function() {
     }
   }
 
-  function display(days, hours, minutes, seconds) {}
 }
 
 
