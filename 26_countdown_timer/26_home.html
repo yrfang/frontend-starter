@@ -20,27 +20,21 @@
     <div id="user_setting">
 
       <form>
-        Choose : <input type="date" name="tdate" placeholder="mm/dd/yyyy" autocomplete="off" id="time">
-        <input type="submit" name="" value="Ready?" id="btn">
+        Date : <input type="date" name="date" placeholder="mm/dd/yyyy" autocomplete="off" id="date">
+        Time : <input type="time" name="time" autocomplete="off" id="time">
+        <input type="submit" name="" value="Countdown" id="btn">
       </form>
 
     </div>
 
     <div class="countdown">
       <p class="timer">
+        <span id="info"></span>
         <span id="days"></span>
         <span id="hours"></span>
         <span id="minutes"></span>
         <span id="seconds"></span>
       </p>
-      <p id="test"></p>
-<!--      <p class="unit">
-        <span>days</span>
-        <span>hours</span>
-        <span>minutes</span>
-        <span>seconds</span>
-      </p>
--->
     </div>
 
   </body>

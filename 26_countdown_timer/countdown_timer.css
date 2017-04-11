@@ -3,7 +3,7 @@ body {
   letter-spacing: 1.5px;
   margin: 0;
   width: 100vw;
-  background-color: #1f1f1f;
+  background-color: #333232;
 }
 
 header {
@@ -29,7 +29,7 @@ header a {
 }
 
 header a:hover {
-  color: #f9b857;
+  color: #f957e8;
 }
 
 #user_setting {
@@ -40,7 +40,7 @@ header a:hover {
 }
 
 form {
-  margin: 20px 0 30px;
+  margin: 20px auto;
 }
 
 input {
@@ -57,10 +57,11 @@ input:focus {
 }
 
 #btn {
-  background-color: #ab437f;
+  background-color: #ad4682;
   color: #fff;
-  width: 120px;
+  width: 150px;
   height: 40px;
+  font-size: 20px;
   letter-spacing: 1.5px;
   cursor: pointer;
 }
@@ -77,23 +78,13 @@ input:focus {
 
 .timer {
   font-size: 72px;
-  margin: 30px auto;
+  width: 100%;
+  margin: 50px auto;
   margin-bottom: 0;
   color: #fff;
   text-align: center;
 }
 
 .timer span {
-  margin-right: 10px;
-}
-
-.unit {
-  margin: 10px auto;
-  text-align: center;
-}
-
-.unit span {
-  margin-left: 60px;
-  font-size: 18px;
-  color: #fff;
+  margin-right: 15px;
 }
