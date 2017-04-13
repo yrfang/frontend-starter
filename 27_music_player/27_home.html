@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="music_box.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="music_box.js"></script>
-    <title>Musci Box</title>
+    <title>Musci Player</title>
   </head>
   <body>
 
@@ -18,13 +18,19 @@
 
     <div id="container">
       <div id="player_container">
-        <div id="player"></div>
+        <div id="play"></div>
+        <div id="pause_container">
+          <span class="pause"></span>
+          <span class="pause"></span>
+        </div>
       </div>
     </div>
 
     <div id="music_container">
-      <audio src="guitar.wav" type="audio/wav"></audio>
       <input type="range" max="1" min="0" step="0.01" onchange="" id="vol">
+      <div id="sound" class="show">
+        <audio controls loop src="guitar.wav" type="audio/wav" id="playmusic"></audio>
+      </div>
     </div>
 
   </body>
