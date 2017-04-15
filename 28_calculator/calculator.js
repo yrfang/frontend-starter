@@ -132,9 +132,10 @@ $(document).ready(function() {
     var idArray = [];
     $('.operator').each(function () {
         idArray.push(this.id);
-        console.log(idArray);
     });
+    console.log(idArray);
   }
+  test();
 
 
 
