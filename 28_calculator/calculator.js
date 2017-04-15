@@ -49,9 +49,14 @@ $(document).ready(function() {
     console.log(this.id);
     updateNum(this.id);
   });
-
+  var operation = $('.operator').text().split("");
   $('.operator').on('click', function() {
-    updateOperator(this.id);
+    alert(this.innerHTML)
+    alert((operation)[0])
+    var newOperation = (operation).indexOf(this.innerHTML);
+    console.log(operation);
+    console.log(newOperation);
+    updateOperator();
   });
 
   $('.run').on('click', function() {
@@ -81,9 +86,9 @@ $(document).ready(function() {
       } else {
         curNum += num; //curNum is string --> added into a string
       }
-    } else if (num == 'negative') {
-      if (curNum.indexof('-') !== -1) {
-        curNum = curNum.substr(0);
+    } else if (num == 'positive_negative') {
+      if (curNum.indexof('−') !== -1) {
+        curNum = curNum.substr(1);
       } else {
         curNum = (0 - curNum).toString();
       }
