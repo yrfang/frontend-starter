@@ -50,40 +50,7 @@ $(document).ready(function() {
   });
 
   $('.operator').on('click', function(operator) {
-    operator = this.id;
-    console.log(operator);
-
-    var operation;
-
-    switch (true) {
-      case (operator === '+') :
-        operation = this.innerHTML;
-        break;
-
-      case (operator === '-') :
-        operation = this.innerHTML;
-        break;
-
-      case (operator === '*') :
-        operation = this.innerHTML;
-        break;
-
-      case (operator === '/') :
-        operation = this.innerHTML;
-        break;
-
-      case (operator === '+-') :
-        operation = this.innerHTML;
-        break;
-
-      default :
-        break;
-    }
-
-    console.log(operation);
-    curNum = curNum + operation;
-
-    displayNum(curNum);
+    updatePrep(this.id);
   });
 
   $('#all_clear').on('click', function() {
@@ -92,8 +59,8 @@ $(document).ready(function() {
     displayNum(curNum);
   });
 
-  $('.run').on('click', function() {
-    run();
+  $('#equals').on('click', function() {
+    displayAns(ans);
   });
 
 
@@ -102,18 +69,6 @@ $(document).ready(function() {
     //ans = prep + curNum + operator;
     $('#display').val(curNum);
   }
-
-/*
-  function determineOperator(key) {
-    if (key == '+' || key == '-' || key == '*' || key == '/') {
-      updateOperator(key);
-    } else if (key == 'enter') {
-      equalCal();
-    } else if (key != 'delete') {
-      updateNum(key);
-    }
-  }
-*/
 
   function updateNum(num) {
     if (num == '.') {
@@ -128,15 +83,21 @@ $(document).ready(function() {
     displayNum();
   }
 
-  function test() {
-    var idArray = [];
-    $('.operator').each(function () {
-        idArray.push(this.id);
-    });
-    console.log(idArray);
+  function updatePrep(operator) {
+    curNum = curNum + operator;
+    displayNum();
   }
-  test();
 
+  function displayAns() {
+    console.log(curNum);
 
+    ans = eval(curNum);
+    curNum = ans;
+    console.log(ans);
+    displayNum(curNum);
+
+    curNum = '';
+    console.log(curNum);
+  }
 
 });
