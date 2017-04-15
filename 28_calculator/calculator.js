@@ -1,7 +1,6 @@
 $(document).ready(function() {
+  var prep = '';
   var curNum = '';
-  var cal = '';
-  var operator;
   var ans;
 
   var keyCode = {
@@ -39,7 +38,7 @@ $(document).ready(function() {
 		'190': '.',
 	}
 
-  //$('#display').focus();
+  $('#display').focus();
 
 	$('#display').on('keydown', function (e) {
 		e.preventDefault();
@@ -49,26 +48,62 @@ $(document).ready(function() {
     console.log(this.id);
     updateNum(this.id);
   });
-  var operation = $('.operator').text().split("");
-  $('.operator').on('click', function() {
-    alert(this.innerHTML)
-    alert((operation)[0])
-    var newOperation = (operation).indexOf(this.innerHTML);
+
+  $('.operator').on('click', function(operator) {
+    operator = this.id;
+    console.log(operator);
+
+    var operation;
+
+    switch (true) {
+      case (operator === '+') :
+        operation = this.innerHTML;
+        break;
+
+      case (operator === '-') :
+        operation = this.innerHTML;
+        break;
+
+      case (operator === '*') :
+        operation = this.innerHTML;
+        break;
+
+      case (operator === '/') :
+        operation = this.innerHTML;
+        break;
+
+      case (operator === '+-') :
+        operation = this.innerHTML;
+        break;
+
+      default :
+        break;
+    }
+
     console.log(operation);
-    console.log(newOperation);
-    updateOperator();
+    curNum = curNum + operation;
+
+    displayNum(curNum);
+  });
+
+  $('#all_clear').on('click', function() {
+    curNum = '';
+    prep = '';
+    displayNum(curNum);
   });
 
   $('.run').on('click', function() {
-    equalCal();
+    run();
   });
 
 
   //function
   function displayNum() {
-    $('#display').val(cal + curNum);
+    //ans = prep + curNum + operator;
+    $('#display').val(curNum);
   }
 
+/*
   function determineOperator(key) {
     if (key == '+' || key == '-' || key == '*' || key == '/') {
       updateOperator(key);
@@ -78,43 +113,29 @@ $(document).ready(function() {
       updateNum(key);
     }
   }
+*/
 
   function updateNum(num) {
     if (num == '.') {
-      if (curNum.indexOf('.') !== -1) {
-        return;
-      } else {
+      if (curNum.indexOf('.') == -1) {
         curNum += num; //curNum is string --> added into a string
-      }
-    } else if (num == 'positive_negative') {
-      if (curNum.indexof('−') !== -1) {
-        curNum = curNum.substr(1);
       } else {
-        curNum = (0 - curNum).toString();
+        return;
       }
     } else {
       curNum += num;
     }
-
     displayNum();
-
   }
 
-  function updateOperator(operator) {
-    cal = cal + curNum + operator;
-    curNum = '';
-    displayNum();
-    console.log(cal);
-    console.log(curNum);
-    console.log(operator);
+  function test() {
+    var idArray = [];
+    $('.operator').each(function () {
+        idArray.push(this.id);
+        console.log(idArray);
+    });
   }
 
-  function equalCal() {
-    updateNum('');
 
-    $('#display').val(ans);
-    curNum = ans;
-    cal = '';
-  }
 
 });
