@@ -2,6 +2,7 @@ $(document).ready(function() {
   var prep = '';
   var curNum = '';
   var ans;
+  var t = '';
 
   var keyCode = {
 		'13': 'enter',
@@ -49,28 +50,37 @@ $(document).ready(function() {
     updateNum(this.id);
   });
 
-  $('.operator').on('click', function(operator) {
+  $('.operator').on('click', function() {
+    //var operator = this.id;
+    //console.log(operator);
+
     updatePrep(this.id);
   });
 
   $('#all_clear').on('click', function() {
     curNum = '';
     prep = '';
-    displayNum(curNum);
+    displayNum();
+  });
+
+  $('#clear_entry').on('click', function() {
+    console.log(curNum);
+    curNum = '';
+    displayNum();
   });
 
   $('#equals').on('click', function() {
-    displayAns(ans);
+    displayAns();
   });
 
 
   //function
   function displayNum() {
-    //ans = prep + curNum + operator;
-    $('#display').val(curNum);
+    $('#display').val(prep + curNum);
   }
 
   function updateNum(num) {
+
     if (num == '.') {
       if (curNum.indexOf('.') == -1) {
         curNum += num; //curNum is string --> added into a string
@@ -84,20 +94,58 @@ $(document).ready(function() {
   }
 
   function updatePrep(operator) {
-    curNum = curNum + operator;
+    prep = prep + curNum + operator;
+    curNum = '';
     displayNum();
+    console.log(prep);
+
+
+    t += operator;
+    //console.log(t);
+    var t1 = t.substr(t.length-1);
+    console.log(prep);
+    //console.log(t1);
+    var t2 = t.substr(t.length-2, t.length-1);
+    console.log(prep);
+    //console.log(t2);
+
+    if (t1 === t2) {
+      
+    }
   }
 
   function displayAns() {
+    updatePrep('');
     console.log(curNum);
+    console.log(prep);
 
-    ans = eval(curNum);
-    curNum = ans;
-    console.log(ans);
-    displayNum(curNum);
+    //test the lasted num is a digital or not
+    var test = parseFloat(prep.substr(prep.length-1));
+    console.log(prep.length);
+    console.log(prep.substr(prep.length-1));
+    console.log(test);
 
-    curNum = '';
-    console.log(curNum);
+    if (isNaN(parseInt(test))) {
+      $('#display').val('');
+      curNum = '';
+      ans = '';
+    } else {
+      ans = eval(prep) * 1e6;
+      ans = Math.round(ans, 6);
+      ans = ans/1e6;
+      console.log(ans);
+
+      if (ans == Infinity || ans == -Infinity || ans == NaN) {
+        alert("It\'s invalid.");
+        $('#display').val('');
+        curNum = '';
+        ans = '';
+      } else {
+        $('#display').val(ans);
+        curNum = ans;
+      }
+    }
+    prep = '';
   }
 
 });
