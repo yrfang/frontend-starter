@@ -7,7 +7,7 @@ $(document).ready(function() {
   var lastInput = '';
   var lastInputIsNum = false;
 
-  var keyCode = {
+  var keycode = {
 		'13': 'enter',
 		'48': '0',
 		'49': '1',
@@ -63,7 +63,11 @@ $(document).ready(function() {
   });
 
   $('.negative').on('click', function() {
-    updateNegative();
+    if (true == checkOperator(this.id)) {
+      updateNegative(this.id);
+      //console.log(prep);
+    }
+    lastInputIsNum = true;
   });
 
   $('#all_clear').on('click', function() {
@@ -76,17 +80,44 @@ $(document).ready(function() {
     console.log(curNum);
     curNum = '';
     displayNum();
+    lastInputIsNum = false;
   });
 
   $('#equals').on('click', function() {
     displayAns();
   });
 
+  $('#display').on('keyup', function(e) {
+    e.preventDefault();
+    var key = e.which;
+    if (key==8 || key==46) {
+      key = 'delete';
+      curNum = '';
+      prep = $('#display').val();
+      console.log(prep);
+      prep = prep.substring(0, prep.length-1); //the secondLast one string
+      $('#display').val(prep);
+      console.log(prep);
+    } else if (e.shiftKey && e.which==56) {
+      key = '*';
+      curNum = '';
+      prep = $('#display').val();
+      console.log(prep);
+      $('#display').val(prep);
+    }
+    else {
+      key = keycode[String(key)];
+    }
+
+    if (key) {
+      determinKeycond(key);
+    }
+  });
 
 
 
 
-
+//----------function----------
   function displayNum() {
     $('#display').val(prep + curNum);
   }
@@ -169,6 +200,22 @@ $(document).ready(function() {
       }
     }
     prep = '';
+  }
+
+
+
+  function determinKeycond(key) {
+    if (key == '+' || key == '-' || key == '*' || key == '/') {
+      if (true == checkOperator(key)) {
+        updatePrep(key);
+      }
+      lastInputIsNum = false;
+    } else if (key == 'enter') {
+      displayAns();
+    } else if (key != 'delete') {
+      updateNum(key);
+      lastInputIsNum = true;
+    }
   }
 
 });
