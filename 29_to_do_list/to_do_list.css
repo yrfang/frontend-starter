@@ -1,0 +1,153 @@
+body {
+    font-family: sans-serif, Open Sans, Roboto, PT Sans;
+    text-align: center;
+    letter-spacing: 1.5px;
+    background-color: #7ab394;
+    margin: auto;
+    width: 60%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+}
+
+#links_container a {
+  margin-left: 10px;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: bolder;
+  color: #fce22d;
+}
+
+#links_container a:visited {
+  color: #fce22d;
+}
+
+#links_container a:hover {
+	color: #cc2ad5;
+}
+
+#container {
+  margin: 80px auto;
+}
+
+#input_container {
+  display: table;
+  margin-bottom: 0;
+  padding: 40px;
+  width: 100%;
+  background-color: #4ec3f5;
+}
+
+#input_container #text {
+  margin-right: 0;
+  padding: 0 10px;
+  width: 70%;
+  height: 40px;
+  font-size: 18px;
+  border: none;
+}
+
+#input_container #submit {
+  margin-left: 0;
+  width: 20%;
+  height: 40px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #333333;
+  border: none;
+  cursor: pointer;
+}
+
+#input_container #submit:hover {
+  background-color: #656565;
+}
+
+input {
+  outline: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  cursor: pointer;
+  position: relative;
+  margin: 0 auto;
+  padding: 12px 8px 12px 40px;
+  background-color: #e7e6e6;
+  color: #000;
+  font-size: 16px;
+  text-align: left;
+  list-style-type: none;
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+p:nth-child(odd) {
+  background: #dbd9d9;
+}
+
+p:hover {
+  background: #c9c9c9;
+}
+
+p.checked {
+  background: #555454;
+  color: #fff;
+  text-decoration: line-through;
+  text-decoration-color: #fff;
+  -webkit-text-decoration-color: #fff;
+}
+
+.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+p::after {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+  z-index: 10;
+}
+
+.close:hover {
+  background-color: #1a7da7;
+  color: white;
+  top: 0;
+  bottom: 0;
+}
