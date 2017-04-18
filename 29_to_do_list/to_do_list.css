@@ -1,5 +1,5 @@
 body {
-    font-family: sans-serif, Open Sans, Roboto, PT Sans;
+    font-family: Microsoft JhengHei, sans-serif, Open Sans, Roboto, PT Sans;
     text-align: center;
     letter-spacing: 1.5px;
     background-color: #7ab394;
@@ -50,6 +50,7 @@ footer {
 }
 
 #input_container #text {
+  font-family: Microsoft JhengHei, sans-serif, Open Sans, Roboto, PT Sans;
   margin-right: 0;
   padding: 0 10px;
   width: 70%;
