@@ -1,7 +1,7 @@
 //ECMAScript
 function removeTransition(e) {
     if (e.propertyName !== 'transform') return;
-    this.target.classList.remove('playing');
+    e.target.classList.remove('playing');
   }
 
 
