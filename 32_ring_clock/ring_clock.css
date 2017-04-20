@@ -1,0 +1,93 @@
+html {
+  background: #edc701 url('rings.jpg') no-repeat center center;
+  background-size:cover;
+  font-family:'helvetica neue';
+  text-align: center;
+}
+
+* {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+body {
+    font-family: sans-serif, Open Sans, Roboto, PT Sans;
+    text-align: center;
+    margin: 0;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.clock {
+  position: relative;
+  margin: auto;
+  top: 5rem;
+  width: 30rem;
+  height: 30rem;
+  border:20px solid #fff;
+  border-radius:50%;
+  box-shadow:
+    0 0 0 3px rgba(0,0,0,0.1),
+    inset 0 0 0 3px #EFEFEF,
+    inset 0 0 10px black,
+    0 0 10px rgba(0,0,0,0.2);
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateX(42px) translateY(5px); /* account for the height of the clock hands */
+  }
+
+.hand {
+  position: absolute;
+  width:40%;
+  height:6px;
+  background: #fff;
+  box-shadow: 0 0 3px 3px rgba(0,0,0,0.1);
+  top:50%;
+  transform-origin: 100%;
+  transform: rotate(0deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hour-hand {
+  left: 10%;
+  width: 30%;
+}
+
+.second-hand {
+  height:3px;
+  background: #2f2f2f;
+  box-shadow: 0 0 3px 3px rgba(0,0,0,0.1);
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+}
+
+#links_container a {
+  margin-left: 10px;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  font-weight: bolder;
+  color: #ede295;
+}
+
+#links_container a:visited {
+  color: #ede295;
+}
+
+#links_container a:hover {
+	color: #ffe425;
+}
