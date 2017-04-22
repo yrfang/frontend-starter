@@ -1,0 +1,105 @@
+body {
+  font-family: 'helvetica neue', sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  text-align: center;
+}
+
+h2 {
+  margin: 50px auto;
+  font-size: 42px;
+}
+
+.controls {
+  margin-bottom: 50px;
+}
+
+label {
+  margin: 8px 0 20px 0;
+}
+
+input {
+  margin: auto;
+  width:100px;
+  margin-right: 20px;
+}
+
+input::selection {
+  outline: none;
+}
+
+img {
+  width: 60%;
+}
+
+.choose_container {
+
+}
+
+.choose_container input {
+  margin: 20px auto;
+  margin-bottom: 100px;
+  background-color: #653eff;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+}
+
+:root {
+  --base: #68c73c;
+  --spacing: 10px;
+  --blur: 5px;
+}
+
+.h2 {
+  color: var(--base);
+}
+
+img {
+  margin-bottom: 30px;
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
+}
+
+#submit_container {
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+#submit_container input:selection {
+  outline: none;
+}
+
+#imgURL {
+  width: 180px;
+  height: 30px;
+}
+
+#submit {
+  padding: 5px;
+  width: 60px;
+  background-color: #866cee;
+  color: #fff;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  padding: 10px 0;
+}
+
+#links_container a {
+  margin-left: 10px;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  font-weight: bolder;
+  color: #866cee;
+}
+
+#links_container a:visited {
+  color: #866cee;
+}
