@@ -37,11 +37,13 @@ function displayMatches() {
       `;
     }).join('');
     suggestions.innerHTML = html;
+    //const displayResult = Array.from(document.querySelectorAll('.suggestions li'));
+    //displayResult.forEach(output => output.addEventListener('click', displaySearch));
 }
 
 
 function displaySearch() {
-  console.log(this.textContent);
+  document.querySelector('.resultDisplay').innerHTML = this ;
   //const resultDisplay = document.querySelector('.resultDisplay').innerHTML = this.textContent;
 }
 
@@ -52,5 +54,4 @@ const searchOutput = document.querySelectorAll('.suggestions li');
 
 
 searchInput.addEventListener('change', displayMatches);
-searchInput.addEventListener('keyup', displayMatches);
-searchOutput.forEach(input => input.addEventListener('click', displaySearch));
+searchInput.addEventListener('keyup', displayMatches);s
