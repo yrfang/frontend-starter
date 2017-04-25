@@ -1,0 +1,59 @@
+body {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  text-align: center;
+  letter-spacing: 1.5px;
+  margin: 0;
+  background-color: #463d3d;
+}
+
+header {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+#links_container a {
+  float: left;
+  margin-right: 18px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #706f6f;
+}
+
+#links_container a:visited {
+  color: #706f6f;
+}
+
+#links_container a:hover {
+	color: #fff;
+}
+
+#function_container {
+  position: relative;
+  margin: 60px;
+  margin-bottom: 20px;
+}
+
+#function_container input {
+  width: 80px;
+  height: 30px;
+  background-color: #368063;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+#function_container input:hover {
+  background-color: #38eea7;
+}
+
+canvas {
+  position: relative;
+  margin: 20px auto;
+  border: solid 1px #666;
+  background-color: #fff;
+  box-shadow: inset 0 0 5px #000;
+  cursor: pointer;
+}
