@@ -83,5 +83,7 @@ pen.addEventListener('click', function(e) {
   [lastX, lastY] = [e.offsetX, e.offsetY];
 });
 
+
 http://stackoverflow.com/questions/25907163/html5-canvas-eraser-tool-without-overdraw-white-color
+https://codepen.io/WangWeiqiang/pen/Cadyu
 */
