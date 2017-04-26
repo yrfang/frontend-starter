@@ -54,4 +54,4 @@ const searchOutput = document.querySelectorAll('.suggestions li');
 
 
 searchInput.addEventListener('change', displayMatches);
-searchInput.addEventListener('keyup', displayMatches);s
+searchInput.addEventListener('keyup', displayMatches);
