@@ -23,8 +23,6 @@ function handleCheck(e) {
       }
     })
   }
-
-  //最後一個有checked的checkbox, 則會變成按shift開頭就顯示
   lastChecked = this;
 }
 
