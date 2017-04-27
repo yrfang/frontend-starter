@@ -3,27 +3,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Key Detection</title>
+  <link rel="stylesheet" href="secret_word.css">
   <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+  <title>Secret Word</title>
 </head>
 <body>
 
-<script>
-  const pressed = [];
-  const secretCode = 'hello';
+  <div id="info">
+    Once you keyup <span id="hello">hello</span>, you will see some surprice!
+  </div>
 
-  window.addEventListener('keyup', (e) => {
-    console.log(e.key);
-    pressed.push(e.key);
-    pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
-    if (pressed.join('').includes(secretCode)) {
-      console.log('DING DING!');
-      cornify_add(); //present cornify.js
-    }
-    console.log(pressed);
-  });
+  <footer>
+    <div id="links_container">
+      <a href="../1_homepage/home.html" id="home">Home</a>
+    </div>
+  </footer>
 
+  <script>
+    const pressed = [];
+    const secretCode = 'hello';
+    const info = window.querySelector('#info');
 
-</script>
+    window.addEventListener('keyup', (e) => {
+      setTimeout()
+
+      console.log(e.key);
+      pressed.push(e.key);
+      pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+      if (pressed.join('').includes(secretCode)) {
+        console.log('DING DING!');
+        cornify_add(); //present cornify.js
+      }
+      console.log(pressed);
+    });
+
+  </script>
+
 </body>
 </html>
