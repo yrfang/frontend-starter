@@ -10,10 +10,32 @@
     body {
       margin: 0;
       font-family: sans-serif;
-      background: url("https://source.unsplash.com/nDqA4d5NL0k/2000x2000");
+      background: url("city.jpg");
       background-size: cover;
       min-height: 100vh;
     }
+
+    header {
+      position: absolute;
+    	top: 0px;
+    	left: 0px;
+    	text-align: left;
+    	padding: 10px 20px;
+      z-index: 5;
+    }
+
+    #links_container a {
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bolder;
+      color: #6dcb7a;
+      cursor: pointer;
+    }
+
+    #links_container a:visited {
+      color: #6dcb7a;
+    }
+
     #bands {
       margin: 40px auto;
       list-style: inside square;
@@ -34,6 +56,12 @@
       text-decoration: none;
     }
   </style>
+
+  <header>
+    <div id="links_container">
+      <a href="../1_homepage/home.html">Home</a>
+    </div>
+  </header>
 
   <ul id="bands"></ul>
 
