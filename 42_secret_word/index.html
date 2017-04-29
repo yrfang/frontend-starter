@@ -22,10 +22,13 @@
   <script>
     const pressed = [];
     const secretCode = 'hello';
-    const info = window.querySelector('#info');
+    const info = document.querySelector('#info');
 
     window.addEventListener('keyup', (e) => {
-      setTimeout()
+
+      setTimeout(function() {
+        info.style.display = 'none';
+      }, 2000);
 
       console.log(e.key);
       pressed.push(e.key);
