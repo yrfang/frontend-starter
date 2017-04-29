@@ -1,0 +1,82 @@
+body {
+  font-family: 微軟正黑體, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  letter-spacing: 1.5px;
+  margin: 0;
+  width: 100vw;
+}
+
+
+
+header {
+  position: absolute;
+	top: 0px;
+	left: 0px;
+	text-align: left;
+	padding: 10px 20px;
+  z-index: 5;
+}
+
+#links_container a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bolder;
+  color: #6dcb7a;
+  cursor: pointer;
+}
+
+#links_container a:visited {
+  color: #6dcb7a;
+}
+
+#info_container {
+  position: absolute;
+	bottom: 0px;
+	left: 0px;
+	text-align: left;
+	padding: 10px 20px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	z-index: 50;
+}
+
+#tab {
+  margin: 0;
+	font-weight: bolder;
+	font-size: 18px;
+	color: #6dcb7a;
+	cursor: pointer;
+}
+
+#info {
+  display: none;
+  width: 500px;
+  font-size: 14px;
+  text-align: justify;
+}
+
+#info_container:hover {
+	color: #fff;
+  border-radius: 0 5px 0 0;
+	background-color: #1d1d1d;
+}
+
+#info_container:hover > #info {
+	display: block;
+}
+
+
+.hero {
+  position: absolute;
+  left: 0;
+  right: 0;
+  min-height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  }
+
+h1 {
+  text-shadow: 10px 10px 0 rgba(0,0,0,1);
+  font-size: 100px;
+}
