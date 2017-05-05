@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--20170414-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="calculator.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="calculator.js"></script>
+    <title>Calculator</title>
+  </head>
+  <body>
+
+    <header>
+      <div id="links_container">
+        <a href="index.html" id='title'>Calculator</a>
+        <a href="../01 - homepage/index.html">Home</a>
+      </div>
+    </header>
+
+    <div id="container">
+      <div id="inner_container">
+
+        <div id="result_container">
+          <input type="text" autocomplete="off" id="display">
+        </div>
+
+        <table id="button_container">
+          <tr class="calc row">
+            <td class="calc btn" id="all_clear">AC</td>
+            <td class="calc btn" id="clear_entry">C</td>
+            <td class="calc btn negative" id="+-">&#177;</td>
+            <td class="calc btn operator" id="+">+</td>
+          </tr>
+
+          <tr class="calc row">
+            <td class="calc btn num" id="7">7</td>
+            <td class="calc btn num" id="8">8</td>
+            <td class="calc btn num" id="9">9</td>
+            <td class="calc btn operator" id="-">-</td>
+          </tr>
+
+          <tr class="calc row">
+            <td class="calc btn num" id="4">4</td>
+            <td class="calc btn num" id="5">5</td>
+            <td class="calc btn num" id="6">6</td>
+            <td class="calc btn operator" id="*">&times;</td>
+          </tr>
+
+          <tr class="calc row">
+            <td class="calc btn num" id="1">1</td>
+            <td class="calc btn num" id="2">2</td>
+            <td class="calc btn num" id="3">3</td>
+            <td class="calc btn operator" id="/">/</td>
+          </tr>
+
+          <tr class="calc row">
+            <td colspan="2" class="calc btn num" id="0">0</td>
+            <td class="calc btn num" id=".">.</td>
+            <td class="calc btn run" id="equals">=</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </body>
+</html>
+
+
+<!--
+http://codepen.io/BlindPrimate/pen/bVEGEN
+https://codepen.io/lalwanivikas/pen/eZxjqo
+-->
