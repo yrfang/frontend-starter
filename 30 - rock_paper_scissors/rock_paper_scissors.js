@@ -44,7 +44,7 @@ $(document).ready(function() {
     }, 500);
 
     setTimeout(function() {
-      $('#again').html('<a href="30_home.html">Play again?</a>');
+      $('#again').html('<a href="index.html">Play again?</a>');
     }, 2000);
   }
 
