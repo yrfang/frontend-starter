@@ -1,0 +1,43 @@
+/*html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}*/
+
+body {
+  /*background-color: #666666;*/
+}
+
+.nav_container {
+  background-color: #61dfd4;
+}
+
+.nav_content {
+  display: inline-block;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100px;
+  border-bottom: solid 7px #59cf93;
+  background-color: #61dfd4;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.nav_content:hover {
+  background-color: #a0fcf4;
+}
+
+* {
+  border: solid 1px;
+}
+
+.namecard {
+  width: 350px;
+  padding: 20px;
+  margin: auto;
+}
