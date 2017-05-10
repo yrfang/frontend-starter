@@ -1,0 +1,33 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+$color_white: #efefef;
+$color_red: #ff5353;
+$color_green: #71f561;
+$color_black: #000;
+$color_grey: #666;
+
+// BASE SIZE
+$base_line_width: 4px;
+
+// BREAK WIDTH
+$break_large: 1024px;
+$break_medium: 768px;
+$break_small: 400px;
+
+// FONT SETTING
+$font_family: 'Oswald', sans-serif, 微軟正黑體;
+
+* {
+  font-family: $font_family;
+}
+
+.test {
+  border: solid $base_line_width $color_red;
+  width: 100px;
+  height: 100px;
+}
