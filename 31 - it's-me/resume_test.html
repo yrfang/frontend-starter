@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--20170510-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Resume Test</title>
+  </head>
+  <body>
+
+    <div class="top">top</div>
+    <div class="bottom">
+      <div class="left">left</div><div class="right">
+        <div class="rtop">rtop</div>
+        <div class="rbottom">rbottom</div>
+      </div>
+      bottom
+    </div>
+
+    <style media="screen">
+      * {
+        border: solid 2px black;
+        vertical-align: top;
+      }
+
+      .top {
+        height: 100px;
+      }
+
+      .left, .right {
+        display: inline-block;
+        box-sizing: border-box;
+        width: 50%;
+      }
+
+      .left {
+        height: 300px;
+      }
+
+      .rtop, .rbottom {
+        height: 100px;
+      }
+
+      .bottom {
+        height: 400px;
+        bottom: 0;
+      }
+    </style>
+
+  </body>
+</html>
