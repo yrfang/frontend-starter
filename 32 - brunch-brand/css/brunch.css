@@ -1,0 +1,229 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*@import "compass/reset";*/
+/* line 23, ../scss/brunch.scss */
+* {
+  /*border: solid 1px;*/
+  position: relative;
+  vertical-align: top;
+}
+
+/* line 34, ../scss/brunch.scss */
+.maxinwidth {
+  max-width: 768px;
+}
+
+/* line 40, ../scss/brunch.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 45, ../scss/brunch.scss */
+.header {
+  height: 400px;
+}
+/* line 47, ../scss/brunch.scss */
+.header img {
+  width: 100%;
+}
+
+/* line 52, ../scss/brunch.scss */
+.content {
+  font-family: 'Source Sans Pro', sans-serif, 微軟正黑體;
+  padding: 80px 150px;
+  letter-spacing: 2px;
+}
+/* line 57, ../scss/brunch.scss */
+.content .content_part {
+  display: inline-block;
+  box-sizing: border-box;
+  margin-right: 30px;
+}
+/* line 61, ../scss/brunch.scss */
+.content .content_part img {
+  margin: 20px auto;
+  width: 600px;
+  height: 400px;
+  box-shadow: 0 0 10px rgba(96, 96, 96, 0.8);
+}
+/* line 69, ../scss/brunch.scss */
+.content .content_text {
+  width: 250px;
+}
+/* line 73, ../scss/brunch.scss */
+.content h5 {
+  margin-top: 10px;
+}
+/* line 77, ../scss/brunch.scss */
+.content h1 {
+  font-size: 50px;
+}
+/* line 80, ../scss/brunch.scss */
+.content h1.small_english {
+  font-size: 40px;
+}
+/* line 83, ../scss/brunch.scss */
+.content .titlehr {
+  width: 100px;
+  border-bottom: solid 5px;
+}
+/* line 87, ../scss/brunch.scss */
+.content h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+/* line 91, ../scss/brunch.scss */
+.content h2.small_english {
+  font-size: 24px;
+}
+/* line 94, ../scss/brunch.scss */
+.content h3 {
+  font-size: 18px;
+}
+/* line 97, ../scss/brunch.scss */
+.content h3.small_english {
+  font-size: 16px;
+}
+/* line 100, ../scss/brunch.scss */
+.content .small_english {
+  margin-top: 15px;
+}
+/* line 104, ../scss/brunch.scss */
+.content .button {
+  padding: 5px;
+  padding: 5px 25px;
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 20px;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-weight: bold;
+  border: solid 2px;
+}
+/* line 116, ../scss/brunch.scss */
+.content .color_chip {
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 15px;
+}
+/* line 120, ../scss/brunch.scss */
+.content .color_chip .color_block, .content .color_chip .color_tag {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 124, ../scss/brunch.scss */
+.content .color_chip .color_tag {
+  margin-right: 5px;
+}
+/* line 127, ../scss/brunch.scss */
+.content .color_chip .color_block {
+  width: 30px;
+  height: 30px;
+}
+/* line 130, ../scss/brunch.scss */
+.content .color_chip .color_block1 {
+  background-color: #F4A7B9;
+}
+/* line 133, ../scss/brunch.scss */
+.content .color_chip .color_block2 {
+  background-color: #7de8b8;
+}
+/* line 136, ../scss/brunch.scss */
+.content .color_chip .color_block3 {
+  background-color: #764de9;
+}
+/* line 139, ../scss/brunch.scss */
+.content .color_chip .color_block4 {
+  background-color: #67defe;
+}
+
+/* line 145, ../scss/brunch.scss */
+.content_white {
+  background-color: #fff;
+}
+/* line 147, ../scss/brunch.scss */
+.content_white .small_english {
+  color: #D75455;
+}
+/* line 150, ../scss/brunch.scss */
+.content_white .titlehr {
+  border-color: #666;
+}
+/* line 153, ../scss/brunch.scss */
+.content_white .color_block {
+  border: solid 1px #000;
+}
+
+/* line 158, ../scss/brunch.scss */
+.content_coffee {
+  background-color: #86473F;
+  color: #fff;
+  font-weight: lighter;
+}
+/* line 162, ../scss/brunch.scss */
+.content_coffee h5 {
+  color: #DB8E71;
+}
+/* line 165, ../scss/brunch.scss */
+.content_coffee .small_english {
+  color: #F7D94C;
+}
+/* line 168, ../scss/brunch.scss */
+.content_coffee .color_block {
+  border: solid 1px #fff;
+}
+/* line 171, ../scss/brunch.scss */
+.content_coffee .button {
+  font-weight: lighter;
+}
+
+/* line 176, ../scss/brunch.scss */
+.content_light {
+  background-color: #d8cfd9;
+}
+/* line 178, ../scss/brunch.scss */
+.content_light .small_english {
+  color: #D75455;
+}
+/* line 181, ../scss/brunch.scss */
+.content_light .color_block {
+  border: solid 1px #000;
+}
+
+/* line 189, ../scss/brunch.scss */
+.content_brown {
+  background-color: #DB8E71;
+  color: #fff;
+}
+/* line 192, ../scss/brunch.scss */
+.content_brown h5 {
+  color: #666;
+}
+/* line 195, ../scss/brunch.scss */
+.content_brown .small_english {
+  color: #7de8b8;
+}
+/* line 198, ../scss/brunch.scss */
+.content_brown .color_block {
+  border: solid 1px #fff;
+}
+/* line 201, ../scss/brunch.scss */
+.content_brown .button {
+  font-weight: lighter;
+}
+
+/* line 206, ../scss/brunch.scss */
+.footer {
+  text-align: center;
+  font-size: 16px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* line 211, ../scss/brunch.scss */
+.footer a {
+  text-decoration: none;
+}

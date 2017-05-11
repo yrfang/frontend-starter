@@ -1,0 +1,88 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@charset "UTF-8";
+
+$color_white: #efefef;
+$color_red: #ff5353;
+$color_green: #71f561;
+$color_black: #000;
+$color_grey: #666;
+
+// BASE SIZE
+$base_line_width: 4px;
+
+// BREAK WIDTH
+$break_large: 1024px;
+$break_medium: 768px;
+$break_small: 400px;
+
+// FONT SETTING
+$font_family: 'Oswald', sans-serif, 微軟正黑體;
+
+* {
+  font-family: $font_family;
+}
+
+.test {
+  border: solid $base_line_width $color_red;
+  width: 100px;
+  height: 100px;
+}
+
+#test_tag {
+  color: $color_red;
+  h2 {
+    color: $color_grey;
+    p {
+      color: $color_black;
+    }
+  }
+}
+
+@mixin block($length: 50px, $color: #000) {
+  width: $length;
+  height: $length;
+  border: solid 2px $color;
+}
+
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+.block1 {
+  @include block(200px, red);
+  .inner {
+    @include block(50px, tomato);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.block2 {
+  @include block(50px, blue);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.block3 {
+  @include block(50px, green);
+}
+
+.button1 {
+  border: solid 2px $color_red;
+  @include size(80px, 40px);
+}
+
+.button2 {
+  border: solid 4px $color_green;
+  box-shadow: 1px 1px 5px #666;
+  @include size(120px, 80px);
+}

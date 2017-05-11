@@ -1,0 +1,214 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+/*@import "compass/reset";*/
+@charset "UTF-8";
+
+$color_brown: #DB8E71;
+$color_pink: #F4A7B9;
+$color_coffee: #86473F;
+$color_red: #D75455;
+$color_white: #fff;
+$color_yellow: #F7D94C;
+$color_grey: #666;
+$color_light: #d8cfd9;
+$color_black: #000;
+
+$font_base_size: 10px;
+
+$max_content_width: 768px;
+
+* {
+  /*border: solid 1px;*/
+  position: relative;
+  vertical-align: top;
+}
+
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+.maxinwidth {
+  max-width: $max_content_width;
+  // padding-left: auto;
+  // padding-right: auto;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  height: 400px;
+  & img {
+    width: 100%;
+}
+}
+
+.content {
+  font-family: 'Source Sans Pro', sans-serif, 微軟正黑體;
+  padding: 80px 150px;
+  letter-spacing: 2px;
+
+  & .content_part {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-right: 30px;
+    & img {
+      margin: 20px auto;
+      width: 600px;
+      height: 400px;
+      box-shadow: 0 0 10px rgba(96,96,96,.8);
+    }
+  }
+
+  & .content_text {
+    width: 250px;
+  }
+
+  & h5 {
+    margin-top: 10px;
+  }
+
+  & h1 {
+    font-size: $font_base_size*5;
+  }
+  & h1.small_english {
+    font-size: $font_base_size*4;
+  }
+  & .titlehr {
+    width: 100px;
+    border-bottom: solid 5px;
+  }
+  & h2 {
+    font-size: $font_base_size*3;
+    margin-bottom: 10px;
+  }
+  & h2.small_english {
+    font-size: $font_base_size*2.4;
+  }
+  & h3 {
+    font-size: $font_base_size*1.8;
+  }
+  & h3.small_english {
+    font-size: $font_base_size*1.6;
+  }
+  & .small_english {
+    margin-top: 15px;
+  }
+
+  & .button {
+    padding: 5px;
+    padding: 5px 25px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;
+    letter-spacing: 2px;
+    font-size: $font_base_size*1.5;
+    font-weight: bold;
+    border: solid 2px;
+  }
+
+  & .color_chip {
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 15px;
+  & .color_block, & .color_tag {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  & .color_tag {
+    margin-right: 5px;
+  }
+  & .color_block {
+    @include size(30px, 30px);
+  }
+  & .color_block1 {
+    background-color: $color_pink;
+  }
+  & .color_block2 {
+    background-color: #7de8b8;
+  }
+  & .color_block3 {
+    background-color: #764de9;
+  }
+  & .color_block4 {
+    background-color: #67defe;
+  }
+  }
+}
+
+.content_white {
+  background-color: $color_white;
+  & .small_english {
+    color: $color_red;
+  }
+  & .titlehr {
+    border-color: $color_grey;
+  }
+  & .color_block {
+    border: solid 1px $color_black;
+  }
+}
+
+.content_coffee {
+  background-color: $color_coffee;
+  color: $color_white;
+  font-weight: lighter;
+  & h5 {
+    color: $color-brown;
+  }
+  & .small_english {
+    color: $color_yellow;
+  }
+  & .color_block {
+    border: solid 1px $color_white;
+  }
+  & .button {
+    font-weight: lighter;
+  }
+}
+
+.content_light {
+  background-color: $color_light;
+  & .small_english {
+    color: $color_red;
+  }
+  & .color_block {
+    border: solid 1px $color_black;
+  }
+  & .button {
+    // font-weight: lighter;
+  }
+}
+
+.content_brown {
+  background-color: $color_brown;
+  color: $color_white;
+  & h5 {
+    color: $color_grey;
+  }
+  & .small_english {
+    color: #7de8b8;
+  }
+  & .color_block {
+    border: solid 1px $color_white;
+  }
+  & .button {
+    font-weight: lighter;
+  }
+}
+
+.footer {
+  text-align: center;
+  font-size: $font_base_size*1.6;
+  padding-top: 20px;
+  padding-bottom: 20px;
+& a {
+  text-decoration: none;
+}
+}
