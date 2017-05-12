@@ -1,0 +1,59 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+/*@import "compass/reset";*/
+@charset "UTF-8";
+
+* {
+  background-color: white;
+  font-family: 微軟正黑體;
+}
+
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+body, html {
+  background-color: #666;
+}
+
+div {
+  @include size(150px, 50px);
+  border: solid 2px transparent;
+  padding: 20px;
+  margin: 20px;
+&::before {
+  content: "這是前面的";
+  color: #b64eff;
+  content: attr(data-size);
+}
+&::after {
+  content: "這是後面的";
+  color: orange;
+  content: attr(data-color);
+  content: ""
+}
+}
+
+div[data-size="small"] {
+  @include size(150px, 50px);
+}
+div[data-size="medium"] {
+  @include size(250px, 70px);
+}
+div[data-size="big"] {
+  @include size(350px, 100px);
+}
+
+div[data-color="red"] {
+  border-color: #ff0000;
+}
+div[data-color="green"] {
+  border-color: #54d733;
+}
+div[data-color="blue"] {
+  border-color: #3339d7;
+}

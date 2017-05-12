@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*@import "compass/reset";*/
+/* line 9, ../scss/screen.scss */
+* {
+  background-color: white;
+  font-family: 微軟正黑體;
+}
+
+/* line 19, ../scss/screen.scss */
+body, html {
+  background-color: #666;
+}
+
+/* line 23, ../scss/screen.scss */
+div {
+  width: 150px;
+  height: 50px;
+  border: solid 2px transparent;
+  padding: 20px;
+  margin: 20px;
+}
+/* line 28, ../scss/screen.scss */
+div::before {
+  content: "這是前面的";
+  color: #b64eff;
+  content: attr(data-size);
+}
+/* line 33, ../scss/screen.scss */
+div::after {
+  content: "這是後面的";
+  color: orange;
+  content: attr(data-color);
+  content: "";
+}
+
+/* line 41, ../scss/screen.scss */
+div[data-size="small"] {
+  width: 150px;
+  height: 50px;
+}
+
+/* line 44, ../scss/screen.scss */
+div[data-size="medium"] {
+  width: 250px;
+  height: 70px;
+}
+
+/* line 47, ../scss/screen.scss */
+div[data-size="big"] {
+  width: 350px;
+  height: 100px;
+}
+
+/* line 51, ../scss/screen.scss */
+div[data-color="red"] {
+  border-color: #ff0000;
+}
+
+/* line 54, ../scss/screen.scss */
+div[data-color="green"] {
+  border-color: #54d733;
+}
+
+/* line 57, ../scss/screen.scss */
+div[data-color="blue"] {
+  border-color: #3339d7;
+}
