@@ -34,7 +34,7 @@ html, body {
 /* line 52, ../scss/brunch.scss */
 .content {
   font-family: 'Source Sans Pro', sans-serif, 微軟正黑體;
-  padding: 80px 150px;
+  padding: 80px 160px;
   letter-spacing: 2px;
 }
 /* line 57, ../scss/brunch.scss */
@@ -46,8 +46,8 @@ html, body {
 /* line 61, ../scss/brunch.scss */
 .content .content_part img {
   margin: 20px auto;
-  width: 600px;
-  height: 400px;
+  width: 400px;
+  height: 300px;
   box-shadow: 0 0 10px rgba(96, 96, 96, 0.8);
 }
 /* line 69, ../scss/brunch.scss */
@@ -220,10 +220,16 @@ html, body {
 .footer {
   text-align: center;
   font-size: 16px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  font-weight: bolder;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #F4A7B9;
 }
-/* line 211, ../scss/brunch.scss */
+/* line 213, ../scss/brunch.scss */
 .footer a {
   text-decoration: none;
+}
+/* line 215, ../scss/brunch.scss */
+.footer a:visited {
+  color: #F4A7B9;
 }
