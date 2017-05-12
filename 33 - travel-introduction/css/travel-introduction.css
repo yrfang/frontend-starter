@@ -4,26 +4,128 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /*@import "compass/reset";*/
-/* line 9, ../scss/photo-sticker.scss */
+/* line 9, ../scss/travel-introduction.scss */
 * {
-  border: solid 2px;
   font-family: 'Roboto', sans-serif, 微軟正黑體;
   position: relative;
+  box-sizing: border-box;
 }
 
-/* line 20, ../scss/photo-sticker.scss */
+/* line 16, ../scss/travel-introduction.scss */
+::selection {
+  color: #fff;
+  background-color: #40b4bd;
+}
+
+/* line 26, ../scss/travel-introduction.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 31, ../scss/travel-introduction.scss */
 .container {
-  width: 60%;
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  border: solid 2px #777;
 }
 
-/* line 24, ../scss/photo-sticker.scss */
+/* line 38, ../scss/travel-introduction.scss */
 .cover {
   width: 100%;
-  height: 150px;
+  height: 300px;
+  background-image: url("../images/coverphoto.png");
+  background-size: cover;
+  opacity: 0.8;
+  border-bottom: solid 2px #777;
 }
 
-/* line 28, ../scss/photo-sticker.scss */
+/* line 46, ../scss/travel-introduction.scss */
 .bottom {
   width: 100%;
-  height: 200px;
+  height: 350px;
+  display: flex;
+}
+/* line 49, ../scss/travel-introduction.scss */
+.bottom .information {
+  display: block;
+  height: 350px;
+  padding: 10px;
+}
+/* line 54, ../scss/travel-introduction.scss */
+.bottom .left {
+  margin-left: 80px;
+  margin-right: 50px;
+  width: 60%;
+}
+/* line 58, ../scss/travel-introduction.scss */
+.bottom .left h1 {
+  color: #333;
+}
+/* line 61, ../scss/travel-introduction.scss */
+.bottom .left .text {
+  margin-left: 20px;
+  padding-right: 30px;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+  text-align: justify;
+}
+/* line 70, ../scss/travel-introduction.scss */
+.bottom .right {
+  margin-right: 80px;
+  top: -100px;
+  width: 35%;
+  height: 300px;
+  font-size: 16px;
+  vertical-align: top;
+  letter-spacing: 1.2px;
+  background-color: rgba(201, 201, 201, 0.5);
+}
+/* line 79, ../scss/travel-introduction.scss */
+.bottom .right #twd {
+  font-size: 16px;
+}
+/* line 82, ../scss/travel-introduction.scss */
+.bottom .right .price {
+  margin: auto;
+  padding: 10px 20px;
+  font-size: 36px;
+  font-weight: 100;
+  text-align: right;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/* line 91, ../scss/travel-introduction.scss */
+.bottom .right .date {
+  margin: 40px auto;
+  padding: 20px;
+  text-align: right;
+  color: #40b4bd;
+}
+/* line 97, ../scss/travel-introduction.scss */
+.bottom .right .submit {
+  padding: 5px 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: lighter;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #40b4bd;
+}
+/* line 107, ../scss/travel-introduction.scss */
+.bottom .right .home {
+  padding: 20px 20px;
+  text-align: center;
+  font-size: 14px;
+}
+/* line 111, ../scss/travel-introduction.scss */
+.bottom .right .home a {
+  text-decoration: none;
+  color: #40b4bd;
+}
+/* line 115, ../scss/travel-introduction.scss */
+.bottom .right .home a:visited {
+  color: #40b4bd;
 }

@@ -7,9 +7,15 @@
 @charset "UTF-8";
 
 * {
-  border: solid 2px;
+  // border: solid 2px;
   font-family: 'Roboto', sans-serif, 微軟正黑體;
   position: relative;
+  box-sizing: border-box;
+}
+
+::selection {
+  color: #fff;
+  background-color: #40b4bd;
 }
 
 @mixin size($w, $h) {
@@ -17,14 +23,98 @@
   height: $h;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 .container {
-  width: 60%;
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  border: solid 2px #777;
 }
 
 .cover {
-  @include size(100%, 150px);
+  @include size(100%, 300px);
+  background-image: url('../images/coverphoto.png');
+  background-size: cover;
+  opacity: 0.8;
+  border-bottom: solid 2px #777;
 }
 
 .bottom {
-  @include size(100%, 200px);
+  @include size(100%, 350px);
+  display: flex;
+.information {
+  display: block;
+  height: 350px;
+  padding: 10px;
+}
+& .left {
+  margin-left: 80px;
+  margin-right: 50px;
+  width: 60%;
+  & h1 {
+  color: #333;
+  }
+  & .text {
+    margin-left: 20px;
+    padding-right: 30px;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    text-align: justify;
+  }
+}
+
+& .right {
+  margin-right: 80px;
+  top: -100px;
+  width: 35%;
+  height: 300px;
+  font-size: 16px;
+  vertical-align: top;
+  letter-spacing: 1.2px;
+  background-color: rgba(201,201,201,.5);
+  & #twd {
+    font-size: 16px;
+  }
+  & .price {
+    margin: auto;
+    padding: 10px 20px;
+    font-size: 36px;
+    font-weight: 100;
+    text-align: right;
+    color: #fff;
+    background-color: rgba(0, 0, 0,.70);
+  }
+  & .date {
+    margin: 40px auto;
+    padding: 20px;
+    text-align: right;
+    color: #40b4bd;
+  }
+  & .submit {
+    padding: 5px 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: lighter;
+    cursor: pointer;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #40b4bd;
+  }
+  & .home {
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 14px;
+    & a {
+      text-decoration: none;
+      color: #40b4bd;
+    }
+    & a:visited {
+      color: #40b4bd;
+    }
+  }
+}
 }
