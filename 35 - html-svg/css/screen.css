@@ -1,0 +1,117 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 9, ../scss/screen.scss */
+svg {
+  width: 240px;
+  border: solid 2px #000;
+}
+
+/* line 14, ../scss/screen.scss */
+#pic1 {
+  stroke: #000;
+  stroke-width: 3px;
+}
+/* line 17, ../scss/screen.scss */
+#pic1 circle {
+  fill: #fff;
+}
+
+/* line 22, ../scss/screen.scss */
+#pic2 {
+  stroke: #000;
+  stroke-width: 3px;
+}
+/* line 25, ../scss/screen.scss */
+#pic2 circle {
+  fill: #fff;
+}
+/* line 28, ../scss/screen.scss */
+#pic2 rect {
+  fill: none;
+}
+
+/* line 33, ../scss/screen.scss */
+#pic3 {
+  stroke-width: 2px;
+}
+/* line 35, ../scss/screen.scss */
+#pic3 circle {
+  stroke: #000;
+}
+/* line 38, ../scss/screen.scss */
+#pic3 polyline {
+  stroke: #666;
+  fill: none;
+}
+
+/* line 44, ../scss/screen.scss */
+#pic4 {
+  fill: #000;
+}
+
+/* line 48, ../scss/screen.scss */
+#pic5 {
+  stroke: #000;
+  stroke-width: 2px;
+  fill: none;
+}
+/* line 52, ../scss/screen.scss */
+#pic5 .inner {
+  fill: #000;
+}
+/* line 55, ../scss/screen.scss */
+#pic5 circle {
+  fill: #ff0000;
+  stroke: none;
+}
+/* line 59, ../scss/screen.scss */
+#pic5 text {
+  fill: #000;
+  stroke: none;
+  font-family: 微軟正黑體;
+  font-size: 16px;
+}
+/* line 65, ../scss/screen.scss */
+#pic5 .frame_outer, #pic5 .frame_inner, #pic5 .neck, #pic5 .bottom {
+  transform: scale(0);
+  transform-origin: center bottom;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+}
+/* line 72, ../scss/screen.scss */
+#pic5 .screen_content {
+  opacity: 0;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+/* line 78, ../scss/screen.scss */
+#pic5:hover .frame_outer, #pic5:hover .frame_inner, #pic5:hover .neck, #pic5:hover .bottom {
+  transform: scale(1);
+  transition-delay: 0.5s;
+}
+/* line 82, ../scss/screen.scss */
+#pic5:hover .neck, #pic5:hover .bottom {
+  transition-delay: 0s;
+}
+/* line 85, ../scss/screen.scss */
+#pic5:hover .screen_content {
+  opacity: 1;
+  transition-delay: 1s;
+}
+
+/* line 92, ../scss/screen.scss */
+footer {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  text-align: center;
+}
+/* line 97, ../scss/screen.scss */
+footer a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #777;
+}

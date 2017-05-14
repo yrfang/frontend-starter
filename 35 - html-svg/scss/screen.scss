@@ -1,0 +1,102 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+// @import "compass/reset";
+@charset "UTF-8";
+
+svg {
+  width: 240px;
+  border: solid 2px #000;
+}
+
+#pic1 {
+  stroke: #000;
+  stroke-width: 3px;
+  & circle {
+    fill: #fff;
+  }
+}
+
+#pic2 {
+  stroke: #000;
+  stroke-width: 3px;
+  & circle {
+    fill: #fff;
+  }
+  & rect {
+    fill: none;
+  }
+}
+
+#pic3 {
+  stroke-width: 2px;
+  & circle {
+    stroke: #000;
+  }
+  & polyline {
+    stroke: #666;
+    fill: none;
+  }
+}
+
+#pic4 {
+  fill: #000;
+}
+
+#pic5 {
+  stroke: #000;
+  stroke-width: 2px;
+  fill: none;
+  & .inner {
+    fill: #000;
+  }
+  & circle {
+    fill: #ff0000;
+    stroke: none;
+  }
+  & text {
+    fill: #000;
+    stroke: none;
+    font-family: 微軟正黑體;
+    font-size: 16px;
+  }
+  .frame_outer,.frame_inner,.neck,.bottom {
+    transform: scale(0);
+    transform-origin: center bottom;
+
+    transition-duration: 0.5s;
+    transition-delay: 0.5s;
+  }
+  .screen_content {
+    opacity: 0;
+    transition-duration: 0.5s;
+    transition-delay: 0s;
+  }
+  &:hover {
+    .frame_outer,.frame_inner,.neck,.bottom {
+      transform: scale(1);
+      transition-delay: 0.5s;
+    }
+    .neck, .bottom {
+      transition-delay: 0s;
+    }
+    .screen_content {
+      opacity: 1;
+      transition-delay: 1s;
+    }
+  }
+}
+
+footer {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  text-align: center;
+  & a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #777;
+  }
+}
