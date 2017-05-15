@@ -1,0 +1,361 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*@import "compass/reset";*/
+/* line 14, ../scss/screen.scss */
+* {
+  position: relative;
+  font-family: 'Hind Vadodara', sans-serif, 微軟正黑體;
+}
+
+/* line 20, ../scss/screen.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+}
+
+/* line 31, ../scss/screen.scss */
+.daybox {
+  width: 50%;
+  max-width: 400px;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* line 40, ../scss/screen.scss */
+.daybox:hover .bottom {
+  height: 100px;
+}
+/* line 43, ../scss/screen.scss */
+.daybox:hover .dayweather {
+  opacity: 1;
+  top: 0px;
+}
+
+/* line 50, ../scss/screen.scss */
+.top {
+  height: 300px;
+  background: linear-gradient(20deg, #5083af, #254f74, #0d2b46);
+  background-size: 100% 300%;
+  animation: daylight 5s linear both;
+  transition-duration: 0.5s;
+  border-radius: 8px 8px 0 0;
+}
+@keyframes daylight {
+  0% {
+    background-position: 100% 30%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+/* line 63, ../scss/screen.scss */
+.top .moon {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  box-shadow: 15px -15px #000;
+  position: absolute;
+  left: 30px;
+  top: 80px;
+  animation: moonmove 10s infinite;
+}
+@keyframes moonmove {
+  0% {
+    box-shadow: 15px -15px 0 0 #FFD633;
+    transform: translateX(-15px) translateY(15px);
+  }
+  100% {
+    box-shadow: -15px 15px 0 0 #FFD633;
+    transform: translateX(15px) translateY(-15px);
+  }
+}
+/* line 80, ../scss/screen.scss */
+.top .cloud {
+  width: 100px;
+  height: 36px;
+  position: absolute;
+  left: 200px;
+  bottom: 50px;
+  border-radius: 20px;
+  animation: cloudDrift 2s infinite;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+/* line 90, ../scss/screen.scss */
+.top .cloud:before, .top .cloud:after {
+  width: 50px;
+  height: 50px;
+  content: "";
+  display: block;
+  border: solid 1px #fff;
+  border-radius: 100%;
+  position: absolute;
+  background-color: #fff;
+}
+/* line 99, ../scss/screen.scss */
+.top .cloud:before {
+  left: 16px;
+  top: -28px;
+}
+/* line 103, ../scss/screen.scss */
+.top .cloud:after {
+  left: 35px;
+  top: -20px;
+}
+
+@keyframes cloudDrift {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+/* line 125, ../scss/screen.scss */
+.rain {
+  width: 2px;
+  height: 10px;
+  position: absolute;
+  left: 45px;
+  bottom: 15px;
+  animation: raindrop 1s infinite;
+  background-color: #fff;
+}
+
+/* line 134, ../scss/screen.scss */
+.rain2 {
+  left: 70px;
+  bottom: 20px;
+  animation-delay: -0.4s;
+}
+
+/* line 140, ../scss/screen.scss */
+.rain3 {
+  left: 30px;
+  bottom: 30px;
+  animation-delay: -0.7s;
+}
+
+@keyframes raindrop {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  100% {
+    -webkit-transform: translateY(60px);
+    transform: translateY(60px);
+    opacity: 0;
+  }
+}
+/* line 162, ../scss/screen.scss */
+.temsvg {
+  bottom: 30px;
+  width: 100%;
+  stroke: #fff;
+}
+/* line 166, ../scss/screen.scss */
+.temsvg circle {
+  fill: #fff;
+  stroke-width: 1px;
+  opacity: 0.05s;
+  -webkit-transition: 0.5s 0.2s;
+}
+/* line 172, ../scss/screen.scss */
+.temsvg polyline {
+  fill: none;
+  stroke-width: 2px;
+  opacity: 0.2;
+}
+/* line 177, ../scss/screen.scss */
+.temsvg text {
+  stroke-width: 1px;
+  transform: translateX(-10px) translateY(20px);
+  font-size: 12px;
+  font-weight: lighter;
+  color: #fff;
+  opacity: 0;
+}
+
+/* line 187, ../scss/screen.scss */
+.bottom {
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 0px 0px 8px 8px;
+  transition-duration: 2s;
+  overflow: hidden;
+}
+/* line 196, ../scss/screen.scss */
+.bottom .dayweather {
+  width: calc(100% / 7 - 5px);
+  display: inline-block;
+  text-align: center;
+  opacity: 0;
+  top: 20px;
+  transition: 0.5s;
+}
+/* line 204, ../scss/screen.scss */
+.bottom .dayweather h3 {
+  font-size: 8px;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 400;
+  letter-spacing: 1pxl;
+}
+/* line 211, ../scss/screen.scss */
+.bottom .dayweather svg {
+  width: 100%;
+  max-width: 40px;
+  height: 40px;
+}
+/* line 216, ../scss/screen.scss */
+.bottom .dayweather svg .sun {
+  fill: #ebda49;
+  stroke-width: 25px;
+  stroke: #ebda49;
+  stroke-dasharray: 5px;
+}
+/* line 222, ../scss/screen.scss */
+.bottom .dayweather svg .cloud {
+  fill: #888;
+}
+/* line 225, ../scss/screen.scss */
+.bottom .dayweather svg .rain {
+  stroke: #333;
+  stroke-width: 5px;
+}
+
+/* line 233, ../scss/screen.scss */
+.dayweather:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+/* line 236, ../scss/screen.scss */
+.dayweather:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+/* line 239, ../scss/screen.scss */
+.dayweather:nth-child(3) {
+  transition-delay: 0.6s;
+}
+
+/* line 242, ../scss/screen.scss */
+.dayweather:nth-child(4) {
+  transition-delay: 0.8s;
+}
+
+/* line 245, ../scss/screen.scss */
+.dayweather:nth-child(5) {
+  transition-delay: 1.0s;
+}
+
+/* line 248, ../scss/screen.scss */
+.dayweather:nth-child(6) {
+  transition-delay: 1.2s;
+}
+
+/* line 251, ../scss/screen.scss */
+.dayweather:nth-child(7) {
+  transition-delay: 1.4s;
+}
+
+/* line 255, ../scss/screen.scss */
+.text_area {
+  display: inline-block;
+  position: relative;
+  top: 10px;
+  left: 20px;
+  bottom: 10px;
+  color: #fff;
+  /*margin-bottom: 15px;*/
+}
+/* line 264, ../scss/screen.scss */
+.text_area .temperature {
+  font-size: 75px;
+  line-height: 70px;
+}
+/* line 268, ../scss/screen.scss */
+.text_area .info {
+  font-size: 13px;
+  opacity: 0.5;
+}
+
+/* line 274, ../scss/screen.scss */
+.moon, .cloud {
+  transition: 0.5s;
+}
+
+/* line 277, ../scss/screen.scss */
+.temsvg {
+  transition: 0.5s;
+}
+/* line 279, ../scss/screen.scss */
+.temsvg circle {
+  transition-delay: 0.5s;
+}
+/* line 282, ../scss/screen.scss */
+.temsvg polyline {
+  transition-delay: 0.5s;
+}
+/* line 285, ../scss/screen.scss */
+.temsvg text {
+  transition-delay: 1s;
+}
+
+/* line 291, ../scss/screen.scss */
+#switch_night:checked + .top .moon, #switch_night:checked + .top .cloud {
+  opacity: 0.2;
+}
+/* line 295, ../scss/screen.scss */
+#switch_night:checked + .top .temsvg circle, #switch_night:checked + .top .temsvg polyline, #switch_night:checked + .top .temsvg text {
+  opacity: 1;
+}
+
+/* line 301, ../scss/screen.scss */
+#switch_night {
+  display: none;
+}
+
+/* line 305, ../scss/screen.scss */
+label {
+  cursor: pointer;
+}
+
+/* line 309, ../scss/screen.scss */
+footer {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%) translateY(-50%);
+}
+/* line 314, ../scss/screen.scss */
+footer a {
+  font-size: 16px;
+  color: #666;
+  text-decoration: none;
+}
+/* line 319, ../scss/screen.scss */
+footer a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}

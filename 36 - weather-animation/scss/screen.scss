@@ -12,18 +12,53 @@
 }
 
 * {
-  border: solid 1px #000;
+  // border: solid 1px #000;
   position: relative;
   font-family: 'Hind Vadodara', sans-serif, 微軟正黑體;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
 }
 
 .daybox {
   width: 50%;
   max-width: 400px;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover {
+    .bottom {
+      height: 100px;
+    }
+    .dayweather {
+      opacity: 1;
+      top: 0px;
+    }
+  }
 }
 
 .top {
   height: 300px;
+  background: linear-gradient(20deg, #5083af, #254f74, #0d2b46);
+  background-size: 100% 300%;
+  animation: daylight 5s linear both;
+  transition-duration: 0.5s;
+  border-radius: 8px 8px 0 0;
+
+  @keyframes daylight {
+    0% {background-position: 100% 30%}
+    100% {background-position: 100% 100%}
+  }
 
   .moon {
     @include size(80px, 80px);
@@ -31,8 +66,8 @@
     box-shadow: 15px -15px #000;
     position:  absolute;
     left: 30px;
-    top: 40px;
-    animation: moonmove 2s infinite;
+    top: 80px;
+    animation: moonmove 10s infinite;
 
     @keyframes moonmove {
       0% {box-shadow: 15px -15px 0 0 #FFD633;
@@ -49,14 +84,17 @@
     bottom: 50px;
     border-radius: 20px;
     animation: cloudDrift 2s infinite;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
 
     &:before, &:after {
       @include size(50px, 50px);
       content: "";
       display: block;
-      border: solid 1px;
+      border: solid 1px #fff;
       border-radius: 100%;
       position: absolute;
+      background-color: #fff;
     }
     &:before {
       left: 16px;
@@ -90,6 +128,7 @@
   left: 45px;
   bottom: 15px;
   animation: raindrop 1s infinite;
+  background-color: #fff;
 }
 
 .rain2 {
@@ -121,54 +160,105 @@
 }
 
 .temsvg {
+  bottom: 30px;
   width: 100%;
-  stroke: #000;
+  stroke: #fff;
   & circle {
-    fill: #000;
-    stroke: #fff;
+    fill: #fff;
     stroke-width: 1px;
     opacity: 0.05s;
     -webkit-transition: 0.5s 0.2s;
   }
   & polyline {
     fill: none;
-    stroke: #000;
     stroke-width: 2px;
+    opacity: 0.2;
   }
   & text {
     stroke-width: 1px;
     transform: translateX(-10px) translateY(20px);
-    font-size: 10px;
+    font-size: 12px;
+    font-weight: lighter;
+    color: #fff;
+    opacity: 0;
   }
 }
 
 .bottom {
-  height: 100px;
+  height: 10px;
   display: flex;
   justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+  border-radius: 0px 0px 8px 8px;
+  transition-duration: 2s;
+  overflow: hidden;
 
   .dayweather {
     width: calc(100% / 7 - 5px);
     display: inline-block;
     text-align: center;
+    opacity: 0;
+    top: 20px;
+    transition: 0.5s;
 
     h3 {
       font-size: 8px;
+      color: rgba(#000,.8);
+      font-weight: 400;
+      letter-spacing: 1pxl
     }
 
     svg {
       width: 100%;
       max-width: 40px;
       height: 40px;
+
+      & .sun {
+        fill: #ebda49;
+        stroke-width: 25px;
+        stroke: #ebda49;
+        stroke-dasharray: 5px;
+      }
+      & .cloud {
+        fill: #888;
+      }
+      & .rain {
+        stroke: #333;
+        stroke-width: 5px
+      }
     }
   }
+}
+
+.dayweather:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.dayweather:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.dayweather:nth-child(3) {
+  transition-delay: 0.6s;
+}
+.dayweather:nth-child(4) {
+  transition-delay: 0.8s;
+}
+.dayweather:nth-child(5) {
+  transition-delay: 1.0s;
+}
+.dayweather:nth-child(6) {
+  transition-delay: 1.2s;
+}
+.dayweather:nth-child(7) {
+  transition-delay: 1.4s;
 }
 
 .text_area {
   display: inline-block;
   position: relative;
+  top: 10px;
   left: 20px;
-  bottom: 20px;
+  bottom: 10px;
+  color: #fff;
   /*margin-bottom: 15px;*/
 
   .temperature {
@@ -177,5 +267,56 @@
   }
   .info {
     font-size: 13px;
+    opacity: 0.5;
+  }
+}
+
+.moon, .cloud {
+  transition: 0.5s;
+}
+.temsvg {
+  transition: 0.5s;
+  & circle {
+    transition-delay: 0.5s;
+  }
+  & polyline {
+    transition-delay: 0.5s;
+  }
+  & text {
+    transition-delay: 1s;
+  }
+}
+
+#switch_night:checked+.top {
+  .moon, .cloud {
+    opacity: 0.2;
+  }
+  .temsvg {
+    & circle, & polyline, & text {
+      opacity: 1;
+    }
+  }
+}
+
+#switch_night {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+footer {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%) translateY(-50%);
+  & a {
+    font-size: 16px;
+    color: #666;
+    text-decoration: none;
+  }
+  & a:hover {
+    color: rgba(#fff,.7);
   }
 }
