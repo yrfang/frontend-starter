@@ -1,0 +1,194 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*@import "compass/reset";*/
+/* line 14, ../scss/screen.scss */
+* {
+  border: solid 1px #000;
+  position: relative;
+  font-family: 'Hind Vadodara', sans-serif, 微軟正黑體;
+}
+
+/* line 20, ../scss/screen.scss */
+.daybox {
+  width: 50%;
+  max-width: 400px;
+}
+
+/* line 25, ../scss/screen.scss */
+.top {
+  height: 300px;
+}
+/* line 28, ../scss/screen.scss */
+.top .moon {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  box-shadow: 15px -15px #000;
+  position: absolute;
+  left: 30px;
+  top: 40px;
+  animation: moonmove 2s infinite;
+}
+@keyframes moonmove {
+  0% {
+    box-shadow: 15px -15px 0 0 #FFD633;
+    transform: translateX(-15px) translateY(15px);
+  }
+  100% {
+    box-shadow: -15px 15px 0 0 #FFD633;
+    transform: translateX(15px) translateY(-15px);
+  }
+}
+/* line 45, ../scss/screen.scss */
+.top .cloud {
+  width: 100px;
+  height: 36px;
+  position: absolute;
+  left: 200px;
+  bottom: 50px;
+  border-radius: 20px;
+  animation: cloudDrift 2s infinite;
+}
+/* line 53, ../scss/screen.scss */
+.top .cloud:before, .top .cloud:after {
+  width: 50px;
+  height: 50px;
+  content: "";
+  display: block;
+  border: solid 1px;
+  border-radius: 100%;
+  position: absolute;
+}
+/* line 61, ../scss/screen.scss */
+.top .cloud:before {
+  left: 16px;
+  top: -28px;
+}
+/* line 65, ../scss/screen.scss */
+.top .cloud:after {
+  left: 35px;
+  top: -20px;
+}
+
+@keyframes cloudDrift {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+/* line 87, ../scss/screen.scss */
+.rain {
+  width: 2px;
+  height: 10px;
+  position: absolute;
+  left: 45px;
+  bottom: 15px;
+  animation: raindrop 1s infinite;
+}
+
+/* line 95, ../scss/screen.scss */
+.rain2 {
+  left: 70px;
+  bottom: 20px;
+  animation-delay: -0.4s;
+}
+
+/* line 101, ../scss/screen.scss */
+.rain3 {
+  left: 30px;
+  bottom: 30px;
+  animation-delay: -0.7s;
+}
+
+@keyframes raindrop {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  100% {
+    -webkit-transform: translateY(60px);
+    transform: translateY(60px);
+    opacity: 0;
+  }
+}
+/* line 123, ../scss/screen.scss */
+.temsvg {
+  width: 100%;
+  stroke: #000;
+}
+/* line 126, ../scss/screen.scss */
+.temsvg circle {
+  fill: #000;
+  stroke: #fff;
+  stroke-width: 1px;
+  opacity: 0.05s;
+  -webkit-transition: 0.5s 0.2s;
+}
+/* line 133, ../scss/screen.scss */
+.temsvg polyline {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+}
+/* line 138, ../scss/screen.scss */
+.temsvg text {
+  stroke-width: 1px;
+  transform: translateX(-10px) translateY(20px);
+  font-size: 10px;
+}
+
+/* line 145, ../scss/screen.scss */
+.bottom {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+/* line 150, ../scss/screen.scss */
+.bottom .dayweather {
+  width: calc(100% / 7 - 5px);
+  display: inline-block;
+  text-align: center;
+}
+/* line 155, ../scss/screen.scss */
+.bottom .dayweather h3 {
+  font-size: 8px;
+}
+/* line 159, ../scss/screen.scss */
+.bottom .dayweather svg {
+  width: 100%;
+  max-width: 40px;
+  height: 40px;
+}
+
+/* line 167, ../scss/screen.scss */
+.text_area {
+  display: inline-block;
+  position: relative;
+  left: 20px;
+  bottom: 20px;
+  /*margin-bottom: 15px;*/
+}
+/* line 174, ../scss/screen.scss */
+.text_area .temperature {
+  font-size: 75px;
+  line-height: 70px;
+}
+/* line 178, ../scss/screen.scss */
+.text_area .info {
+  font-size: 13px;
+}
