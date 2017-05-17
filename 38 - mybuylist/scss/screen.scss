@@ -132,3 +132,18 @@ h1 {
     background-color: transparent;
   }
 }
+
+footer {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%) translateY(-50%);
+  & a {
+    font-size: 16px;
+    color: #666;
+    text-decoration: none;
+  }
+  & a:hover {
+    color: rgba(#fff,.7);
+  }
+}

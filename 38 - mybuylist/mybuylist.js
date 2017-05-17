@@ -20,17 +20,22 @@ $(document).ready(function() {
   showList();
 
   $(".addbtn").click(function() {
-    //使用val()存取輸入的值，val("..") 有給參數是設定
-    shoplist.list.push(
-      {
-        name:$("#input_name").val(),
-        price: $("#input_price").val()
-      }
-    );
 
-    $("#input_name").val("");
-    $("#input_price").val("");
-    showList();
+    if ($("#input_name").val().trim() == 0 || $("#input_price").val().trim() == 0) {
+      return;
+    } else {
+      //使用val()存取輸入的值，val("..") 有給參數是設定
+      shoplist.list.push(
+        {
+          name:$("#input_name").val(),
+          price: $("#input_price").val()
+        }
+      );
+
+      $("#input_name").val("");
+      $("#input_price").val("");
+      showList();
+    }
 
   });
 
