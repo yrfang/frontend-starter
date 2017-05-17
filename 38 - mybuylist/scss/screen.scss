@@ -7,26 +7,36 @@
 @charset "UTF-8";
 
 * {
-  border: solid 1px;
+  // border: solid 1px;
   position: relative;
+  font-family: arial, 微軟正黑體;
 }
 
 html, body {
   width: 100%;
   height: 100%;
   margin: 0;
+  padding: 0;
+  // position: absolute;
+  // left: 0;
+  // top: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
+  background-color: #FFC954;
+  z-index: -10;
 }
 
 #buylist {
+  border: 3px solid #000;
   display: inline-block;
-  // position: absolute;
-  // left: 50%;
-  // top: 50%;
-  // transform: translate(-50%, -50%);
+  position: absolute;
+  // // left: 50%;
+  top: 150px;
+  // // transform: translateY(-50%);
   padding: 20px;
+  background-color: #e3e3e3;
+  box-shadow: 0px 0px 30px rgba(0,0,0,0.2);
 }
 
 h1 {
@@ -34,17 +44,41 @@ h1 {
   margin-top: -20px;
   margin-left: -20px;
   margin-right: -20px;
+  border-bottom: 3px solid #000;
+  background-color: #57dd8d;
+  color: #fff;
+  font-weight: bold;
+  // overflow: hidden;
+
 }
 
 .buyitem {
-  padding: 5px;
+  padding: 15px;
+  font-size: 16px;
+  vertical-align: middle;
+  font-weight: 700;
+
+  & label {
+    margin-right: 5px;
+    padding: 5px;
+    vertical-align: middle;
+  }
+
+  & input {
+    width: 100px;
+    border: solid 3px;
+    padding: 5px;
+    vertical-align: middle;
+  }
 
   & .addbtn {
     cursor: pointer;
     margin-left: 10px;
     padding: 5px;
+    vertical-align: middle;
+    border: 3px solid #333;
     &:hover {
-      background-color: #000;
+      background-color: #f93f3f;
       color: #fff;
     }
   }
@@ -53,6 +87,7 @@ h1 {
 #item_list {
   margin-top: 10px;
   padding: 5px;
+  vertical-align: middle;
 }
 
 .buy_item {
@@ -60,13 +95,7 @@ h1 {
   list-style: none;
   border: solid 3px #444;
   margin-top: 10px;
-  font-weight: 900;
-
-  & input {
-    width: 100px;
-    border: solid 3px;
-    padding: 2px;
-  }
+  font-weight: 700;
 
   & .price {
     display: inline-block;
@@ -74,6 +103,11 @@ h1 {
     padding-left: 8px;
     padding-right: 8px;
     right: 50px;
+    background-color: #FFC954;
+
+    &:after {
+      content: " $";
+    }
   }
 
   & .del_btn {
@@ -82,9 +116,19 @@ h1 {
     padding: 0px 6px;
     right: 10px;
     cursor: pointer;
+    vertical-align: middle;
+
     &:hover {
-      background-color: #000;
+      background-color: #f93f3f;
       color: #fff;
     }
+  }
+}
+
+.total {
+  background-color: #57dd8d;
+  color: #fff;
+  & .price {
+    background-color: transparent;
   }
 }

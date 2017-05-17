@@ -1,0 +1,132 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 9, ../scss/screen.scss */
+* {
+  position: relative;
+  font-family: arial, 微軟正黑體;
+}
+
+/* line 15, ../scss/screen.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #FFC954;
+  z-index: -10;
+}
+
+/* line 30, ../scss/screen.scss */
+#buylist {
+  border: 3px solid #000;
+  display: inline-block;
+  position: absolute;
+  top: 150px;
+  padding: 20px;
+  background-color: #e3e3e3;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* line 42, ../scss/screen.scss */
+h1 {
+  padding: 20px;
+  margin-top: -20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  border-bottom: 3px solid #000;
+  background-color: #57dd8d;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* line 55, ../scss/screen.scss */
+.buyitem {
+  padding: 15px;
+  font-size: 16px;
+  vertical-align: middle;
+  font-weight: 700;
+}
+/* line 61, ../scss/screen.scss */
+.buyitem label {
+  margin-right: 5px;
+  padding: 5px;
+  vertical-align: middle;
+}
+/* line 67, ../scss/screen.scss */
+.buyitem input {
+  width: 100px;
+  border: solid 3px;
+  padding: 5px;
+  vertical-align: middle;
+}
+/* line 74, ../scss/screen.scss */
+.buyitem .addbtn {
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 5px;
+  vertical-align: middle;
+  border: 3px solid #333;
+}
+/* line 80, ../scss/screen.scss */
+.buyitem .addbtn:hover {
+  background-color: #f93f3f;
+  color: #fff;
+}
+
+/* line 87, ../scss/screen.scss */
+#item_list {
+  margin-top: 10px;
+  padding: 5px;
+  vertical-align: middle;
+}
+
+/* line 93, ../scss/screen.scss */
+.buy_item {
+  padding: 5px;
+  list-style: none;
+  border: solid 3px #444;
+  margin-top: 10px;
+  font-weight: 700;
+}
+/* line 100, ../scss/screen.scss */
+.buy_item .price {
+  display: inline-block;
+  position: absolute;
+  padding-left: 8px;
+  padding-right: 8px;
+  right: 50px;
+  background-color: #FFC954;
+}
+/* line 108, ../scss/screen.scss */
+.buy_item .price:after {
+  content: " $";
+}
+/* line 113, ../scss/screen.scss */
+.buy_item .del_btn {
+  display: inline-block;
+  position: absolute;
+  padding: 0px 6px;
+  right: 10px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+/* line 121, ../scss/screen.scss */
+.buy_item .del_btn:hover {
+  background-color: #f93f3f;
+  color: #fff;
+}
+
+/* line 128, ../scss/screen.scss */
+.total {
+  background-color: #57dd8d;
+  color: #fff;
+}
+/* line 131, ../scss/screen.scss */
+.total .price {
+  background-color: transparent;
+}
