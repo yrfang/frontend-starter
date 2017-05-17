@@ -32,7 +32,7 @@ html, body {
   display: inline-block;
   position: absolute;
   // // left: 50%;
-  top: 150px;
+  top: 120px;
   // // transform: translateY(-50%);
   padding: 20px;
   background-color: #e3e3e3;
@@ -69,6 +69,10 @@ h1 {
     border: solid 3px;
     padding: 5px;
     vertical-align: middle;
+    outline: none;
+    & input:focus::-webkit-input-placeholder{
+      opacity: 0;
+    }
   }
 
   & .addbtn {
@@ -87,7 +91,6 @@ h1 {
 #item_list {
   margin-top: 10px;
   padding: 5px;
-  vertical-align: middle;
 }
 
 .buy_item {
@@ -96,14 +99,18 @@ h1 {
   border: solid 3px #444;
   margin-top: 10px;
   font-weight: 700;
+  vertical-align: middle;
 
   & .price {
     display: inline-block;
     position: absolute;
+    padding-top: 1px;
+    padding-bottom: 1px;
     padding-left: 8px;
     padding-right: 8px;
     right: 50px;
     background-color: #FFC954;
+    vertical-align: middle;
 
     &:after {
       content: " $";

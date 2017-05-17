@@ -26,7 +26,7 @@ html, body {
   border: 3px solid #000;
   display: inline-block;
   position: absolute;
-  top: 150px;
+  top: 120px;
   padding: 20px;
   background-color: #e3e3e3;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
@@ -63,8 +63,13 @@ h1 {
   border: solid 3px;
   padding: 5px;
   vertical-align: middle;
+  outline: none;
 }
-/* line 74, ../scss/screen.scss */
+/* line 73, ../scss/screen.scss */
+.buyitem input input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+/* line 78, ../scss/screen.scss */
 .buyitem .addbtn {
   cursor: pointer;
   margin-left: 10px;
@@ -72,41 +77,44 @@ h1 {
   vertical-align: middle;
   border: 3px solid #333;
 }
-/* line 80, ../scss/screen.scss */
+/* line 84, ../scss/screen.scss */
 .buyitem .addbtn:hover {
   background-color: #f93f3f;
   color: #fff;
 }
 
-/* line 87, ../scss/screen.scss */
+/* line 91, ../scss/screen.scss */
 #item_list {
   margin-top: 10px;
   padding: 5px;
-  vertical-align: middle;
 }
 
-/* line 93, ../scss/screen.scss */
+/* line 96, ../scss/screen.scss */
 .buy_item {
   padding: 5px;
   list-style: none;
   border: solid 3px #444;
   margin-top: 10px;
   font-weight: 700;
+  vertical-align: middle;
 }
-/* line 100, ../scss/screen.scss */
+/* line 104, ../scss/screen.scss */
 .buy_item .price {
   display: inline-block;
   position: absolute;
+  padding-top: 1px;
+  padding-bottom: 1px;
   padding-left: 8px;
   padding-right: 8px;
   right: 50px;
   background-color: #FFC954;
+  vertical-align: middle;
 }
-/* line 108, ../scss/screen.scss */
+/* line 115, ../scss/screen.scss */
 .buy_item .price:after {
   content: " $";
 }
-/* line 113, ../scss/screen.scss */
+/* line 120, ../scss/screen.scss */
 .buy_item .del_btn {
   display: inline-block;
   position: absolute;
@@ -115,36 +123,36 @@ h1 {
   cursor: pointer;
   vertical-align: middle;
 }
-/* line 121, ../scss/screen.scss */
+/* line 128, ../scss/screen.scss */
 .buy_item .del_btn:hover {
   background-color: #f93f3f;
   color: #fff;
 }
 
-/* line 128, ../scss/screen.scss */
+/* line 135, ../scss/screen.scss */
 .total {
   background-color: #57dd8d;
   color: #fff;
 }
-/* line 131, ../scss/screen.scss */
+/* line 138, ../scss/screen.scss */
 .total .price {
   background-color: transparent;
 }
 
-/* line 136, ../scss/screen.scss */
+/* line 143, ../scss/screen.scss */
 footer {
   position: absolute;
   left: 50%;
   bottom: 10px;
   transform: translateX(-50%) translateY(-50%);
 }
-/* line 141, ../scss/screen.scss */
+/* line 148, ../scss/screen.scss */
 footer a {
   font-size: 16px;
   color: #666;
   text-decoration: none;
 }
-/* line 146, ../scss/screen.scss */
+/* line 153, ../scss/screen.scss */
 footer a:hover {
   color: rgba(255, 255, 255, 0.7);
 }
