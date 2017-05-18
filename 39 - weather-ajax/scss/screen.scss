@@ -1,0 +1,94 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+// @import "compass/reset";
+@charset "UTF-8";
+
+* {
+  // border: solid 1px #000;
+  font-family: 'Roboto', sans-serif, 微軟正黑體;
+  position: relative;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 30px;
+}
+
+.data_container, h2 {
+  border: 2px solid #000;
+  padding: 20px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+
+  #listitem {
+    margin: 0;
+    padding: 20px;
+
+    & ul {
+      padding: 0;
+    }
+
+    & li {
+      list-style: none;
+    }
+  }
+}
+
+.location {
+  font-size: 16px;
+  padding: 8px;
+
+  & .temp {
+    display: inline-block;
+    position: absolute;
+    padding-top: auto;
+    padding-bottom: auto;
+    padding-left: 9px;
+    padding-right: 9px;
+    right: 40px;
+    background-color: #FFC954;
+    vertical-align: middle;
+    // &:after {
+    //   content: " (°C)"
+    // }
+  }
+}
+
+.title {
+  font-weight: 400;
+  color: #000;
+}
+
+.fa fa-sun-o {
+  display: block;
+  position: relative;
+  right: 10px;
+  font-style: 24px;
+  background-color: transparent;
+  color: #ff0000;
+}
+
+footer {
+  position: fixed;
+  left: 50%;
+  bottom: 0px;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: rgba(#c9c9c9, 0.35);
+  & a {
+    padding: 5px;
+    font-size: 16px;
+    color: #FFC954;
+    text-decoration: none;
+  }
+  & a:visited {
+    color: #FFC954;
+  }
+}
