@@ -5,7 +5,6 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /* line 9, ../scss/screen.scss */
 * {
-  border: 1px solid #000;
   font-family: arial, 微軟正黑體;
   vertical-align: middle;
 }
@@ -17,6 +16,7 @@ html, body {
   position: relative;
   vertical-align: top;
   box-sizing: border-box;
+  background-color: rgba(232, 232, 232, 0.8);
 }
 
 /* line 24, ../scss/screen.scss */
@@ -32,15 +32,15 @@ html, body {
 /* line 35, ../scss/screen.scss */
 .top_bar {
   height: 60px;
-  background-color: #fbdcac;
+  background-color: rgba(255, 234, 203, 0.85);
 }
 /* line 38, ../scss/screen.scss */
 .top_bar .icon {
   height: 40px;
-  margin: 10px;
+  margin: 8px;
   margin-left: 15px;
   margin-right: 5px;
-  border: 2px solid #f7a52a;
+  border: 3px solid #f7a52a;
   border-radius: 100%;
 }
 /* line 46, ../scss/screen.scss */
@@ -71,9 +71,10 @@ html, body {
 /* line 70, ../scss/screen.scss */
 .middle_bar {
   height: 50px;
-  background-color: #eee;
+  background-color: rgba(255, 234, 203, 0.85);
+  border-bottom: solid 2px rgba(187, 187, 187, 0.75);
 }
-/* line 73, ../scss/screen.scss */
+/* line 74, ../scss/screen.scss */
 .middle_bar .person_img {
   width: 170px;
   height: 170px;
@@ -84,169 +85,208 @@ html, body {
   border: solid 4px #fff;
   background-image: url("https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/O5KRF826GG.jpg");
   background-position: center center;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 180%;
 }
-/* line 85, ../scss/screen.scss */
+/* line 87, ../scss/screen.scss */
 .middle_bar .name_container {
   position: absolute;
   top: 50%;
-  right: -160px;
+  right: -200px;
   transform: translateY(-50%);
   letter-spacing: 2px;
 }
-/* line 91, ../scss/screen.scss */
+/* line 93, ../scss/screen.scss */
 .middle_bar .name_container h2, .middle_bar .name_container h5 {
   margin: 0;
   font-size: 14px;
 }
-/* line 95, ../scss/screen.scss */
+/* line 97, ../scss/screen.scss */
 .middle_bar .name_container h2 {
   font-size: 32px;
 }
 
-/* line 101, ../scss/screen.scss */
+/* line 103, ../scss/screen.scss */
 .bottom_bar {
   background-color: #ffffff;
   color: #000;
   padding: 18px;
 }
 
-/* line 108, ../scss/screen.scss */
+/* line 110, ../scss/screen.scss */
 .block {
   display: inline-block;
-  padding: 8px;
+  padding: 20px;
   box-sizing: border-box;
   height: 250px;
   font-size: 16px;
   text-align: left;
 }
-/* line 115, ../scss/screen.scss */
+/* line 117, ../scss/screen.scss */
 .block h3 {
   font-size: 28px;
+  letter-spacing: 1.5px;
   margin-bottom: 15px;
 }
-/* line 119, ../scss/screen.scss */
+/* line 122, ../scss/screen.scss */
 .block h4 {
   font-size: 24px;
-  color: red;
+  color: #ff7937;
+}
+/* line 126, ../scss/screen.scss */
+.block p {
+  text-align: justify;
 }
 
-/* line 125, ../scss/screen.scss */
+/* line 131, ../scss/screen.scss */
 .intro {
   height: initial;
   width: 100%;
   text-align: center;
 }
-/* line 129, ../scss/screen.scss */
+/* line 135, ../scss/screen.scss */
 .intro .food_icon {
   margin-top: 0;
+  margin-bottom: 30px;
   width: 20%;
   min-width: 100px;
 }
 
-/* line 136, ../scss/screen.scss */
+/* line 143, ../scss/screen.scss */
 .information {
-  font-style: 12px;
   line-height: 25px;
 }
-/* line 139, ../scss/screen.scss */
+/* line 145, ../scss/screen.scss */
 .information i {
   width: 20px;
   vertical-align: middle;
   text-align: center;
 }
-/* line 144, ../scss/screen.scss */
+/* line 150, ../scss/screen.scss */
 .information span {
   vertical-align: middle;
 }
 
-/* line 149, ../scss/screen.scss */
+/* line 155, ../scss/screen.scss */
+.menu {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* line 160, ../scss/screen.scss */
 .recommend {
   height: initial;
-  border: solid 2px #000;
   display: inline-block;
   width: 30%;
   text-align: center;
 }
-/* line 155, ../scss/screen.scss */
+/* line 165, ../scss/screen.scss */
 .recommend img {
   width: 100%;
   height: 200px;
 }
+/* line 169, ../scss/screen.scss */
+.recommend:hover {
+  background-color: rgba(255, 234, 203, 0.85);
+  border-radius: 8px;
+  cursor: pointer;
+}
 
-/* line 161, ../scss/screen.scss */
+/* line 176, ../scss/screen.scss */
 .footer {
   height: initial;
   text-align: center;
   padding: 20px;
 }
-/* line 165, ../scss/screen.scss */
+/* line 180, ../scss/screen.scss */
 .footer h4 {
   font-size: 18px;
   margin: 0;
 }
-/* line 169, ../scss/screen.scss */
+/* line 184, ../scss/screen.scss */
 .footer p {
   font-size: 16px;
   margin: 10px;
   margin-bottom: 0;
+  text-align: center;
+}
+/* line 189, ../scss/screen.scss */
+.footer p a {
+  text-decoration: none;
+}
+/* line 191, ../scss/screen.scss */
+.footer p a:hover {
+  color: #ff0091;
 }
 
-/* line 177, ../scss/screen.scss */
-.text, .menu {
+/* line 199, ../scss/screen.scss */
+.text {
   width: 60%;
+  background-color: #e3f9c3;
 }
 
-/* line 180, ../scss/screen.scss */
-.information, .dishes {
+/* line 203, ../scss/screen.scss */
+.information {
   width: 40%;
+  background-color: rgba(241, 252, 223, 0.8);
 }
 
-/* line 183, ../scss/screen.scss */
+/* line 207, ../scss/screen.scss */
+.menu {
+  width: 100%;
+  vertical-align: middle;
+}
+
+/* line 211, ../scss/screen.scss */
 .recommend {
   width: calc(100% / 3);
 }
 
-/* line 186, ../scss/screen.scss */
+/* line 214, ../scss/screen.scss */
 .footer {
   width: 100%;
 }
 
 @media all and (min-width: 760px) and (max-width: 959px) {
-  /* line 192, ../scss/screen.scss */
+  /* line 220, ../scss/screen.scss */
   .recommend {
     width: calc(100% / 3);
     vertical-align: top;
   }
-  /* line 195, ../scss/screen.scss */
+  /* line 223, ../scss/screen.scss */
   .recommend h4 {
     font-size: 18px;
     text-align: center;
   }
-  /* line 199, ../scss/screen.scss */
+  /* line 227, ../scss/screen.scss */
   .recommend img {
     width: 80%;
     height: 150px;
   }
 }
 @media all and (min-width: 480px) and (max-width: 759px) {
-  /* line 208, ../scss/screen.scss */
+  /* line 236, ../scss/screen.scss */
+  .text, .information {
+    width: 50%;
+  }
+
+  /* line 242, ../scss/screen.scss */
   .recommend {
     width: calc(100% / 3);
   }
-  /* line 210, ../scss/screen.scss */
+  /* line 244, ../scss/screen.scss */
   .recommend h4 {
     font-size: 14px;
     text-align: left;
   }
-  /* line 214, ../scss/screen.scss */
+  /* line 248, ../scss/screen.scss */
   .recommend img {
     max-width: 120px;
     max-height: 100px;
   }
 }
 @media all and (max-width: 480px) {
-  /* line 224, ../scss/screen.scss */
+  /* line 258, ../scss/screen.scss */
   .middle_bar .person_img {
     width: 130px;
     height: 130px;
@@ -254,43 +294,49 @@ html, body {
     top: -110px;
   }
 
-  /* line 231, ../scss/screen.scss */
+  /* line 265, ../scss/screen.scss */
   .text, .information, .menu, .dishes {
     width: 100%;
   }
 
-  /* line 234, ../scss/screen.scss */
+  /* line 268, ../scss/screen.scss */
+  .menu {
+    text-align: left;
+  }
+
+  /* line 271, ../scss/screen.scss */
   .recommend {
     width: 100%;
     text-align: left;
   }
-  /* line 237, ../scss/screen.scss */
+  /* line 274, ../scss/screen.scss */
   .recommend h4 {
     display: inline-block;
     width: 80px;
     margin-right: 20px;
     font-size: 14px;
   }
-  /* line 243, ../scss/screen.scss */
+  /* line 280, ../scss/screen.scss */
   .recommend img {
-    diplay: inline-block;
+    display: inline-block;
     max-width: 120px;
     max-height: 100px;
   }
 
-  /* line 249, ../scss/screen.scss */
+  /* line 286, ../scss/screen.scss */
   .footer {
     height: initial;
     text-align: left;
     padding: 20px;
   }
-  /* line 253, ../scss/screen.scss */
+  /* line 290, ../scss/screen.scss */
   .footer h4 {
     font-size: 16px;
     margin: 0;
   }
-  /* line 257, ../scss/screen.scss */
+  /* line 294, ../scss/screen.scss */
   .footer p {
+    text-align: left;
     font-size: 14px;
     margin: 10px;
     margin-bottom: 0;
@@ -298,32 +344,33 @@ html, body {
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 269, ../scss/screen.scss */
+  /* line 307, ../scss/screen.scss */
   .top_bar {
     height: 70px;
   }
-  /* line 271, ../scss/screen.scss */
+  /* line 309, ../scss/screen.scss */
   .top_bar .icon {
     height: 40px;
   }
-  /* line 274, ../scss/screen.scss */
+  /* line 312, ../scss/screen.scss */
   .top_bar input {
-    width: calc(100% - 50px - 40px);
+    margin-left: 5px;
+    width: calc(100% - 50px - 50px);
     background-color: #ffb03b;
     color: black;
     margin-top: 5px;
   }
 
-  /* line 281, ../scss/screen.scss */
+  /* line 320, ../scss/screen.scss */
   .middle_bar {
     height: 160px;
   }
-  /* line 283, ../scss/screen.scss */
+  /* line 322, ../scss/screen.scss */
   .middle_bar .person_img {
     left: 50%;
     transform: translateX(-50%);
   }
-  /* line 287, ../scss/screen.scss */
+  /* line 326, ../scss/screen.scss */
   .middle_bar .name_container {
     right: initial;
     top: initial;
@@ -331,7 +378,7 @@ html, body {
     transform: translateX(-50%);
     top: 105%;
   }
-  /* line 294, ../scss/screen.scss */
+  /* line 333, ../scss/screen.scss */
   .middle_bar h2, .middle_bar h5 {
     width: 200px;
     text-align: center;
