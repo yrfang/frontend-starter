@@ -1,0 +1,299 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+ // @import "compass/reset";
+ @charset "UTF-8";
+
+ * {
+   border: 1px solid #000;
+   font-family: arial, 微軟正黑體;
+   vertical-align: middle;
+ }
+
+ html, body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    vertical-align: top;
+    box-sizing: border-box;
+   //  background-color: #86dfdc;
+}
+
+.container {
+   max-width: 1024px;
+   margin-left: auto;
+   margin-right: auto;
+   // padding-left: 40px;
+   // padding-right: 40px;
+   display: flex;
+   flex-direction: column;
+   font-size: 0px;
+}
+
+.top_bar {
+   height: 60px;
+   background-color: #fbdcac;
+   .icon {
+      height: 40px;
+      margin: 10px;
+      margin-left: 15px;
+      margin-right: 5px;
+      border: 2px solid #f7a52a;
+      border-radius: 100%;
+   }
+   & input {
+      height: 30px;
+      width: 300px;
+      margin: 10px;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 0;
+      padding-left: 10px;
+      border: solid 2px #f7a52a;
+      border-radius: 5px;
+      outline: none;
+      font-size:16px;
+      letter-spacing: 1.5px;
+   }
+}
+
+.cover {
+   height: 350px;
+   background-image: url('https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/CFSQPAXM18.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: right top;
+}
+
+.middle_bar {
+   height: 50px;
+   background-color: #eee;
+   .person_img {
+      width: 170px;
+      height: 170px;
+      position: relative;
+      top: -140px;
+      left: 20px;
+      box-shadow: 0 0 10px #ededed;
+      border: solid 4px #fff;
+      background-image: url('https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/O5KRF826GG.jpg');
+      background-position: center center;
+      background-size: cover;
+   }
+   .name_container {
+      position: absolute;
+      top: 50%;
+      right: -160px;
+      transform: translateY(-50%);
+      letter-spacing: 2px;
+      & h2,& h5 {
+         margin: 0;
+         font-size: 14px;
+      }
+      & h2 {
+         font-size: 32px;
+      }
+   }
+}
+
+.bottom_bar {
+   background-color: #ffffff;
+   color: #000;
+   // min-width: 300px;
+   padding: 18px;
+}
+
+.block {
+   display: inline-block;
+   padding: 8px;
+   box-sizing: border-box;
+   height: 250px;
+   font-size: 16px;
+   text-align: left;
+   & h3 {
+     font-size: 28px;
+     margin-bottom: 15px;
+   }
+   & h4 {
+      font-size: 24px;
+      color: red;
+   }
+}
+
+.intro {
+  height: initial; //包住所有的物件
+  width: 100%;
+  text-align: center;
+  .food_icon {
+    margin-top: 0;
+    width: 20%;
+    min-width: 100px;
+  }
+}
+
+.information {
+   font-style: 12px;
+   line-height: 25px;
+   & i {
+      width: 20px;
+      vertical-align: middle;
+      text-align: center;
+   }
+   & span {
+      vertical-align: middle;
+   }
+}
+
+.recommend {
+  height: initial;
+  border: solid 2px #000;
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  img {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+.footer {
+  height: initial;
+  text-align: center;
+  padding: 20px;
+  h4 {
+      font-size: 18px;
+      margin: 0;
+  }
+  p {
+      font-size: 16px;
+      margin: 10px;
+      margin-bottom: 0;
+  }
+}
+
+//電腦版
+.text, .menu {
+   width: 60%;
+}
+.information, .dishes {
+   width: 40%;
+}
+.recommend {
+  width: calc(100% / 3);
+}
+.footer {
+   width: 100%;
+}
+
+//平板
+@media all and (min-width: 760px) and (max-width: 959px) {
+  .recommend {
+    width: calc(100% / 3);
+    vertical-align: top;
+    h4 {
+      font-size: 18px;
+      text-align: center;
+   }
+    img {
+      width: 80%;
+      height: 150px;
+    }
+  }
+}
+
+//小平板
+@media all and (min-width: 480px) and (max-width: 759px) {
+   .recommend {
+     width: calc(100% / 3);
+     h4 {
+        font-size: 14px;
+        text-align: left;
+     }
+     img {
+        max-width: 120px;
+        max-height: 100px;
+     }
+   }
+}
+
+//手機
+@media all and (max-width: 480px) {
+   .middle_bar {
+      .person_img {
+         width: 130px;
+         height: 130px;
+         position: relative;
+         top: -110px;
+      }
+   }
+   .text, .information, .menu, .dishes {
+     width: 100%;
+   }
+    .recommend {
+       width: 100%;
+       text-align: left;
+       h4 {
+          display: inline-block;
+          width: 80px;
+          margin-right: 20px;
+          font-size: 14px;
+       }
+       img {
+          diplay: inline-block;
+          max-width: 120px;
+          max-height: 100px;
+       }
+    }
+    .footer {
+      height: initial;
+      text-align: left;
+      padding: 20px;
+      h4 {
+          font-size: 16px;
+          margin: 0;
+      }
+      p {
+          font-size: 14px;
+          margin: 10px;
+          margin-bottom: 0;
+          margin-left: 0;
+      }
+    }
+}
+
+//修改coverphoto位置
+//調整input長度
+@media screen and (max-width: 768px) {
+   .top_bar {
+      height: 70px;
+      .icon {
+         height: 40px;
+      }
+      input {
+         width: calc(100% - 50px - 40px);
+         background-color: darken(#ffcf87, 15);
+         color: darken(#fff, 100);
+         margin-top: 5px;
+      }
+   }
+   .middle_bar {
+      height: 160px;
+      .person_img {
+         left: 50%;
+         transform: translateX(-50%);
+      }
+      .name_container {
+         right: initial;
+         top: initial;
+         left: 50%;
+         transform: translateX(-50%);
+         top: 105%;
+      }
+      h2, h5 {
+         width: 200px;
+         text-align: center;
+      }
+   }
+}

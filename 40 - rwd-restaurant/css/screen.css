@@ -1,0 +1,339 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 9, ../scss/screen.scss */
+* {
+  border: 1px solid #000;
+  font-family: arial, 微軟正黑體;
+  vertical-align: middle;
+}
+
+/* line 15, ../scss/screen.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+/* line 24, ../scss/screen.scss */
+.container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 0px;
+}
+
+/* line 35, ../scss/screen.scss */
+.top_bar {
+  height: 60px;
+  background-color: #fbdcac;
+}
+/* line 38, ../scss/screen.scss */
+.top_bar .icon {
+  height: 40px;
+  margin: 10px;
+  margin-left: 15px;
+  margin-right: 5px;
+  border: 2px solid #f7a52a;
+  border-radius: 100%;
+}
+/* line 46, ../scss/screen.scss */
+.top_bar input {
+  height: 30px;
+  width: 300px;
+  margin: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 0;
+  padding-left: 10px;
+  border: solid 2px #f7a52a;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+}
+
+/* line 62, ../scss/screen.scss */
+.cover {
+  height: 350px;
+  background-image: url("https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/CFSQPAXM18.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right top;
+}
+
+/* line 70, ../scss/screen.scss */
+.middle_bar {
+  height: 50px;
+  background-color: #eee;
+}
+/* line 73, ../scss/screen.scss */
+.middle_bar .person_img {
+  width: 170px;
+  height: 170px;
+  position: relative;
+  top: -140px;
+  left: 20px;
+  box-shadow: 0 0 10px #ededed;
+  border: solid 4px #fff;
+  background-image: url("https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/O5KRF826GG.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+/* line 85, ../scss/screen.scss */
+.middle_bar .name_container {
+  position: absolute;
+  top: 50%;
+  right: -160px;
+  transform: translateY(-50%);
+  letter-spacing: 2px;
+}
+/* line 91, ../scss/screen.scss */
+.middle_bar .name_container h2, .middle_bar .name_container h5 {
+  margin: 0;
+  font-size: 14px;
+}
+/* line 95, ../scss/screen.scss */
+.middle_bar .name_container h2 {
+  font-size: 32px;
+}
+
+/* line 101, ../scss/screen.scss */
+.bottom_bar {
+  background-color: #ffffff;
+  color: #000;
+  padding: 18px;
+}
+
+/* line 108, ../scss/screen.scss */
+.block {
+  display: inline-block;
+  padding: 8px;
+  box-sizing: border-box;
+  height: 250px;
+  font-size: 16px;
+  text-align: left;
+}
+/* line 115, ../scss/screen.scss */
+.block h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+/* line 119, ../scss/screen.scss */
+.block h4 {
+  font-size: 24px;
+  color: red;
+}
+
+/* line 125, ../scss/screen.scss */
+.intro {
+  height: initial;
+  width: 100%;
+  text-align: center;
+}
+/* line 129, ../scss/screen.scss */
+.intro .food_icon {
+  margin-top: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+/* line 136, ../scss/screen.scss */
+.information {
+  font-style: 12px;
+  line-height: 25px;
+}
+/* line 139, ../scss/screen.scss */
+.information i {
+  width: 20px;
+  vertical-align: middle;
+  text-align: center;
+}
+/* line 144, ../scss/screen.scss */
+.information span {
+  vertical-align: middle;
+}
+
+/* line 149, ../scss/screen.scss */
+.recommend {
+  height: initial;
+  border: solid 2px #000;
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+}
+/* line 155, ../scss/screen.scss */
+.recommend img {
+  width: 100%;
+  height: 200px;
+}
+
+/* line 161, ../scss/screen.scss */
+.footer {
+  height: initial;
+  text-align: center;
+  padding: 20px;
+}
+/* line 165, ../scss/screen.scss */
+.footer h4 {
+  font-size: 18px;
+  margin: 0;
+}
+/* line 169, ../scss/screen.scss */
+.footer p {
+  font-size: 16px;
+  margin: 10px;
+  margin-bottom: 0;
+}
+
+/* line 177, ../scss/screen.scss */
+.text, .menu {
+  width: 60%;
+}
+
+/* line 180, ../scss/screen.scss */
+.information, .dishes {
+  width: 40%;
+}
+
+/* line 183, ../scss/screen.scss */
+.recommend {
+  width: calc(100% / 3);
+}
+
+/* line 186, ../scss/screen.scss */
+.footer {
+  width: 100%;
+}
+
+@media all and (min-width: 760px) and (max-width: 959px) {
+  /* line 192, ../scss/screen.scss */
+  .recommend {
+    width: calc(100% / 3);
+    vertical-align: top;
+  }
+  /* line 195, ../scss/screen.scss */
+  .recommend h4 {
+    font-size: 18px;
+    text-align: center;
+  }
+  /* line 199, ../scss/screen.scss */
+  .recommend img {
+    width: 80%;
+    height: 150px;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 759px) {
+  /* line 208, ../scss/screen.scss */
+  .recommend {
+    width: calc(100% / 3);
+  }
+  /* line 210, ../scss/screen.scss */
+  .recommend h4 {
+    font-size: 14px;
+    text-align: left;
+  }
+  /* line 214, ../scss/screen.scss */
+  .recommend img {
+    max-width: 120px;
+    max-height: 100px;
+  }
+}
+@media all and (max-width: 480px) {
+  /* line 224, ../scss/screen.scss */
+  .middle_bar .person_img {
+    width: 130px;
+    height: 130px;
+    position: relative;
+    top: -110px;
+  }
+
+  /* line 231, ../scss/screen.scss */
+  .text, .information, .menu, .dishes {
+    width: 100%;
+  }
+
+  /* line 234, ../scss/screen.scss */
+  .recommend {
+    width: 100%;
+    text-align: left;
+  }
+  /* line 237, ../scss/screen.scss */
+  .recommend h4 {
+    display: inline-block;
+    width: 80px;
+    margin-right: 20px;
+    font-size: 14px;
+  }
+  /* line 243, ../scss/screen.scss */
+  .recommend img {
+    diplay: inline-block;
+    max-width: 120px;
+    max-height: 100px;
+  }
+
+  /* line 249, ../scss/screen.scss */
+  .footer {
+    height: initial;
+    text-align: left;
+    padding: 20px;
+  }
+  /* line 253, ../scss/screen.scss */
+  .footer h4 {
+    font-size: 16px;
+    margin: 0;
+  }
+  /* line 257, ../scss/screen.scss */
+  .footer p {
+    font-size: 14px;
+    margin: 10px;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 269, ../scss/screen.scss */
+  .top_bar {
+    height: 70px;
+  }
+  /* line 271, ../scss/screen.scss */
+  .top_bar .icon {
+    height: 40px;
+  }
+  /* line 274, ../scss/screen.scss */
+  .top_bar input {
+    width: calc(100% - 50px - 40px);
+    background-color: #ffb03b;
+    color: black;
+    margin-top: 5px;
+  }
+
+  /* line 281, ../scss/screen.scss */
+  .middle_bar {
+    height: 160px;
+  }
+  /* line 283, ../scss/screen.scss */
+  .middle_bar .person_img {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  /* line 287, ../scss/screen.scss */
+  .middle_bar .name_container {
+    right: initial;
+    top: initial;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 105%;
+  }
+  /* line 294, ../scss/screen.scss */
+  .middle_bar h2, .middle_bar h5 {
+    width: 200px;
+    text-align: center;
+  }
+}
