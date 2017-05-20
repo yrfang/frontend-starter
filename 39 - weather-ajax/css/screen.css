@@ -77,21 +77,20 @@ body {
 }
 
 /* line 79, ../scss/screen.scss */
-footer {
-  position: fixed;
-  left: 50%;
-  bottom: 0px;
-  transform: translateX(-50%) translateY(-50%);
+.home {
+  position: absolute;
+  top: 15px;
+  right: 20px;
   background-color: rgba(201, 201, 201, 0.35);
 }
 /* line 85, ../scss/screen.scss */
-footer a {
+.home a {
   padding: 5px;
   font-size: 16px;
   color: #FFC954;
   text-decoration: none;
 }
 /* line 91, ../scss/screen.scss */
-footer a:visited {
+.home a:visited {
   color: #FFC954;
 }
