@@ -1,0 +1,125 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 9, ../scss/screen.scss */
+* {
+  font-family: 微軟正黑體;
+}
+
+/* line 14, ../scss/screen.scss */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: bold;
+}
+
+/* line 18, ../scss/screen.scss */
+header.jumbotron {
+  text-align: center;
+  background-image: url("http://timefortaiwan.tw/d_upload_tour100/touching/photos/A0/B0/C0/D19/E181/F716/a5492f6d-2612-43cc-a588-aa18c55350c1.jpg");
+  background-size: cover;
+  background-position: center center;
+  padding: 120px;
+  color: #fff;
+  margin: 0;
+}
+
+/* line 28, ../scss/screen.scss */
+section {
+  text-align: center;
+  padding: 80px 0px;
+  margin: 0;
+}
+/* line 32, ../scss/screen.scss */
+section .section-heading {
+  font-size: 36px;
+  margin-top: 0;
+}
+/* line 36, ../scss/screen.scss */
+section .section-subheading {
+  font-size: 16px;
+}
+
+/* line 41, ../scss/screen.scss */
+.col-city {
+  padding: 40px;
+}
+/* line 43, ../scss/screen.scss */
+.col-city img {
+  width: 200px;
+  height: 190px;
+  border-radius: 50%;
+}
+
+/* line 51, ../scss/screen.scss */
+section.story {
+  background-color: #eee;
+}
+/* line 53, ../scss/screen.scss */
+section.story .col-md-6 {
+  padding: 20px;
+}
+/* line 56, ../scss/screen.scss */
+section.story .icon_city {
+  width: 160px;
+  margin-bottom: 0;
+}
+
+/* line 62, ../scss/screen.scss */
+section.pictures {
+  padding: 0;
+  color: #fff;
+}
+/* line 65, ../scss/screen.scss */
+section.pictures .col-md-6 {
+  padding: 150px;
+  cursor: pointer;
+}
+/* line 69, ../scss/screen.scss */
+section.pictures .col-md-6:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition-duration: 0.8s;
+  background-position: center center;
+}
+/* line 83, ../scss/screen.scss */
+section.pictures .col-md-6:hover p {
+  opacity: 0.7;
+}
+/* line 86, ../scss/screen.scss */
+section.pictures .col-md-6:hover:before {
+  filter: brightness(0.5);
+  background-size: 150% auto;
+}
+/* line 93, ../scss/screen.scss */
+section.pictures .pic1:before {
+  background-image: url("https://pic.pimg.tw/tainanlohas/1450927495-1503299545.jpg?v=1450927506");
+  background-size: 130% auto;
+}
+/* line 99, ../scss/screen.scss */
+section.pictures .pic2:before {
+  background-image: url("http://i.epochtimes.com/assets/uploads/2012/01/1201230900501471.jpg");
+  background-size: 130% auto;
+}
+/* line 105, ../scss/screen.scss */
+section.pictures p {
+  opacity: 0.4;
+  transition-duration: 0.5s;
+}
+
+/* line 111, ../scss/screen.scss */
+section.ask {
+  background-color: #133d5c;
+  color: white;
+}
+/* line 114, ../scss/screen.scss */
+section.ask input {
+  outline: none;
+  margin: 15px;
+}

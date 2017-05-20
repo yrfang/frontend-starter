@@ -1,0 +1,118 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+// @import "compass/reset";
+ @charset "UTF-8";
+
+* {
+  // border: solid #000;
+  font-family: 微軟正黑體;
+}
+
+h1,h2,h3,h4,h5,h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: bold;
+}
+
+header.jumbotron {
+  text-align: center;
+  background-image: url('http://timefortaiwan.tw/d_upload_tour100/touching/photos/A0/B0/C0/D19/E181/F716/a5492f6d-2612-43cc-a588-aa18c55350c1.jpg');
+  background-size: cover;
+  background-position: center center;
+  padding: 120px;
+  color: #fff;
+  margin: 0;
+}
+
+section {
+  text-align: center;
+  padding: 80px 0px;
+  margin: 0;
+  .section-heading {
+    font-size: 36px;
+    margin-top: 0;
+  }
+  .section-subheading {
+    font-size: 16px;
+  }
+}
+
+.col-city {
+  padding: 40px;
+  img {
+    // width: 100%;
+    width: 200px;
+    height: 190px;
+    border-radius: 50%;
+  }
+}
+
+section.story {
+  background-color: #eee;
+  .col-md-6 {
+    padding: 20px;
+  }
+  .icon_city {
+    width: 160px;
+    margin-bottom: 0;
+  }
+}
+
+section.pictures {
+  padding: 0;
+  color: #fff;
+  .col-md-6 {
+    padding: 150px;
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition-duration: 0.8s;
+      background-position: center center;
+    }
+
+    &:hover {
+      p {
+        opacity: 0.7;
+      }
+      &:before {
+        filter: brightness(0.5);
+        background-size: 150% auto;
+      }
+    }
+  }
+
+  .pic1:before {
+    background-image: url('https://pic.pimg.tw/tainanlohas/1450927495-1503299545.jpg?v=1450927506');
+    background-size: 130% auto;
+    // background-repeat: no-repeat;
+  }
+
+  .pic2:before {
+    background-image: url('http://i.epochtimes.com/assets/uploads/2012/01/1201230900501471.jpg');
+    background-size: 130% auto;
+    // background-repeat: no-repeat;
+  }
+
+  p {
+    opacity: 0.4;
+    transition-duration: 0.5s;
+  }
+}
+
+section.ask {
+  background-color: #133d5c;
+  color: white;
+  input {
+    outline: none;
+    margin: 15px;
+  }
+}
