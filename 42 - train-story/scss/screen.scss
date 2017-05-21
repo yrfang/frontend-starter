@@ -1,0 +1,155 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+ // @import "compass/reset";
+@charset "UTF-8";
+
+$color_yellow: #fece54;
+
+* {
+  // border: solid 1px;
+  font-family: 微軟正黑體;
+}
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+  font-weight: bold;
+}
+
+nav.navbar {
+  transition: 0.5s;
+}
+
+nav.navbar.navbar-default.navbar-fixed-top.navbar-top {
+  border: 1px solid transparent;
+  background-color: transparent;
+  a {
+    color: #fff;
+    transition: 0.5s;
+    &:hover {
+      color: $color_yellow;
+    }
+  }
+}
+
+header.jumbotron {
+  text-align: center;
+  background-image: url(https://www.102like.com/manage/0/product/30802/1483763046_188.jpeg);
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 0px;
+  .container {
+    color: #fff;
+    padding: 200px 0;
+  }
+  hr {
+    width: 60px;
+    border: solid 2px $color_yellow;
+    margin-bottom: 10px;
+  }
+  h4 {
+    color: rgba(#fff,0.8);
+    font-weight: normal;
+    margin-top: 0;
+  }
+}
+
+section {
+  padding: 90px 0;
+}
+
+#section_intro {
+  background-color: $color_yellow;
+  .col-sm-5.img {
+    height: 350px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf_EQARgyDCh_Y0K1OcBLDNDVlDbXXZeQR_3PXBPJU6iULowhx);
+    background-size: cover;
+    mix-blend-mode: multiply;
+  }
+  h2 {
+    margin-top: 150px;
+    padding: 0px 20px;
+  }
+}
+
+#section_story {
+  .img_wrap {
+    height: 220px;
+    overflow: hidden;
+  }
+  img {
+    width: 130%;
+  }
+}
+
+#section_development {
+  background-color: #444;
+  color: #fff;
+  padding: 0;
+  .col-sm-5.map {
+    height: 400px;
+    background-image: url(http://orig07.deviantart.net/02b9/f/2011/326/1/7/europe_blank_map_2_by_fenn_o_manic-d4awgzs.png);
+    background-size: 100% 110%;
+    // mix-blend-mode: multiply;
+  }
+  .star {
+    position: absolute;
+    left: 25%;
+    top: 53%;
+    font-weight: bold;
+    font-size: 24px;
+    color: #ff0000;
+    border: none;
+  }
+  .col-sm-7 {
+    text-align: center;
+    i {
+      font-size: 50px;
+    }
+  }
+  .col-sm-12.style {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+#section_features {
+  img {
+    width: 100%;
+  }
+  i {
+    font-size: 60px;
+  }
+  .feature {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+footer.jumbotron {
+  background-image: url(https://www.102like.com/manage/0/product/30802/1483763046_188.jpeg);
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 0px;
+  text-align: center;
+  .container {
+    color: #fff;
+    padding: 60px 0px;
+  }
+  hr {
+    width: 60px;
+    border: solid 2px $color_yellow;
+    margin-bottom: 10px;
+  }
+  input {
+    text-align: center;
+    background-color: rgba(#3c3c3c,.4);
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    outline: none;
+  }
+}

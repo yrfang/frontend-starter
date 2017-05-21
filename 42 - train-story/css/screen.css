@@ -1,0 +1,173 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 11, ../scss/screen.scss */
+* {
+  font-family: 微軟正黑體;
+}
+
+/* line 16, ../scss/screen.scss */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: bold;
+}
+
+/* line 20, ../scss/screen.scss */
+nav.navbar {
+  transition: 0.5s;
+}
+
+/* line 24, ../scss/screen.scss */
+nav.navbar.navbar-default.navbar-fixed-top.navbar-top {
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+/* line 28, ../scss/screen.scss */
+nav.navbar.navbar-default.navbar-fixed-top.navbar-top a {
+  color: #fff;
+  transition: 0.5s;
+}
+/* line 31, ../scss/screen.scss */
+nav.navbar.navbar-default.navbar-fixed-top.navbar-top a:hover {
+  color: #fece54;
+}
+
+/* line 37, ../scss/screen.scss */
+header.jumbotron {
+  text-align: center;
+  background-image: url(https://www.102like.com/manage/0/product/30802/1483763046_188.jpeg);
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 0px;
+}
+/* line 44, ../scss/screen.scss */
+header.jumbotron .container {
+  color: #fff;
+  padding: 200px 0;
+}
+/* line 48, ../scss/screen.scss */
+header.jumbotron hr {
+  width: 60px;
+  border: solid 2px #fece54;
+  margin-bottom: 10px;
+}
+/* line 53, ../scss/screen.scss */
+header.jumbotron h4 {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: normal;
+  margin-top: 0;
+}
+
+/* line 60, ../scss/screen.scss */
+section {
+  padding: 90px 0;
+}
+
+/* line 64, ../scss/screen.scss */
+#section_intro {
+  background-color: #fece54;
+}
+/* line 66, ../scss/screen.scss */
+#section_intro .col-sm-5.img {
+  height: 350px;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf_EQARgyDCh_Y0K1OcBLDNDVlDbXXZeQR_3PXBPJU6iULowhx);
+  background-size: cover;
+  mix-blend-mode: multiply;
+}
+/* line 72, ../scss/screen.scss */
+#section_intro h2 {
+  margin-top: 150px;
+  padding: 0px 20px;
+}
+
+/* line 79, ../scss/screen.scss */
+#section_story .img_wrap {
+  height: 220px;
+  overflow: hidden;
+}
+/* line 83, ../scss/screen.scss */
+#section_story img {
+  width: 130%;
+}
+
+/* line 88, ../scss/screen.scss */
+#section_development {
+  background-color: #444;
+  color: #fff;
+  padding: 0;
+}
+/* line 92, ../scss/screen.scss */
+#section_development .col-sm-5.map {
+  height: 400px;
+  background-image: url(http://orig07.deviantart.net/02b9/f/2011/326/1/7/europe_blank_map_2_by_fenn_o_manic-d4awgzs.png);
+  background-size: 100% 110%;
+}
+/* line 98, ../scss/screen.scss */
+#section_development .star {
+  position: absolute;
+  left: 25%;
+  top: 53%;
+  font-weight: bold;
+  font-size: 24px;
+  color: #ff0000;
+  border: none;
+}
+/* line 107, ../scss/screen.scss */
+#section_development .col-sm-7 {
+  text-align: center;
+}
+/* line 109, ../scss/screen.scss */
+#section_development .col-sm-7 i {
+  font-size: 50px;
+}
+/* line 113, ../scss/screen.scss */
+#section_development .col-sm-12.style {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* line 120, ../scss/screen.scss */
+#section_features img {
+  width: 100%;
+}
+/* line 123, ../scss/screen.scss */
+#section_features i {
+  font-size: 60px;
+}
+/* line 126, ../scss/screen.scss */
+#section_features .feature {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* line 132, ../scss/screen.scss */
+footer.jumbotron {
+  background-image: url(https://www.102like.com/manage/0/product/30802/1483763046_188.jpeg);
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 0px;
+  text-align: center;
+}
+/* line 139, ../scss/screen.scss */
+footer.jumbotron .container {
+  color: #fff;
+  padding: 60px 0px;
+}
+/* line 143, ../scss/screen.scss */
+footer.jumbotron hr {
+  width: 60px;
+  border: solid 2px #fece54;
+  margin-bottom: 10px;
+}
+/* line 148, ../scss/screen.scss */
+footer.jumbotron input {
+  text-align: center;
+  background-color: rgba(60, 60, 60, 0.4);
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: none;
+}
