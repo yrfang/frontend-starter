@@ -14,26 +14,60 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 /* line 20, ../scss/screen.scss */
-nav.navbar {
-  transition: 0.5s;
-}
-
-/* line 24, ../scss/screen.scss */
-nav.navbar.navbar-default.navbar-fixed-top.navbar-top {
-  border: 1px solid transparent;
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: transparent;
+  padding: 10px 20px;
+  border-bottom: solid 2px #fff;
+  z-index: 10;
 }
-/* line 28, ../scss/screen.scss */
-nav.navbar.navbar-default.navbar-fixed-top.navbar-top a {
+/* line 30, ../scss/screen.scss */
+nav .nav_container {
+  display: inline-block;
+}
+/* line 32, ../scss/screen.scss */
+nav .nav_container a {
+  text-decoration: none;
   color: #fff;
   transition: 0.5s;
 }
-/* line 31, ../scss/screen.scss */
-nav.navbar.navbar-default.navbar-fixed-top.navbar-top a:hover {
+/* line 38, ../scss/screen.scss */
+nav .navbar-title {
+  display: inline-block;
+}
+/* line 40, ../scss/screen.scss */
+nav .navbar-title a {
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  color: #fff;
+}
+/* line 46, ../scss/screen.scss */
+nav .navbar-list {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  display: inline-block;
+  list-style: none;
+}
+/* line 52, ../scss/screen.scss */
+nav .navbar-list li {
+  display: inline-block;
+  padding-left: 5px;
+}
+/* line 56, ../scss/screen.scss */
+nav .navbar-list a {
+  font-size: 14px;
+  color: #fff;
+}
+/* line 59, ../scss/screen.scss */
+nav .navbar-list a:hover {
   color: #fece54;
 }
 
-/* line 37, ../scss/screen.scss */
+/* line 86, ../scss/screen.scss */
 header.jumbotron {
   text-align: center;
   background-image: url(https://www.102like.com/manage/0/product/30802/1483763046_188.jpeg);
@@ -42,69 +76,69 @@ header.jumbotron {
   background-attachment: fixed;
   margin-bottom: 0px;
 }
-/* line 44, ../scss/screen.scss */
+/* line 93, ../scss/screen.scss */
 header.jumbotron .container {
   color: #fff;
   padding: 200px 0;
 }
-/* line 48, ../scss/screen.scss */
+/* line 97, ../scss/screen.scss */
 header.jumbotron hr {
   width: 60px;
   border: solid 2px #fece54;
   margin-bottom: 10px;
 }
-/* line 53, ../scss/screen.scss */
+/* line 102, ../scss/screen.scss */
 header.jumbotron h4 {
   color: rgba(255, 255, 255, 0.8);
   font-weight: normal;
   margin-top: 0;
 }
 
-/* line 60, ../scss/screen.scss */
+/* line 109, ../scss/screen.scss */
 section {
   padding: 90px 0;
 }
 
-/* line 64, ../scss/screen.scss */
+/* line 113, ../scss/screen.scss */
 #section_intro {
   background-color: #fece54;
 }
-/* line 66, ../scss/screen.scss */
+/* line 115, ../scss/screen.scss */
 #section_intro .col-sm-5.img {
   height: 350px;
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf_EQARgyDCh_Y0K1OcBLDNDVlDbXXZeQR_3PXBPJU6iULowhx);
   background-size: cover;
   mix-blend-mode: multiply;
 }
-/* line 72, ../scss/screen.scss */
+/* line 121, ../scss/screen.scss */
 #section_intro h2 {
   margin-top: 150px;
   padding: 0px 20px;
 }
 
-/* line 79, ../scss/screen.scss */
+/* line 128, ../scss/screen.scss */
 #section_story .img_wrap {
   height: 220px;
   overflow: hidden;
 }
-/* line 83, ../scss/screen.scss */
+/* line 132, ../scss/screen.scss */
 #section_story img {
   width: 130%;
 }
 
-/* line 88, ../scss/screen.scss */
+/* line 137, ../scss/screen.scss */
 #section_development {
   background-color: #444;
   color: #fff;
   padding: 0;
 }
-/* line 92, ../scss/screen.scss */
+/* line 141, ../scss/screen.scss */
 #section_development .col-sm-5.map {
   height: 400px;
   background-image: url(http://orig07.deviantart.net/02b9/f/2011/326/1/7/europe_blank_map_2_by_fenn_o_manic-d4awgzs.png);
   background-size: 100% 110%;
 }
-/* line 98, ../scss/screen.scss */
+/* line 147, ../scss/screen.scss */
 #section_development .star {
   position: absolute;
   left: 25%;
@@ -114,35 +148,35 @@ section {
   color: #ff0000;
   border: none;
 }
-/* line 107, ../scss/screen.scss */
+/* line 156, ../scss/screen.scss */
 #section_development .col-sm-7 {
   text-align: center;
 }
-/* line 109, ../scss/screen.scss */
+/* line 158, ../scss/screen.scss */
 #section_development .col-sm-7 i {
   font-size: 50px;
 }
-/* line 113, ../scss/screen.scss */
+/* line 162, ../scss/screen.scss */
 #section_development .col-sm-12.style {
   margin-top: 40px;
   margin-bottom: 40px;
 }
 
-/* line 120, ../scss/screen.scss */
+/* line 169, ../scss/screen.scss */
 #section_features img {
   width: 100%;
 }
-/* line 123, ../scss/screen.scss */
+/* line 172, ../scss/screen.scss */
 #section_features i {
   font-size: 60px;
 }
-/* line 126, ../scss/screen.scss */
+/* line 175, ../scss/screen.scss */
 #section_features .feature {
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-/* line 132, ../scss/screen.scss */
+/* line 181, ../scss/screen.scss */
 footer.jumbotron {
   background-image: url(https://www.102like.com/manage/0/product/30802/1483763046_188.jpeg);
   background-position: bottom;
@@ -151,18 +185,18 @@ footer.jumbotron {
   margin-bottom: 0px;
   text-align: center;
 }
-/* line 139, ../scss/screen.scss */
+/* line 188, ../scss/screen.scss */
 footer.jumbotron .container {
   color: #fff;
   padding: 60px 0px;
 }
-/* line 143, ../scss/screen.scss */
+/* line 192, ../scss/screen.scss */
 footer.jumbotron hr {
   width: 60px;
   border: solid 2px #fece54;
   margin-bottom: 10px;
 }
-/* line 148, ../scss/screen.scss */
+/* line 197, ../scss/screen.scss */
 footer.jumbotron input {
   text-align: center;
   background-color: rgba(60, 60, 60, 0.4);
