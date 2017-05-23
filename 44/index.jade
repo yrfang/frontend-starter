@@ -1,0 +1,30 @@
+//output:index.html
+
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto")
+    link(rel="stylesheet", href="css/screen.css")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js")
+    script(src="bookstore.js")
+    title Bookstore
+  body
+  
+  #app
+    h1 使用Vue.js計算呈現資訊/v-if
+    h3 博客來排行榜資料轉換html
+      span
+      img.bkl_icon(src="http://pk.ixpanel.com/images/pk/201108/0824/BOOKS.gif") 
+      a(href="http://www.books.com.tw/" target="_blank") (連結網址)
+    
+    br
+    
+    label 詳細模式
+      input(type="checkbox")
+    
+    hr
+    
+    .book(v-for="book in books")
+      img(src="{{book.img}}")
