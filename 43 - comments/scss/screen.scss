@@ -1,0 +1,120 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+// @import "compass/reset";
+@charset "UTF-8";
+
+* {
+  // border: solid 1px #000;
+  font-family: 'Roboto', sans-serif, 微軟正黑體;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  a {
+    text-decoration: none;
+    color: #7a5751;
+    font-weight: bold;
+    font-size: 20px;
+    &:hover {
+      color: #888;
+    }
+  }
+}
+
+.container {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 50px auto;
+  font-size: 16px;
+
+  form {
+    width: 50%;
+    padding: 20px;
+    line-height: 30px;
+    border: solid 1px #7a5751;
+    border-radius: 5px;
+  }
+  label {
+    margin-right: 5px;
+  }
+  input {
+    width: 150px;
+    height: 20px;
+    outline: none;
+  }
+  .text {
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+    vertical-align: top;
+  }
+  .button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 1px 7px;
+    border: 5px;
+    color: #bbb;
+    background-color: #000;
+    letter-spacing: 2px;
+    cursor: pointer;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.feedback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin-top: 30px;
+  font-size: 16px;
+  .comment {
+    width: 50%;
+    padding: 20px;
+    line-height: 30px;
+    background-color: #7a5751;
+    color: #bbb;
+    border: none;
+    border-radius: 5px;
+  }
+}
+
+.message {
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.send_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #333;
+  border-radius: 5px;
+  padding: 15px;
+  display: inline-block;
+}

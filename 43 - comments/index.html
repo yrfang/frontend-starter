@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--20170523-->
+<html lang="en">
+  <meta chartest="utf-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="css/screen.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="comments.js"></script>
+  <title>Comments</title>
+  <body>
+    <header><a href="../01 - homepage/index.html">Home</a></header>
+    <div id="app" class="container">
+      <h1 class="title">哈囉!</h1>
+      <h4 class="subtitle">到目前為止對於我有什麼建議呢?</h4>
+      <div class="content">
+        <form action="#" method="method">
+          <label>我的名字</label>
+          <input type="text" v-model="name"><br>
+          <label>我的信箱是</label>
+          <input type="text" v-model="email"><br>
+          <input type="text" v-model="text" class="text">
+          <div class="button">Send!</div>
+        </form>
+      </div>
+      <div class="feedback">
+        <div class="comment"><span>哈囉，我是 </span><span v-bind:style="styleObject">{{name}}<br></span><span>我的信箱是 </span><span v-bind:style="styleObject">{{email}}<br></span><span>這是我想對你說的話 : </span><span v-bind:style="styleObject">{{text}}</span></div>
+      </div>
+    </div>
+  </body>
+</html>

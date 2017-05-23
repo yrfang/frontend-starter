@@ -1,0 +1,132 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 9, ../scss/screen.scss */
+* {
+  font-family: 'Roboto', sans-serif, 微軟正黑體;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+/* line 16, ../scss/screen.scss */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 21, ../scss/screen.scss */
+header {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+/* line 25, ../scss/screen.scss */
+header a {
+  text-decoration: none;
+  color: #7a5751;
+  font-weight: bold;
+  font-size: 20px;
+}
+/* line 30, ../scss/screen.scss */
+header a:hover {
+  color: #888;
+}
+
+/* line 36, ../scss/screen.scss */
+.container {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* line 43, ../scss/screen.scss */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 50px auto;
+  font-size: 16px;
+}
+/* line 51, ../scss/screen.scss */
+.content form {
+  width: 50%;
+  padding: 20px;
+  line-height: 30px;
+  border: solid 1px #7a5751;
+  border-radius: 5px;
+}
+/* line 58, ../scss/screen.scss */
+.content label {
+  margin-right: 5px;
+}
+/* line 61, ../scss/screen.scss */
+.content input {
+  width: 150px;
+  height: 20px;
+  outline: none;
+}
+/* line 66, ../scss/screen.scss */
+.content .text {
+  width: 100%;
+  height: 80px;
+  margin-top: 10px;
+  vertical-align: top;
+}
+/* line 72, ../scss/screen.scss */
+.content .button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 1px 7px;
+  border: 5px;
+  color: #bbb;
+  background-color: #000;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+/* line 81, ../scss/screen.scss */
+.content .button:hover {
+  color: #fff;
+}
+
+/* line 87, ../scss/screen.scss */
+.feedback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin-top: 30px;
+  font-size: 16px;
+}
+/* line 94, ../scss/screen.scss */
+.feedback .comment {
+  width: 50%;
+  padding: 20px;
+  line-height: 30px;
+  background-color: #7a5751;
+  color: #bbb;
+  border: none;
+  border-radius: 5px;
+}
+
+/* line 105, ../scss/screen.scss */
+.message {
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+/* line 111, ../scss/screen.scss */
+.send_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #333;
+  border-radius: 5px;
+  padding: 15px;
+  display: inline-block;
+}

@@ -1,0 +1,42 @@
+//output:index.html
+
+doctype html
+//20170523
+html(lang="en")
+  meta(chartest="utf-8")
+  link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto")
+  link(rel="stylesheet", href="css/screen.css")
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+  script(src="https://unpkg.com/vue/dist/vue.js")
+  script(src="comments.js")
+  title Comments
+  
+  body
+    
+    header
+      a(href="../01 - homepage/index.html") Home
+    
+    .container#app
+      h1.title 哈囉!
+      h4.subtitle 到目前為止對於我有什麼建議呢?
+      
+      .content
+        form(action="#" method="method")
+          label 我的名字
+          input(type="text" v-model="name")
+          br
+          label 我的信箱是
+          input(type="text" v-model="email")
+          br
+          input.text(type="text" v-model="text")
+          .button Send!
+      
+      .feedback
+        .comment
+          span 哈囉，我是 
+          span(v-bind:style="styleObject") {{name}}<br>
+          span 我的信箱是 
+          span(v-bind:style="styleObject") {{email}}<br>
+          span 這是我想對你說的話 : 
+          span(v-bind:style="styleObject") {{text}}
+      
