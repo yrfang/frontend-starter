@@ -6,5 +6,11 @@
 /* line 9, ../scss/screen.scss */
 * {
   border: solid 1px #000;
-  font-family: 微軟正黑體;
+  font-family: 'Roboto', sans-serif, 微軟正黑體;
+}
+
+/* line 14, ../scss/screen.scss */
+body {
+  padding: 20px;
+  line-height: 30px;
 }
