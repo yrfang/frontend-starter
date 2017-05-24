@@ -1,0 +1,135 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 9, ../scss/screen.scss */
+* {
+  font-family: 微軟正黑體;
+}
+
+/* line 13, ../scss/screen.scss */
+body {
+  padding: 20px;
+}
+
+/* line 17, ../scss/screen.scss */
+.bkl_icon {
+  width: 100px;
+  margin-left: 5px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/* line 24, ../scss/screen.scss */
+input {
+  margin-right: 15px;
+}
+
+/* line 28, ../scss/screen.scss */
+hr {
+  border: solid 1px #333;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 34, ../scss/screen.scss */
+.book {
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  border: solid 1px #bbb;
+  width: 170px;
+  height: 280px;
+  line-height: 22px;
+  vertical-align: top;
+}
+/* line 44, ../scss/screen.scss */
+.book a {
+  color: #555;
+}
+/* line 48, ../scss/screen.scss */
+.book img {
+  width: 100%;
+  height: initial;
+}
+/* line 53, ../scss/screen.scss */
+.book .author, .book .price, .book .publish {
+  font-weight: normal;
+  margin: 0;
+  font-size: 14px;
+}
+/* line 59, ../scss/screen.scss */
+.book .author {
+  margin-top: 5px;
+}
+/* line 63, ../scss/screen.scss */
+.book .name {
+  margin: 0;
+  margin-top: 5px;
+  font-size: 18px;
+}
+/* line 67, ../scss/screen.scss */
+.book .name a {
+  color: #222;
+}
+/* line 72, ../scss/screen.scss */
+.book .red {
+  font-weight: 900;
+  color: #d93800;
+}
+
+/* line 78, ../scss/screen.scss */
+.book.detail {
+  display: block;
+  width: 80%;
+  height: initial;
+  text-align: left;
+  padding: 10px;
+  line-height: 24px;
+}
+/* line 86, ../scss/screen.scss */
+.book.detail img {
+  width: 150px;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 91, ../scss/screen.scss */
+.book.detail .infos {
+  display: inline-block;
+  width: calc(100% - 150px - 20px);
+  vertical-align: middle;
+}
+/* line 96, ../scss/screen.scss */
+.book.detail .name {
+  text-align: justify;
+}
+
+/* line 101, ../scss/screen.scss */
+.big {
+  width: 280px;
+  height: 400px;
+  vertical-align: top;
+}
+/* line 105, ../scss/screen.scss */
+.big img {
+  margin-bottom: 5px;
+}
+
+/* line 110, ../scss/screen.scss */
+.detail.big {
+  height: inital;
+  padding: 20px;
+}
+/* line 113, ../scss/screen.scss */
+.detail.big img {
+  width: 220px;
+}
+/* line 116, ../scss/screen.scss */
+.detail.big .infos {
+  width: calc(100% - 220px - 40px);
+}
+/* line 119, ../scss/screen.scss */
+.detail.big .name {
+  text-align: justify;
+}

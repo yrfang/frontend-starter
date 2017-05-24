@@ -1,0 +1,69 @@
+//output:index.html
+
+doctype html
+//20170524
+html(lang='en')
+  head
+    meta(chartest="utf-8")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto")
+    link(rel="stylesheet", href="css/screen.css")
+    title Bookstore
+    
+  body
+  
+    .container#app
+      h1 使用Vue.js計算呈現資訊/v-if
+      h3 博客來排行榜資料轉換html
+        span
+        img.bkl_icon(src="http://pk.ixpanel.com/images/pk/201108/0824/BOOKS.gif") 
+        a(href="http://www.books.com.tw/" target="_blank") (連結網址)
+        br
+        a(href="../01 - homepage/index.html") Home
+        br
+      
+      label 詳細模式
+        input(type="checkbox" v-model="mode_detail")
+      
+      label 優惠價
+      span(v-for="(book, index) in books")
+        label {{index+1}}
+          input(type="checkbox" v-model="book.is_discount")
+      
+      br
+      br
+      
+      label 小呈現
+        input(type="radio" value="small" v-model="mode_size")
+      label 大呈現
+        input(type="radio" value="big" v-model="mode_size") 
+       
+      hr
+      
+      .book(v-for="book in books" v-bind:class="[mode_detail?'detail':'', mode_size]")
+        img(v-bind:src="book.img")
+        .infos
+          h2.name(v-if="!mode_detail")
+            a(v-bind:href="book.link_book" target="_blank") {{book.name.substring(0, 18)}}
+          h2.name(v-if="mode_detail")
+            a(v-bind:href="book.link_book" target="_blank") {{book.name}}
+          
+          h4.author 作者: 
+            a(v-bind:href="book.link_author" target="_blank") {{book.author}}
+          
+          h4.publish(v-if="mode_detail") 出版社: {{book.publish_house}}
+          
+          h4.price(v-if="book.is_discount") 優惠價: 
+            span.red {{book.discount*100}}
+            span 折
+            span.red {{parseInt(book.price*book.discount)}}
+            span 元
+          h4.price(v-if="!book.is_discount") 價錢: 
+            span.red {{book.price}}
+            span 元
+            
+          h4.publish(v-if="mode_detail") 出版日期: {{book.date}}
+            
+      
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")  
+    script(src="https://unpkg.com/vue/dist/vue.js")  
+    script(src="bookstore.js")

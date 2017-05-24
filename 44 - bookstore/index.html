@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--20170524-->
+<html lang="en">
+  <head>
+    <meta chartest="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="css/screen.css">
+    <title>Bookstore</title>
+  </head>
+  <body>
+    <div id="app" class="container">
+      <h1>使用Vue.js計算呈現資訊/v-if</h1>
+      <h3>博客來排行榜資料轉換html<span></span><img src="http://pk.ixpanel.com/images/pk/201108/0824/BOOKS.gif" class="bkl_icon"><a href="http://www.books.com.tw/" target="_blank">(連結網址)</a><br><a href="../01 - homepage/index.html">Home</a><br></h3>
+      <label>詳細模式
+        <input type="checkbox" v-model="mode_detail">
+      </label>
+      <label>優惠價</label><span v-for="(book, index) in books">
+        <label>{{index+1}}
+          <input type="checkbox" v-model="book.is_discount">
+        </label></span><br><br>
+      <label>小呈現
+        <input type="radio" value="small" v-model="mode_size">
+      </label>
+      <label>大呈現
+        <input type="radio" value="big" v-model="mode_size">
+      </label>
+      <hr>
+      <div v-for="book in books" v-bind:class="[mode_detail?'detail':'', mode_size]" class="book"><img v-bind:src="book.img">
+        <div class="infos">
+          <h2 v-if="!mode_detail" class="name"><a v-bind:href="book.link_book" target="_blank">{{book.name.substring(0, 18)}}</a></h2>
+          <h2 v-if="mode_detail" class="name"><a v-bind:href="book.link_book" target="_blank">{{book.name}}</a></h2>
+          <h4 class="author">作者: <a v-bind:href="book.link_author" target="_blank">{{book.author}}</a></h4>
+          <h4 v-if="mode_detail" class="publish">出版社: {{book.publish_house}}</h4>
+          <h4 v-if="book.is_discount" class="price">優惠價: <span class="red">{{book.discount*100}}</span><span>折</span><span class="red">{{parseInt(book.price*book.discount)}}</span><span>元</span></h4>
+          <h4 v-if="!book.is_discount" class="price">價錢: <span class="red">{{book.price}}</span><span>元</span></h4>
+          <h4 v-if="mode_detail" class="publish">出版日期: {{book.date}}</h4>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> </script>
+    <script src="https://unpkg.com/vue/dist/vue.js"> </script>
+    <script src="bookstore.js"></script>
+  </body>
+</html>

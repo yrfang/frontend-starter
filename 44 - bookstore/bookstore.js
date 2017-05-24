@@ -63,7 +63,7 @@ var bookdatas=[
     name: "手寫美「行」：鋼筆字冠軍的日常行書超值套組《手寫美「行」》+《美「行」小練習》【博客來獨家德國e+m原木筆桿&日本NIKKO沾水筆尖&鋼筆紙箋（Conifer／珠友文化隨機出貨）】",
     author: "葉曄",
     publish_house: "遠流",
-    img: "http://im1.book.com.tw/image/getImage?i=http://www.books.com.tw/img/001/072/35/0010723527_b_01.jpg&v=579b5a78&w=348&h=348",
+    img: "http://im1.book.com.tw/image/getImage?i=http://www.books.com.tw/img/001/072/35/0010723527_b_01.jpg&v=579b5a78&w=378&h=378",
     price: 520,
     is_discount: false,
     discount: 0.75,
@@ -83,12 +83,25 @@ var bookdatas=[
     link_author:
     "http://search.books.com.tw/exep/prod_search.php?key=Graphic%E7%A4%BE%E7%B7%A8%E8%BC%AF%E9%83%A8&f=author",
     date: "2016/10/06"
+  },{
+    name: "最有生產力的一年 The Productivity Project: Accomplishing More by Managing Your Time, Attention, and Energy",
+    author: "Chris Bailey",
+    publish_house: "天下文化",
+    img: "http://im2.book.com.tw/image/getImage?image=http://www.books.com.tw/img/001/072/27/0010722753.jpg&wide=188&height=188",
+    price: 380,
+    is_discount: true,
+    discount: 0.79,
+    link_book: "http://www.books.com.tw/products/0010722753",
+    link_author: "http://search.books.com.tw/search/query/key/Chris+Bailey/adv_author/1/",
+    date: "2016/07/29"
   }
 ];
 
 var vm = new Vue({
-  el: "#app",
+  el: '#app',
   data: {
+    mode_detail: false,
+    mode_size: "small",
     books: bookdatas
   }
 });

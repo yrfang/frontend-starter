@@ -1,0 +1,122 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+ // @import "compass/reset";
+ @charset "UTF-8";
+
+* {
+  font-family: 微軟正黑體;
+}
+
+body {
+  padding: 20px;
+}
+
+.bkl_icon {
+  width: 100px;
+  margin-left: 5px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+input {
+  margin-right: 15px;
+}
+
+hr {
+  border: solid 1px #333;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.book {
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  border: solid 1px #bbb;
+  width: 170px;
+  height: 280px;
+  line-height: 22px;
+  vertical-align: top;
+
+  a {
+    color: #555;
+  }
+
+  img {
+    width: 100%;
+    height: initial;
+  }
+
+  .author,.price, .publish {
+    font-weight: normal;
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .author {
+    margin-top: 5px;
+  }
+
+  .name {
+    margin: 0;
+    margin-top: 5px;
+    font-size: 18px;
+    a {
+      color: #222;
+    }
+  }
+
+  .red {
+    font-weight: 900;
+    color:#d93800;
+  }
+}
+
+.book.detail {
+  display: block;
+  width: 80%;
+  height: initial;
+  text-align: left;
+  padding: 10px;
+  line-height: 24px;
+
+  img {
+    width: 150px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .infos {
+    display: inline-block;
+    width: calc(100% - 150px - 20px);
+    vertical-align: middle;
+  }
+  .name {
+    text-align: justify;
+  }
+}
+
+.big {
+  width: 280px;
+  height: 400px;
+  vertical-align: top;
+  img {
+    margin-bottom: 5px;
+  }
+}
+
+.detail.big {
+  height: inital;
+  padding: 20px;
+  img {
+    width: 220px;
+  }
+  .infos {
+    width: calc(100% - 220px - 40px);
+  }
+  .name {
+    text-align: justify;
+  }
+}
