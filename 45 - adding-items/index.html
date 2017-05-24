@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--20170524-->
+<html lang="en">
+  <head>
+    <meta chartest="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="css/screen.css">
+    <title>Adding Items</title>
+    <body>
+      <header><a href="../01 - homepage/index.html">Home</a></header>
+      <div id="app" class="container">
+        <h1>使用v-on呼叫 / method寫function 建立js事件</h1>
+        <button v-on:click="add('apple')" class="adbtn">加蘋果(apple)</button>
+        <button v-on:click="add('pineapple')" class="adbtn">加鳳梨(pineapple)</button>
+        <button v-on:click="add('pen')" class="adbtn">加筆(pen)</button><br>
+        <h5 class="notify">狀態: {{status}}</h5>
+        <h5 v-if="fruits.length&gt;0">列表共有{{fruits.length}}項資料，有{{totals.pen}}隻筆，{{totals.pineapple}}顆鳳梨，{{totals.apple}}顆蘋果</h5>
+        <h5 v-if="fruits.length&lt;=0">列表裡面沒有資料...</h5>
+        <div v-for="(id,fruit) in fruits" track-by="$index" class="fruit">
+          <div class="name">{{id+1}}. {{fruit}}</div><img v-if="fruit=='pen'" src="http://simpleicon.com/wp-content/uploads/pen-15.png"><img v-if="fruit=='pineapple'" src="https://d30y9cdsu7xlg0.cloudfront.net/png/181946-200.png"><img v-if="fruit=='apple'" src="http://image.flaticon.com/icons/svg/25/25345.svg">
+          <button v-on:click="remove(id,fruit)">X</button>
+        </div>
+      </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.19/vue.js"> </script>
+    <script src="adding.js"></script>
+  </head>
+</html>

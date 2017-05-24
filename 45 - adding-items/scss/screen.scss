@@ -14,9 +14,27 @@ body {
   padding: 20px;
 }
 
+header {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  a {
+    color: #43866e;
+    text-decoration: none;
+    &:hover {
+      color: #333;
+    }
+  }
+}
+
 .fruit {
   margin: 5px;
   padding: 20px;
+  border: solid 1px #bbb;
+  width: 200px;
 
   .name {
     width: 120px;
@@ -24,11 +42,27 @@ body {
   }
 
   img {
-    width: 30px;
+    width: 40px;
   }
 
   * {
     display: inline-block;
     vertical-align: middle;
   }
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  border: solid 1px #555;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    background-color: #333;
+    color: white;
+  }
+}
+
+.adbtn {
+  padding: 10px 20px
 }
