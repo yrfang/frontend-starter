@@ -1,0 +1,68 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+ // @import "compass/reset";
+ @charset "UTF-8";
+
+* {
+  font-family: 微軟正黑體;
+}
+
+body {
+  padding: 20px;
+}
+
+ul.items {
+  padding: 0;
+  li {
+    list-style: none;
+    padding: 5px;
+    border-bottom: solid 1px #bbb;
+    width: 250px;
+  }
+  .name,.price {
+    display: inline-block;
+  }
+  .name {
+    width: 100px;
+  }
+}
+
+ul.classes {
+  list-style: none;
+  padding: 10px;
+
+  li {
+    border-bottom: solid 1px #bbb;
+    padding: 5px;
+    margin-top: 10px;
+  }
+  img {
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+  }
+  .classinfo {
+    width: calc(100% - 200px - 35px);
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px;
+    h4,h5 {
+      margin: 0;
+      margin-bottom: 10px;
+    }
+  }
+  p {
+    font-size: 20px;
+    line-height: 2;
+    text-indent: 2em;
+  }
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 16px;
+}

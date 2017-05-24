@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--20170524-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/screen.css">
+    <title>Ajax and Vue.js</title>
+  </head>
+  <body>
+    <h1>使用JQuery AJAX與Vue.js配合</h1>
+    <hr>
+    <div id="app1">
+      <h2>1.使用Ajax載入純文字</h2>
+      <h3>{{notifydata}}</h3>
+    </div>
+    <hr>
+    <div id="app2">
+      <h2>2.使用Ajax載入商品清單(JSON Array)</h2>
+      <h5 v-if="items.lenght==0">載入中...</h5>
+      <ul class="items">
+        <li v-for="item in items">
+          <div class="name">{{item.name}}</div>
+          <div class="price">{{item.price}}$</div>
+        </li>
+      </ul>
+    </div>
+    <hr>
+    <div id="app3">
+      <h2>3.實戰載入Hahow的API資料(JSON Array)</h2>
+      <h5 v-if="classes.lenght==0">載入中...</h5>
+      <ul class="classes">
+        <li v-for="class in classes"><img v-bind:src="class.coverImage.url" class="classes">
+          <div class="classinfo">
+            <h4>{{class.title}} ({{class.price}}$)</h4>
+            <h5>老師: {{class.owner.name}}</h5>
+            <h5>募資狀態: {{class.numSoldTickets}}/{{class.successCriteria.numSoldTickets}}</h5>
+            <p>{{class.metaDescription}}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <footer><a href="../01 - homepage/index.html">Home</a></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js"> </script>
+    <script src="ajax-vue.js"></script>
+  </body>
+</html>
