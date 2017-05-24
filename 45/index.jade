@@ -1,0 +1,27 @@
+//output:index.html
+
+doctype html
+//20170524
+html(lang='en')
+  head
+    meta(chartest="utf-8")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto")
+    link(rel="stylesheet", href="css/screen.css")
+    title Adding Fruit
+    
+    body
+      .container#app
+        h1 使用v-on呼叫 / method寫function 建立js事件
+        
+        .fruit(v-for="(index, fruit) in fruits")
+          .name {{index+1}}. {{fruit}}
+          img(v-if="fruit=='apple'"  src="http://icons.iconarchive.com/icons/aha-soft/food/256/apple-icon.png")
+          img(v-if="fruit=='pineapple'" src="https://cdn.iconscout.com/public/images/icon/free/png-512/pineapple-fruit-emoj-symbol-food-3c996c1d89b6ceec-512x512.png")
+          img(v-if="fruit=='orange'" src="https://image.flaticon.com/icons/svg/123/123228.svg")
+          img(v-if="fruit=='banana'" src="https://cdn.iconscout.com/public/images/icon/premium/png-512/banana-vegetables-fruit-food-supermarket-32998c55652fc00f-512x512.png")
+
+      
+    
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")  
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.19/vue.js")  
+    script(src="adding.js")
