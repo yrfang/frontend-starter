@@ -6,31 +6,34 @@
   <link rel="stylesheet" href="css/screen.css">
   <title>Hahow Homepage</title>
   <body>
+    <div class="banner">
+      <div class="center_banner"><a href="../01 - homepage/index.html"><img src="https://hahow.in/assets/images/publication/proposal-flow-tablet.png"></a></div>
+    </div>
     <div id="app">
-      <div class="banner">
-        <div class="center_banner"><img src=""></div>
-      </div>
-      <div class="classes"><a class="classbox">
-          <div class="teacher"></div>
-          <div class="top"></div>
-          <div class="bookbtn"></div></a></div>
-      <div class="bottom">
-        <h1 class="classtitle"></h1>
-        <div class="texts">
-          <div class="pricerow">
-            <div class="preprice">預購價</div>
-            <div class="lastday">剩</div>
+      <div class="classes"><a v-for="cls in classdatas" v-bind:href="'https://hahow.in/courses/'+cls._id" target="_blank" class="classbox">
+          <div v-bind:style="'background-image:url('+ cls.owner.profileImageUrl +')'" class="teacher"></div>
+          <div class="top">
+            <div v-bind:style="'background-image:url('+ cls.coverImage.url +')'" class="classpicture"></div>
+            <div class="tag">募資中</div>
+            <div class="bookbtn"><i class="fa fa-bookmark-o"></i></div>
           </div>
-          <div class="progressbar">
-            <div class="valuebar"></div>
-          </div>
-          <div class="nowpeople">已募資</div>
-        </div>
-        <div class="orangebar"></div>
-      </div>
+          <div class="bottom">
+            <h1 class="classtitle">{{cls.title}}</h1>
+            <div class="texts">
+              <div class="pricerow">
+                <div class="preprice">預購價<span class="orange">NT{{cls.preOrderedPrice}}</span></div>
+                <div class="lastday">剩<span class="orange">{{parseInt((new Date(cls.proposalDueTime)-new Date('2016/10/14'))/1000/60/60/24)}}天</span></div>
+              </div>
+              <div class="progressbar">
+                <div v-bind:style="'width:'+230*cls.numSoldTickets/cls.successCriteria.numSoldTickets+'px'" class="valuebar"></div>
+              </div>
+              <div class="nowpeople">已募資<span class="orange">{{cls.numSoldTickets}}/{{cls.successCriteria.numSoldTickets}}人</span></div>
+            </div>
+            <div class="orangebar"></div>
+          </div></a></div>
     </div>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.19/vue.js"> </script>
-  <script src="adding.js"></script>
+  <script src="hahow.js"></script>
 </head>

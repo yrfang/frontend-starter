@@ -3,8 +3,230 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 39, ../scss/screen.scss */
+/* line 44, ../scss/screen.scss */
 * {
-  font-family: 微軟正黑體;
-  border: solid 1px;
+  font-family: "Heiti TC", "HeitiTC-Light", "LiHei", "微軟正黑體", "Lato", "Verdana";
+  position: relative;
+  vertical-align: top;
+  color: #4F4C4B;
+}
+
+/* line 52, ../scss/screen.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 57, ../scss/screen.scss */
+body {
+  background-color: #f3f3f1;
+}
+
+/* line 61, ../scss/screen.scss */
+.orange {
+  color: #FA8B00;
+  font-weight: 500;
+  padding-left: 3px;
+}
+
+/* line 67, ../scss/screen.scss */
+.banner {
+  height: 400px;
+  background: linear-gradient(-45deg, #FFE18D 10%, #FFE18D 10%, #FFDA71 10%, #FFDA71 40%, #FFE18D 40%, #FFE18D 60%, #FFDA71 60%, #FFDA71 90%, #FFE18D 90%, #FFE18D 100%);
+  background-size: 46px 46px;
+  position: relative;
+}
+/* line 72, ../scss/screen.scss */
+.banner .center_banner {
+  display: inline-block;
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.3);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 82, ../scss/screen.scss */
+.banner .center_banner img {
+  width: 1000px;
+  cursor: pointer;
+}
+
+/* line 89, ../scss/screen.scss */
+.classes {
+  margin-top: 50px;
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 96, ../scss/screen.scss */
+.classbox {
+  width: 260px;
+  padding: 15px;
+  padding-bottom: 0px;
+  box-sizing: border-box;
+  text-align: left;
+  text-decoration: none;
+  background-color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin: 25px 15px;
+}
+/* line 109, ../scss/screen.scss */
+.classbox:hover .classpicture {
+  transform: scale(1.15);
+}
+/* line 112, ../scss/screen.scss */
+.classbox:hover .bookbtn {
+  bottom: 10px;
+}
+
+/* line 118, ../scss/screen.scss */
+.teacher {
+  position: absolute;
+  top: -27.5px;
+  width: 55px;
+  height: 55px;
+  background-image: url("https://hahow.in/images/57ab3d5585b097070042067a");
+  background-size: cover;
+  border: solid 2px #fff;
+  border-radius: 100%;
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.12);
+  z-index: 10;
+}
+
+/* line 131, ../scss/screen.scss */
+.top {
+  height: 160px;
+  margin: -15px;
+  margin-bottom: 0px;
+  overflow: hidden;
+  border-radius: 5px 5px 0px 0px;
+}
+/* line 138, ../scss/screen.scss */
+.top .tag {
+  width: 100%;
+  text-align: center;
+  padding: 5px 0px;
+  transform: translate(95px) translateY(15px) rotate(45deg);
+  background-color: #EB5E00;
+  font-weight: 900;
+  color: #fff;
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+}
+/* line 149, ../scss/screen.scss */
+.top .classpicture {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("https://hahow.in/images/574fab4f206cd60900c52a67?width=300");
+  background-size: cover;
+  transition-duration: 0.3s;
+}
+/* line 157, ../scss/screen.scss */
+.top .bookbtn {
+  width: 42px;
+  height: 42px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 15px;
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.2);
+  bottom: -50px;
+  transition: bottom 0.4s;
+  text-align: center;
+}
+/* line 168, ../scss/screen.scss */
+.top .bookbtn:hover {
+  background-color: #EB5E00;
+}
+/* line 170, ../scss/screen.scss */
+.top .bookbtn:hover i {
+  color: #fff;
+}
+/* line 176, ../scss/screen.scss */
+.top i {
+  font-size: 22px;
+  font-weight: 500;
+  color: #FA8B00;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.12);
+}
+
+/* line 188, ../scss/screen.scss */
+.bottom {
+  height: 184px;
+  position: relative;
+}
+/* line 192, ../scss/screen.scss */
+.bottom .classtitle {
+  margin-top: 30px;
+  font-size: 25px;
+}
+
+/* line 198, ../scss/screen.scss */
+.texts {
+  font-size: 15px;
+  padding-top: 0;
+  padding-bottom: 4px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+/* line 206, ../scss/screen.scss */
+.pricerow {
+  height: 22px;
+  position: relative;
+  padding-bottom: 7px;
+}
+/* line 211, ../scss/screen.scss */
+.pricerow .preprice, .pricerow .lastday {
+  display: inline-block;
+  position: absolute;
+}
+/* line 216, ../scss/screen.scss */
+.pricerow .lastday {
+  right: 0;
+}
+
+/* line 221, ../scss/screen.scss */
+.progressbar {
+  height: 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+/* line 227, ../scss/screen.scss */
+.progressbar .valuebar {
+  background-color: #FA8B00;
+  width: 30%;
+  height: 100%;
+  border-radius: 5px 0px 0px 5px;
+  transition-duration: 1s;
+}
+
+/* line 236, ../scss/screen.scss */
+.nowpeople {
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+/* line 243, ../scss/screen.scss */
+.orangebar {
+  position: absolute;
+  bottom: 0;
+  height: 5px;
+  background-color: #EB5E00;
+  width: 100%;
+  margin: 0px -15px;
+  padding: 0px 15px;
+  border-radius: 0px 0px 5px 5px;
 }
