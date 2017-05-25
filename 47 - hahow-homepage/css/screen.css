@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 39, ../scss/screen.scss */
+* {
+  font-family: 微軟正黑體;
+  border: solid 1px;
+}
