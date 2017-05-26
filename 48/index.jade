@@ -1,0 +1,37 @@
+//output:index.html
+
+doctype
+//20170526
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Anton")
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(rel="stylesheet", href="css/screen.css")
+    title Color Sping
+  body
+    .left_container
+      .title_container
+        img.logo(src="https://image.flaticon.com/icons/svg/234/234464.svg")
+        h1.title Color Spining
+    
+    .right_container
+      .block_container
+        .block.left
+        .block.right
+      .btn_container
+        label(for="color_left") Choose 1
+        input#color_left(type="color" name="color" value="#6faaf5")
+        label(for="color_right") Choose 2
+        input#color_right(type="color" name="color" value="#ff8058")
+        button Mixing
+      .text What color do you see ?
+        
+      
+
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")  
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.19/vue.js")  
+    script(src="color-spin.js")
+      
+    

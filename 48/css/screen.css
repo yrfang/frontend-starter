@@ -1,0 +1,124 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 18, ../scss/screen.scss */
+* {
+  border: solid 1px;
+  font-family: 'Anton', sans-serif, 微軟正黑體;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* line 25, ../scss/screen.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 33, ../scss/screen.scss */
+.left_container {
+  width: 50%;
+  height: 100%;
+  padding: 80px;
+  margin: 0;
+  background: linear-gradient(-45deg, #ddd 20%, #ccc 20%, #ddd 40%, #ccc 40%, #ddd 60%, #ccc 60%, #ddd 80%, #ccc 80%, #ddd 100%, #ccc 100%);
+  background-size: 231px 346px;
+}
+/* line 41, ../scss/screen.scss */
+.left_container .title_container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+/* line 47, ../scss/screen.scss */
+.left_container img.logo {
+  width: 150px;
+  margin: 100px 20px 0px 20px;
+}
+/* line 52, ../scss/screen.scss */
+.left_container .title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #f4ab20;
+  text-shadow: 3px 3px 5px #333;
+  margin-top: 0px;
+}
+
+/* line 63, ../scss/screen.scss */
+.right_container {
+  width: 50%;
+  height: 100%;
+  padding: 50px;
+}
+/* line 68, ../scss/screen.scss */
+.right_container .block_container {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 79, ../scss/screen.scss */
+.right_container .block_container .left, .right_container .block_container .right {
+  width: 120px;
+  height: 240px;
+}
+/* line 84, ../scss/screen.scss */
+.right_container .block_container .left {
+  border-bottom-left-radius: 240px;
+  border-top-left-radius: 240px;
+}
+/* line 89, ../scss/screen.scss */
+.right_container .block_container .right {
+  border-bottom-right-radius: 240px;
+  border-top-right-radius: 240px;
+}
+
+/* line 98, ../scss/screen.scss */
+.btn_container {
+  font-size: 16px;
+  font-weight: light;
+  text-align: center;
+}
+
+/* line 104, ../scss/screen.scss */
+lable, input, button {
+  vertical-align: middle;
+}
+
+/* line 108, ../scss/screen.scss */
+input {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+/* line 113, ../scss/screen.scss */
+button {
+  padding: 5px 8px;
+  background-color: #f4ab20;
+  color: #fff;
+  border: solid 1px #000;
+  outline: none;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+/* line 123, ../scss/screen.scss */
+.text {
+  margin-top: 50px;
+  font-size: 24px;
+  font-weight: light;
+  text-align: center;
+  letter-spacing: 1px;
+}
