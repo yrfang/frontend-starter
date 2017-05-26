@@ -5,13 +5,13 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /* line 18, ../scss/screen.scss */
 * {
-  border: solid 1px;
   font-family: 'Anton', sans-serif, 微軟正黑體;
   box-sizing: border-box;
   position: relative;
+  user-select: none;
 }
 
-/* line 25, ../scss/screen.scss */
+/* line 26, ../scss/screen.scss */
 html, body {
   margin: 0;
   padding: 0;
@@ -20,7 +20,7 @@ html, body {
   height: 100%;
 }
 
-/* line 33, ../scss/screen.scss */
+/* line 34, ../scss/screen.scss */
 .left_container {
   width: 50%;
   height: 100%;
@@ -29,18 +29,18 @@ html, body {
   background: linear-gradient(-45deg, #ddd 20%, #ccc 20%, #ddd 40%, #ccc 40%, #ddd 60%, #ccc 60%, #ddd 80%, #ccc 80%, #ddd 100%, #ccc 100%);
   background-size: 231px 346px;
 }
-/* line 41, ../scss/screen.scss */
+/* line 42, ../scss/screen.scss */
 .left_container .title_container {
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
 }
-/* line 47, ../scss/screen.scss */
+/* line 48, ../scss/screen.scss */
 .left_container img.logo {
   width: 150px;
   margin: 100px 20px 0px 20px;
 }
-/* line 52, ../scss/screen.scss */
+/* line 53, ../scss/screen.scss */
 .left_container .title {
   text-align: center;
   font-size: 48px;
@@ -51,74 +51,129 @@ html, body {
   margin-top: 0px;
 }
 
-/* line 63, ../scss/screen.scss */
+/* line 64, ../scss/screen.scss */
+:root {
+  --base: #68c73c;
+  --color_left: #6faaf5;
+  --color_right: #ff8058;
+}
+
+/* line 70, ../scss/screen.scss */
 .right_container {
   width: 50%;
   height: 100%;
   padding: 50px;
 }
-/* line 68, ../scss/screen.scss */
+/* line 75, ../scss/screen.scss */
 .right_container .block_container {
   margin-top: 30px;
   margin-bottom: 50px;
   margin-right: auto;
   margin-left: auto;
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* line 79, ../scss/screen.scss */
+/* line 86, ../scss/screen.scss */
 .right_container .block_container .left, .right_container .block_container .right {
   width: 120px;
   height: 240px;
 }
-/* line 84, ../scss/screen.scss */
+/* line 91, ../scss/screen.scss */
 .right_container .block_container .left {
   border-bottom-left-radius: 240px;
   border-top-left-radius: 240px;
+  background-color: var(--color_left);
 }
-/* line 89, ../scss/screen.scss */
+/* line 97, ../scss/screen.scss */
 .right_container .block_container .right {
   border-bottom-right-radius: 240px;
   border-top-right-radius: 240px;
+  background-color: var(--color_right);
 }
 
-/* line 98, ../scss/screen.scss */
+/* line 107, ../scss/screen.scss */
 .btn_container {
   font-size: 16px;
   font-weight: light;
   text-align: center;
 }
 
-/* line 104, ../scss/screen.scss */
+/* line 113, ../scss/screen.scss */
 lable, input, button {
   vertical-align: middle;
 }
 
-/* line 108, ../scss/screen.scss */
+/* line 117, ../scss/screen.scss */
 input {
   margin-right: 20px;
   cursor: pointer;
 }
 
-/* line 113, ../scss/screen.scss */
+/* line 122, ../scss/screen.scss */
 button {
   padding: 5px 8px;
   background-color: #f4ab20;
   color: #fff;
   border: solid 1px #000;
   outline: none;
+  font-size: 20px;
   letter-spacing: 2px;
   cursor: pointer;
 }
 
-/* line 123, ../scss/screen.scss */
+/* line 133, ../scss/screen.scss */
 .text {
   margin-top: 50px;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: light;
   text-align: center;
   letter-spacing: 1px;
+  color: var(--base);
+}
+
+/* line 142, ../scss/screen.scss */
+.rotate {
+  animation: rotate 0.1s infinite linear;
+  animation-delay: 0s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(72deg);
+  }
+  30% {
+    transform: rotate(144deg);
+  }
+  50% {
+    transform: rotate(216deg);
+  }
+  70% {
+    transform: rotate(288deg);
+  }
+  90% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* line 157, ../scss/screen.scss */
+footer {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  display: inline-block;
+  padding: 5px;
+}
+/* line 163, ../scss/screen.scss */
+footer a {
+  text-decoration: none;
+  color: #f4ab20;
+  letter-spacing: 2px;
 }

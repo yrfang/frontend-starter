@@ -8,12 +8,12 @@ html(lang='en')
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Anton")
     link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
     link(rel="stylesheet", href="css/screen.css")
-    title Color Sping
+    title Color Mixing
   body
     .left_container
       .title_container
         img.logo(src="https://image.flaticon.com/icons/svg/234/234464.svg")
-        h1.title Color Spining
+        h1.title Color Mixing
     
     .right_container
       .block_container
@@ -21,11 +21,13 @@ html(lang='en')
         .block.right
       .btn_container
         label(for="color_left") Choose 1
-        input#color_left(type="color" name="color" value="#6faaf5")
+        input#color_left(type="color" name="color_left" value="#6faaf5")
         label(for="color_right") Choose 2
-        input#color_right(type="color" name="color" value="#ff8058")
+        input#color_right(type="color" name="color_right" value="#ff8058")
         button Mixing
-      .text What color do you see ?
+      .text Just a strange color mixing...
+    footer
+      a(href="../01 - homepage/index.html") Home
         
       
 
