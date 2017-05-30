@@ -51,7 +51,6 @@ nav.navbar.at_top {
 }
 
 // ----------------------------
-
 //index_page
 header {
   position: relative;
@@ -61,6 +60,9 @@ header {
     width: 80%;
     max-width: 250px;
     padding: 250px 0px;
+  }
+  .navbar-brand {
+    color: #fff;
   }
 
   //底部邊界
@@ -107,6 +109,7 @@ section {
 // Section簡介
 #section_about {
   background-color: $color_brown;
+  position: relative;
   .container {
     transform: rotate(15deg) scale(0.9);
   }
@@ -166,6 +169,32 @@ section {
 .tri5 {
   width: 80px;
   margin-left: 100%;
+}
+
+#cat {
+  width: 30%;
+  position: absolute;
+  right: 2px;
+  bottom: -3px;
+  // transform: translateX(-50%);
+}
+
+#cross {
+  position: absolute;
+  &:before, &:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 15px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+  &:after {
+    transform: translate(-50%,-50%) rotate(136deg);
+  }
 }
 
 
@@ -283,6 +312,23 @@ section {
   padding-top: 90px;
   overflow: hidden;
   position: relative;
+
+  .cat {
+    width: 150px;
+    position: absolute;
+    bottom: 0px;
+    transition: 0.3s;
+  }
+  #cat_blue {
+    right: 240px;
+    z-index: 3;
+  }
+  #cat_grey {
+    right: 100px;
+  }
+  #cat_yellow {
+    right: 170px;
+  }
 
   .mails {
     height: 400px;
