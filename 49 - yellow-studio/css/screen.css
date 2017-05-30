@@ -1,0 +1,344 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 14, ../scss/screen.scss */
+* {
+  font-family: "Oswald", 微軟正黑體;
+}
+
+/* line 32, ../scss/screen.scss */
+html, body {
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+/* line 38, ../scss/screen.scss */
+nav.navbar {
+  transition: 0.5s;
+}
+/* line 40, ../scss/screen.scss */
+nav.navbar a {
+  transition: 0.5s;
+}
+
+/* line 46, ../scss/screen.scss */
+nav.navbar.at_top {
+  background-color: transparent;
+}
+/* line 48, ../scss/screen.scss */
+nav.navbar.at_top a, nav.navbar.at_top a:visited {
+  color: #fff;
+}
+
+/* line 56, ../scss/screen.scss */
+header {
+  position: relative;
+  background-color: #282f44;
+  text-align: center;
+}
+/* line 60, ../scss/screen.scss */
+header .icon {
+  width: 80%;
+  max-width: 250px;
+  padding: 250px 0px;
+}
+/* line 67, ../scss/screen.scss */
+header .marginbottom {
+  position: absolute;
+  width: 95%;
+  bottom: 0px;
+  right: 0px;
+  z-index: 5;
+  animation: upin 2s both;
+}
+@keyframes upin {
+  0% {
+    bottom: -100px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+/* line 81, ../scss/screen.scss */
+header .explore {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: #f5d061;
+  top: 85%;
+  opacity: 0;
+  transition: 0.5s;
+}
+/* line 88, ../scss/screen.scss */
+header .explore:after {
+  display: block;
+  content: "v";
+  transform: scaleX(1.2) scaleY(0.5);
+}
+/* line 93, ../scss/screen.scss */
+header .explore.at_top {
+  opacity: 1;
+}
+
+/* line 101, ../scss/screen.scss */
+section {
+  padding: 60px;
+  position: relative;
+}
+
+/* line 108, ../scss/screen.scss */
+#section_about {
+  background-color: #E6AF2E;
+}
+/* line 110, ../scss/screen.scss */
+#section_about .container {
+  transform: rotate(15deg) scale(0.9);
+}
+/* line 114, ../scss/screen.scss */
+#section_about .row {
+  height: 150px;
+  color: #000;
+}
+/* line 117, ../scss/screen.scss */
+#section_about .row .r1text {
+  font-size: 80px;
+}
+/* line 121, ../scss/screen.scss */
+#section_about .row .r2text {
+  font-size: 35px;
+}
+/* line 125, ../scss/screen.scss */
+#section_about .row .r3text {
+  font-size: 50px;
+  text-align: right;
+}
+/* line 129, ../scss/screen.scss */
+#section_about .row .btn-area {
+  height: 150px;
+}
+/* line 132, ../scss/screen.scss */
+#section_about .row a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform: rotate(10deg);
+}
+/* line 139, ../scss/screen.scss */
+#section_about .marginbottom {
+  position: absolute;
+  width: 60%;
+  top: calc(100% - 2px);
+  z-index: 3;
+}
+
+/* line 148, ../scss/screen.scss */
+.tri {
+  transform: rotate(-15deg);
+}
+
+/* line 151, ../scss/screen.scss */
+.tri1 {
+  width: 350px;
+}
+
+/* line 154, ../scss/screen.scss */
+.tri2 {
+  width: 20px;
+  margin-left: 20px;
+}
+
+/* line 158, ../scss/screen.scss */
+.tri3 {
+  width: 150px;
+  margin-left: 70%;
+}
+
+/* line 162, ../scss/screen.scss */
+.tri4 {
+  width: 70px;
+  margin-left: 100%;
+}
+
+/* line 166, ../scss/screen.scss */
+.tri5 {
+  width: 80px;
+  margin-left: 100%;
+}
+
+/* line 174, ../scss/screen.scss */
+#section_service {
+  background-color: #ececec;
+  padding: 80px 0px;
+  padding-bottom: 20px;
+}
+/* line 179, ../scss/screen.scss */
+#section_service .col-sm-4 {
+  text-align: center;
+}
+/* line 183, ../scss/screen.scss */
+#section_service h1 {
+  background-color: #282f44;
+  color: #ececec;
+  font-size: 24px;
+  display: inline-block;
+  padding: 5px 20px;
+  font-weight: normal;
+}
+/* line 192, ../scss/screen.scss */
+#section_service h3 {
+  margin-top: 0;
+  margin-bottom: 60px;
+  color: #E6AF2E;
+}
+/* line 198, ../scss/screen.scss */
+#section_service .icon_service {
+  width: 60%;
+}
+
+/* line 206, ../scss/screen.scss */
+#section_works {
+  background-color: #ececec;
+  padding: 80px 0px;
+  padding-top: 0;
+}
+/* line 211, ../scss/screen.scss */
+#section_works h1 {
+  background-color: #282f44;
+  color: #ececec;
+  font-size: 24px;
+  padding: 6px 25px;
+  display: inline-block;
+  font-weight: normal;
+}
+/* line 220, ../scss/screen.scss */
+#section_works .work {
+  height: 230px;
+  cursor: pointer;
+  position: relative;
+  padding: 5px;
+  overflow: hidden;
+}
+/* line 227, ../scss/screen.scss */
+#section_works .work.big {
+  height: 460px;
+}
+/* line 231, ../scss/screen.scss */
+#section_works .work img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+}
+/* line 236, ../scss/screen.scss */
+#section_works .work:before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: block;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.5s;
+  z-index: 5;
+}
+/* line 247, ../scss/screen.scss */
+#section_works .work .texts {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 8;
+}
+/* line 255, ../scss/screen.scss */
+#section_works .work .title {
+  line-height: 24px;
+}
+/* line 260, ../scss/screen.scss */
+#section_works .work:hover:before, #section_works .work:hover .texts {
+  opacity: 1;
+}
+/* line 267, ../scss/screen.scss */
+#section_works .marginbottom {
+  position: absolute;
+  width: 95%;
+  right: -20px;
+  top: 100%;
+  z-index: 5;
+  animation: upin 2s both;
+}
+
+/* line 280, ../scss/screen.scss */
+#section_contact {
+  background-color: #282f44;
+  color: #ececec;
+  padding-top: 90px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 287, ../scss/screen.scss */
+#section_contact .mails {
+  height: 400px;
+}
+/* line 290, ../scss/screen.scss */
+#section_contact .mails .mailcover {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  top: 70%;
+  transform: rotate(5deg) scale(2.1) translate(-40%, -50%);
+}
+/* line 294, ../scss/screen.scss */
+#section_contact .mails .mailcover img {
+  width: 120%;
+}
+/* line 299, ../scss/screen.scss */
+#section_contact .mails .mailbody {
+  background-color: #ececec;
+  color: #282f44;
+  padding: 20px;
+  padding-left: 40px;
+  position: absolute;
+  width: 90%;
+}
+/* line 309, ../scss/screen.scss */
+#section_contact input, #section_contact textarea {
+  display: block;
+  background-color: transparent;
+  border: none;
+  border: solid 3px #282f44;
+}
+/* line 315, ../scss/screen.scss */
+#section_contact textarea {
+  height: 140px;
+  width: 100%;
+}
+/* line 320, ../scss/screen.scss */
+#section_contact .information {
+  padding-left: 60px;
+}
+
+/* line 326, ../scss/screen.scss */
+footer {
+  position: relative;
+  background-color: #E6AF2E;
+  text-align: center;
+}
+/* line 331, ../scss/screen.scss */
+footer .icon {
+  width: 80%;
+  max-width: 250px;
+  padding: 80px 0px;
+}

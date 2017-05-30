@@ -1,0 +1,336 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+ // @import "compass/reset";
+ @charset "UTF-8";
+
+$color_blue: #282f44;
+$color_brown: #E6AF2E;
+$color_yellow: #f5d061;
+$color_white: #ececec;
+
+* {
+  font-family: "Oswald", 微軟正黑體;
+  // border: solid 1px !important;
+}
+
+@mixin ab_center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+// ----------------------------
+html, body {
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+//navbar
+nav.navbar {
+  transition: 0.5s;
+  a {
+    transition: 0.5s;
+  }
+}
+
+//--導覽列在上方時透明
+nav.navbar.at_top {
+  background-color: transparent;
+  a, a:visited {
+    color: #fff;
+  }
+}
+
+// ----------------------------
+
+//index_page
+header {
+  position: relative;
+  background-color: $color_blue;
+  text-align: center;
+  .icon {
+    width: 80%;
+    max-width: 250px;
+    padding: 250px 0px;
+  }
+
+  //底部邊界
+  .marginbottom {
+    position: absolute;
+    width: 95%;
+    bottom: 0px;
+    right: 0px;
+    z-index: 5;
+    animation: upin 2s both;
+  }
+
+  @keyframes upin {
+    0% {bottom: -100px}
+    100% {bottom: 0px}
+  }
+
+  .explore {
+    @include ab_center;
+    font-size: 16px;
+    color: $color_yellow;
+    top: 85%;
+    opacity: 0;
+    transition: 0.5s;
+    &:after {
+      display: block;
+      content: "v";
+      transform: scaleX(1.2) scaleY(0.5);
+    }
+    &.at_top {
+      opacity: 1;
+    }
+  }
+}
+
+// ----------------------------
+
+section {
+  padding: 60px;
+  position: relative;
+}
+
+// ----------------------------
+// Section簡介
+#section_about {
+  background-color: $color_brown;
+  .container {
+    transform: rotate(15deg) scale(0.9);
+  }
+
+  .row {
+    height: 150px;
+    color: #000;
+    .r1text {
+      font-size: 80px;
+      // transition: 0.1s;
+    }
+    .r2text {
+      font-size: 35px;
+      // transition: 0.2s;
+    }
+    .r3text {
+      font-size: 50px;
+      text-align: right;
+    }
+    .btn-area {
+      height: 150px;
+    }
+    a {
+      @include ab_center;
+      transform: rotate(10deg);
+    }
+  }
+
+  //底部邊界
+  .marginbottom {
+    position: absolute;
+    width: 60%;
+    top: calc(100% - 2px);
+    z-index: 3;
+  }
+}
+
+// triange
+.tri {
+  transform: rotate(-15deg);
+}
+.tri1 {
+  width: 350px;
+}
+.tri2 {
+  width: 20px;
+  margin-left: 20px;
+}
+.tri3 {
+  width: 150px;
+  margin-left: 70%;
+}
+.tri4 {
+  width: 70px;
+  margin-left: 100%;
+}
+.tri5 {
+  width: 80px;
+  margin-left: 100%;
+}
+
+
+// ----------------------------
+// Section服務
+#section_service {
+  background-color: $color_white;
+  padding: 80px 0px;
+  padding-bottom: 20px;
+
+  .col-sm-4 {
+    text-align: center;
+  }
+
+  h1 {
+    background-color: $color_blue;
+    color: $color_white;
+    font-size: 24px;
+    display: inline-block;
+    padding: 5px 20px;
+    font-weight: normal;
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 60px;
+    color: $color_brown;
+  }
+
+  .icon_service {
+    width: 60%;
+  }
+}
+
+
+// ----------------------------
+// Section作品
+#section_works {
+  background-color: $color_white;
+  padding: 80px 0px;
+  padding-top: 0;
+
+  h1 {
+    background-color: $color_blue;
+    color: $color_white;
+    font-size: 24px;
+    padding: 6px 25px;
+    display: inline-block;
+    font-weight: normal;
+  }
+
+  .work {
+    height: 230px;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+    overflow: hidden;
+
+    &.big {
+      height: 460px;
+    }
+
+    img {
+      @include ab_center;
+      height: 100%;
+    }
+
+    &:before {
+      @include ab_center;
+      @include size(100%,100%);
+      content: "";
+      display: block;
+      opacity: 0;
+      background-color: rgba(#000, 0.7);
+      transition: 0.5s;
+      z-index: 5;
+    }
+
+    .texts {
+      @include ab_center;
+      color: #fff;
+      opacity: 0;
+      transition: 0.5s;
+      z-index: 8;
+    }
+
+    .title {
+      line-height: 24px;
+    }
+
+    &:hover {
+      &:before, .texts {
+        opacity: 1;
+      }
+    }
+  }
+
+  //底部邊界
+  .marginbottom {
+    position: absolute;
+    width: 95%;
+    right: -20px;
+    top: 100%;
+    z-index: 5;
+    animation: upin 2s both;
+  }
+}
+
+
+// ----------------------------
+// Section聯絡
+#section_contact {
+  background-color: $color_blue;
+  color: $color_white;
+  padding-top: 90px;
+  overflow: hidden;
+  position: relative;
+
+  .mails {
+    height: 400px;
+
+    .mailcover {
+      @include ab_center;
+      top: 70%;
+      transform: rotate(5deg) scale(2.1) translate(-40%,-50%);
+      img {
+        width: 120%;
+      }
+    }
+
+    .mailbody {
+      background-color: $color_white;
+      color: $color_blue;
+      padding: 20px;
+      padding-left: 40px;
+      position: absolute;
+      width: 90%;
+    }
+  }
+
+  & input,textarea {
+    display: block;
+    background-color: transparent;
+    border: none;
+    border: solid 3px $color_blue;
+  }
+  & textarea {
+    height: 140px;
+    width: 100%;
+  }
+
+  .information {
+    padding-left: 60px;
+  }
+}
+
+// ---------------------------
+footer {
+  position: relative;
+  background-color: $color_brown;
+  text-align: center;
+
+  .icon {
+    width: 80%;
+    max-width: 250px;
+    padding: 80px 0px;
+  }
+}
