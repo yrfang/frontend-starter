@@ -111,10 +111,12 @@ section {
 /* line 120, ../scss/screen.scss */
 #section_about .row .r1text {
   font-size: 80px;
+  transition: 0.1s;
 }
 /* line 124, ../scss/screen.scss */
 #section_about .row .r2text {
   font-size: 35px;
+  transition: 0.2s;
 }
 /* line 128, ../scss/screen.scss */
 #section_about .row .r3text {
@@ -133,7 +135,27 @@ section {
   transform: translate(-50%, -50%);
   transform: rotate(10deg);
 }
-/* line 142, ../scss/screen.scss */
+@media screen and (max-width: 700px) {
+  /* line 140, ../scss/screen.scss */
+  #section_about .row .r1text {
+    font-size: 50px;
+  }
+  /* line 143, ../scss/screen.scss */
+  #section_about .row .r2text {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 148, ../scss/screen.scss */
+  #section_about .row .r1text {
+    font-size: 36px;
+  }
+  /* line 151, ../scss/screen.scss */
+  #section_about .row .r2text {
+    font-size: 18px;
+  }
+}
+/* line 158, ../scss/screen.scss */
 #section_about .marginbottom {
   position: absolute;
   width: 60%;
@@ -141,53 +163,59 @@ section {
   z-index: 3;
 }
 
-/* line 151, ../scss/screen.scss */
+/* line 167, ../scss/screen.scss */
 .tri {
   transform: rotate(-15deg);
 }
 
-/* line 154, ../scss/screen.scss */
+/* line 170, ../scss/screen.scss */
 .tri1 {
   width: 350px;
 }
 
-/* line 157, ../scss/screen.scss */
+/* line 173, ../scss/screen.scss */
 .tri2 {
   width: 20px;
   margin-left: 20px;
 }
 
-/* line 161, ../scss/screen.scss */
+/* line 177, ../scss/screen.scss */
 .tri3 {
   width: 150px;
   margin-left: 70%;
 }
 
-/* line 165, ../scss/screen.scss */
+/* line 181, ../scss/screen.scss */
 .tri4 {
   width: 70px;
   margin-left: 100%;
 }
 
-/* line 169, ../scss/screen.scss */
+/* line 185, ../scss/screen.scss */
 .tri5 {
   width: 80px;
   margin-left: 100%;
 }
 
-/* line 174, ../scss/screen.scss */
+/* line 190, ../scss/screen.scss */
 #cat {
   width: 30%;
   position: absolute;
   right: 2px;
   bottom: -3px;
 }
+@media screen and (max-width: 700px) {
+  /* line 190, ../scss/screen.scss */
+  #cat {
+    left: 5px;
+  }
+}
 
-/* line 182, ../scss/screen.scss */
+/* line 200, ../scss/screen.scss */
 #cross {
   position: absolute;
 }
-/* line 184, ../scss/screen.scss */
+/* line 202, ../scss/screen.scss */
 #cross:before, #cross:after {
   content: "";
   display: block;
@@ -199,22 +227,22 @@ section {
   top: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
 }
-/* line 195, ../scss/screen.scss */
+/* line 213, ../scss/screen.scss */
 #cross:after {
   transform: translate(-50%, -50%) rotate(136deg);
 }
 
-/* line 203, ../scss/screen.scss */
+/* line 221, ../scss/screen.scss */
 #section_service {
   background-color: #ececec;
   padding: 80px 0px;
   padding-bottom: 20px;
 }
-/* line 208, ../scss/screen.scss */
+/* line 226, ../scss/screen.scss */
 #section_service .col-sm-4 {
   text-align: center;
 }
-/* line 212, ../scss/screen.scss */
+/* line 230, ../scss/screen.scss */
 #section_service h1 {
   background-color: #282f44;
   color: #ececec;
@@ -223,24 +251,28 @@ section {
   padding: 5px 20px;
   font-weight: normal;
 }
-/* line 221, ../scss/screen.scss */
+/* line 239, ../scss/screen.scss */
 #section_service h3 {
   margin-top: 0;
   margin-bottom: 60px;
   color: #E6AF2E;
 }
-/* line 227, ../scss/screen.scss */
+/* line 245, ../scss/screen.scss */
 #section_service .icon_service {
   width: 60%;
 }
 
-/* line 235, ../scss/screen.scss */
+/* line 253, ../scss/screen.scss */
 #section_works {
   background-color: #ececec;
   padding: 80px 0px;
   padding-top: 0;
 }
-/* line 240, ../scss/screen.scss */
+/* line 258, ../scss/screen.scss */
+#section_works .col-sm-5 {
+  overflow: hidden;
+}
+/* line 262, ../scss/screen.scss */
 #section_works h1 {
   background-color: #282f44;
   color: #ececec;
@@ -249,27 +281,41 @@ section {
   display: inline-block;
   font-weight: normal;
 }
-/* line 249, ../scss/screen.scss */
+/* line 271, ../scss/screen.scss */
 #section_works .work {
   height: 230px;
   cursor: pointer;
   position: relative;
   padding: 5px;
+  background-color: #bbb;
   overflow: hidden;
 }
-/* line 256, ../scss/screen.scss */
+@media screen and (max-width: 700px) {
+  /* line 271, ../scss/screen.scss */
+  #section_works .work {
+    height: 460px;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 271, ../scss/screen.scss */
+  #section_works .work {
+    height: 460px;
+  }
+}
+/* line 285, ../scss/screen.scss */
 #section_works .work.big {
+  background-color: transparent;
   height: 460px;
 }
-/* line 260, ../scss/screen.scss */
+/* line 290, ../scss/screen.scss */
 #section_works .work img {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  height: 100%;
+  height: 130%;
 }
-/* line 265, ../scss/screen.scss */
+/* line 295, ../scss/screen.scss */
 #section_works .work:before {
   position: absolute;
   left: 50%;
@@ -284,7 +330,7 @@ section {
   transition: 0.5s;
   z-index: 5;
 }
-/* line 276, ../scss/screen.scss */
+/* line 306, ../scss/screen.scss */
 #section_works .work .texts {
   position: absolute;
   left: 50%;
@@ -295,15 +341,15 @@ section {
   transition: 0.5s;
   z-index: 8;
 }
-/* line 284, ../scss/screen.scss */
+/* line 314, ../scss/screen.scss */
 #section_works .work .title {
   line-height: 24px;
 }
-/* line 289, ../scss/screen.scss */
+/* line 319, ../scss/screen.scss */
 #section_works .work:hover:before, #section_works .work:hover .texts {
   opacity: 1;
 }
-/* line 296, ../scss/screen.scss */
+/* line 326, ../scss/screen.scss */
 #section_works .marginbottom {
   position: absolute;
   width: 95%;
@@ -313,7 +359,7 @@ section {
   animation: upin 2s both;
 }
 
-/* line 309, ../scss/screen.scss */
+/* line 339, ../scss/screen.scss */
 #section_contact {
   background-color: #282f44;
   color: #ececec;
@@ -321,31 +367,55 @@ section {
   overflow: hidden;
   position: relative;
 }
-/* line 316, ../scss/screen.scss */
+/* line 346, ../scss/screen.scss */
 #section_contact .cat {
   width: 150px;
   position: absolute;
   bottom: 0px;
   transition: 0.3s;
 }
-/* line 322, ../scss/screen.scss */
+@media screen and (max-width: 700px) {
+  /* line 346, ../scss/screen.scss */
+  #section_contact .cat {
+    width: 100px;
+  }
+}
+/* line 355, ../scss/screen.scss */
 #section_contact #cat_blue {
   right: 240px;
   z-index: 3;
 }
-/* line 326, ../scss/screen.scss */
+@media screen and (max-width: 700px) {
+  /* line 355, ../scss/screen.scss */
+  #section_contact #cat_blue {
+    right: 160px;
+  }
+}
+/* line 362, ../scss/screen.scss */
 #section_contact #cat_grey {
   right: 100px;
 }
-/* line 329, ../scss/screen.scss */
+@media screen and (max-width: 700px) {
+  /* line 362, ../scss/screen.scss */
+  #section_contact #cat_grey {
+    right: 20px;
+  }
+}
+/* line 368, ../scss/screen.scss */
 #section_contact #cat_yellow {
   right: 170px;
 }
-/* line 333, ../scss/screen.scss */
+@media screen and (max-width: 700px) {
+  /* line 368, ../scss/screen.scss */
+  #section_contact #cat_yellow {
+    right: 90px;
+  }
+}
+/* line 375, ../scss/screen.scss */
 #section_contact .mails {
   height: 400px;
 }
-/* line 336, ../scss/screen.scss */
+/* line 378, ../scss/screen.scss */
 #section_contact .mails .mailcover {
   position: absolute;
   left: 50%;
@@ -354,11 +424,11 @@ section {
   top: 70%;
   transform: rotate(5deg) scale(2.1) translate(-40%, -50%);
 }
-/* line 340, ../scss/screen.scss */
+/* line 382, ../scss/screen.scss */
 #section_contact .mails .mailcover img {
   width: 120%;
 }
-/* line 345, ../scss/screen.scss */
+/* line 387, ../scss/screen.scss */
 #section_contact .mails .mailbody {
   background-color: #ececec;
   color: #282f44;
@@ -367,30 +437,30 @@ section {
   position: absolute;
   width: 90%;
 }
-/* line 355, ../scss/screen.scss */
+/* line 397, ../scss/screen.scss */
 #section_contact input, #section_contact textarea {
   display: block;
   background-color: transparent;
   border: none;
   border: solid 3px #282f44;
 }
-/* line 361, ../scss/screen.scss */
+/* line 403, ../scss/screen.scss */
 #section_contact textarea {
   height: 140px;
   width: 100%;
 }
-/* line 366, ../scss/screen.scss */
+/* line 408, ../scss/screen.scss */
 #section_contact .information {
   padding-left: 60px;
 }
 
-/* line 372, ../scss/screen.scss */
+/* line 414, ../scss/screen.scss */
 footer {
   position: relative;
   background-color: #E6AF2E;
   text-align: center;
 }
-/* line 377, ../scss/screen.scss */
+/* line 419, ../scss/screen.scss */
 footer .icon {
   width: 80%;
   max-width: 250px;
