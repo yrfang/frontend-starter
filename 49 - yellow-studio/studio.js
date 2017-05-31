@@ -83,16 +83,25 @@ $(document).ready(function() {
 
 
     // 滑動效果
-  //   $('.mountain').css('transform', translateX('+(pageX/-20+50)'))
-  // });
+    $(".mountain").css("transform","translateX("+(pageX/-20+50)+"px)");
 
-  function detect_cat(cat_id,x){
-    var catplace=$(cat_id).offset().left+$(cat_id).width()/2;
-    if(Math.abs(x-catplace)<80)
-      $(cat_id).css("bottom","0px")
-    else
-      $(cat_id).css("bottom","-50px")
-  }
+    $(".r1text").css("transform","translateX("+(y/-5)+"px)");
+    $(".r2text").css("transform","translateX("+(y/-10)+"px)");
+    $(".r3text").css("transform","translateX("+(y/-12)+"px)");
+
+    $(".tri1").css("transform","translateX("+(x/-5)+"px)");
+    $(".tri2").css("transform","translateX("+(x/-10)+"px)");
+    $(".tri3").css("transform","translateX("+(x/-12)+"px)");
+    $(".tri4").css("transform","translateX("+(x/-14)+"px)");
+    $(".tri5").css("transform","translateX("+(x/-16)+"px)");
+
+    function detect_cat(cat_id,x){
+      var catplace=$(cat_id).offset().left+$(cat_id).width()/2;
+      if(Math.abs(x-catplace)<80)
+        $(cat_id).css("bottom","0px")
+      else
+        $(cat_id).css("bottom","-50px")
+    }
   });
 
 });
