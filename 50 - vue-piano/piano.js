@@ -18,6 +18,9 @@ $(document).ready(function() {
       next_note_id: 0,
       playing_time: 0,
       player: null,
+      recorder: null,
+      now_press_key: -1,
+      record_time: 0,
       display_keys: [
         {num: 1,key: 90  ,type:'white'},
       {num: 1.5,key: 83  ,type:'black'},
@@ -63,8 +66,20 @@ $(document).ready(function() {
         this.now_note_id += 1;
 
         if (this.now_note_id >= this.notes.length) {
+          clearInterval(this.player);
+          this.playing_time=0;
           this.stopplay();
         }
+      },
+      start_record: function() {
+        this.record_time=0;
+        this.recorder =  setInterval(function() {
+          vm.record_time++;
+        });
+      },
+      stop_record: function() {
+        clearInterval(this.recorder);
+        this.record_time=0;
       },
       startplay: function(){
         this.now_note_id=0;
@@ -76,7 +91,7 @@ $(document).ready(function() {
             vobj.playnext(1);
             vobj.next_note_id++;
           }
-          vobj.playing_time++; //播放時間+1
+          vobj.playing_time++;
         },2);
       },
       stopplay: function() {
@@ -84,6 +99,33 @@ $(document).ready(function() {
         this.now_note_id=0;
         this.playing_time=0;
         this.next_note_id=0;
+      },
+      get_current_highlight: function(id, skey){
+        if (this.now_press_key==skey)
+          return true;
+        if (this.notes.length==0)
+          return false
+        var cur_id=this.now_note_id-1;
+        if (cur_id<0) cur_id=0;
+        var num=this.notes[cur_id].num;
+        if (num==id)
+          return true;
+        return false;
+      },
+      addnote: function(id) {
+        if (this.record_time>0) {
+          this.notes.push({num:id, time:this.record_time});
+        }
+        this.playnote(id,1);
+      },
+      load_sample: function() {
+        var vobj = this;
+        $.ajax({
+          url: "http://awiclass.monoame.com/api/command.php?type=get&name=music_dodoro",
+          success: function(res) {
+            vobj.notes = JSON.parse(res);
+          }
+        })
       }
     }
   });
@@ -92,12 +134,17 @@ $(document).ready(function() {
 
   $(window).keydown(function(e) {
     var key = e.which;
+    vm.now_press_key = key;
     console.log(key);
     for (var i=0; i<vm.display_keys.length; i++) {
       if (key == vm.display_keys[i].key) {
-        vm.playnote(vm.display_keys[i].num, 1);
+        vm.addnote(vm.display_keys[i].num, 1);
       }
     }
+  });
+
+  $(window).keyup(function(e) {
+    vm.now_press_key=-1;
   });
 
 });

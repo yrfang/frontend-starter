@@ -4,11 +4,10 @@ doctype html
 head
   meta(charset="utf-8")
   meta(name='viewport', content='width=device-width, initial-scale=1')
-  link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+  link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
   link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Oswald:300,400,700")
   link(rel="stylesheet", href="css/screen.css")
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
-  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.min.js")
   script(src="piano.js")
   title Vue.js Piano
@@ -22,21 +21,37 @@ body
       h2 Vue.js Piano Project
       .keyboard
         .pianokey(v-for="s in display_keys")
-          .white(v-if='s.type==\"white\"' 
-                  v-on:click="playnote(s.num, 1)")
+          .white(v-if='s.type==\"white\"'
+               v-on:click='addnote(s.num)'
+               v-bind:class='get_current_highlight(s.num,s.key)?"playing":""')
+            .label {{String.fromCharCode(s.key)}}
           .black(v-if='s.type==\"black\"'
-                  v-on:click="playnote(s.num, 1)")
+                  v-on:click="addnote(s.num)"
+                  v-bind:class='get_current_highlight(s.num, s.key)?"playing":""')
+            .label {{String.fromCharCode(s.key)}}
       br
       .controls
         ul.notes_list(v-if="notes.length>0")
-          li(v-for="note in notes")
+          li(v-for='(note,id) in notes'
+             v-bind:class="now_note_id-1==id?\"playing\":\"\"")
             .num {{note.num}}
             .time {{note.time}}
+        button(v-on:click="load_sample") Sample
         button(v-on:click="playnext(1)") Playnext
-        button(v-if="playing_time<=0" v-on:click="startplay") Startplay
-        button(v-if="playing_time>=1" v-on:click="stopplay") Stopplay
-        
-        h4 {{playing_time}}
+        button(v-if=("playing_time<=1") 
+              v-on:click="startplay") Startplay
+          i.fa.fa-play
+        button(v-if="playing_time>1" 
+              v-on:click="stopplay") Stopplay
+          i.fa.fa-pause
+        button(v-if="record_time<=0"
+              v-on:click="start_record") Record
+          i.fa.fa-circle
+        button(v-if="record_time>0"
+              v-on:click="stop_record") Stoprecord
+          i.fa.fa-stop
+        button(v-on:click="notes=[]") Clear
+        h4 {{playing_time + record_time}}
         
         
       

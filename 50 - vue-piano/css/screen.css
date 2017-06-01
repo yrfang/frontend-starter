@@ -7,9 +7,11 @@
 * {
   vertical-align: top;
   font-family: 微軟正黑體;
+  backface-visibility: hidden;
+  user-select: none;
 }
 
-/* line 25, ../scss/screen.scss */
+/* line 27, ../scss/screen.scss */
 html, body {
   width: 100%;
   height: 100%;
@@ -18,7 +20,7 @@ html, body {
   position: relative;
 }
 
-/* line 32, ../scss/screen.scss */
+/* line 34, ../scss/screen.scss */
 .center_box {
   position: absolute;
   left: 50%;
@@ -28,53 +30,64 @@ html, body {
   width: 100%;
 }
 
-/* line 41, ../scss/screen.scss */
+/* line 43, ../scss/screen.scss */
 h2 {
   margin-bottom: 30px;
+  color: #585858;
 }
 
-/* line 45, ../scss/screen.scss */
+/* line 48, ../scss/screen.scss */
 button {
   background-color: transparent;
-  border: none;
+  outline: none;
   border: solid 1px;
   padding: 4px 12px;
   border-radius: 4px;
   transition: 0.5s;
   cursor: pointer;
+  vertical-align: middle;
 }
-/* line 53, ../scss/screen.scss */
+/* line 57, ../scss/screen.scss */
 button:hover {
   background-color: #585858;
   color: #fff;
 }
 
-/* line 59, ../scss/screen.scss */
+/* line 63, ../scss/screen.scss */
 .keyboard {
   box-shadow: 0px 0px 40px -5px rgba(0, 0, 0, 0.4);
   display: inline-block;
   margin-bottom: 30px;
 }
 
-/* line 65, ../scss/screen.scss */
+/* line 69, ../scss/screen.scss */
 .pianokey {
   display: inline-block;
   position: relative;
   cursor: pointer;
 }
 
-/* line 71, ../scss/screen.scss */
+/* line 75, ../scss/screen.scss */
 .white {
   width: 44px;
   height: 300px;
   border: solid 1px #eee;
+  transform: translate(-3px, -3px);
+  z-index: 0;
+  transition: 0.1s;
 }
-/* line 74, ../scss/screen.scss */
+/* line 81, ../scss/screen.scss */
 .white:hover {
+  transform: translate(0px, 0px);
   background-color: #eee;
 }
+/* line 85, ../scss/screen.scss */
+.white.playing {
+  background-color: #d5d5d5;
+  transform: translate(0px, 0px);
+}
 
-/* line 80, ../scss/screen.scss */
+/* line 90, ../scss/screen.scss */
 .black {
   position: absolute;
   top: 0px;
@@ -87,13 +100,22 @@ button:hover {
   transform: translate(-3px, -3px);
   transition: 0.1s;
 }
-/* line 91, ../scss/screen.scss */
+/* line 101, ../scss/screen.scss */
 .black:hover {
   transform: translate(0px, 0px);
   background-color: #3f3f3f;
 }
+/* line 105, ../scss/screen.scss */
+.black:active {
+  background-color: #aaa;
+}
+/* line 108, ../scss/screen.scss */
+.black.playing {
+  background-color: #727272;
+  transform: translate(0px, 0px);
+}
 
-/* line 98, ../scss/screen.scss */
+/* line 115, ../scss/screen.scss */
 .notes_list li {
   display: inline-block;
   border-right: solid 1px;
@@ -101,20 +123,43 @@ button:hover {
   cursor: pointer;
   transition: 0.3s;
 }
-/* line 104, ../scss/screen.scss */
+/* line 121, ../scss/screen.scss */
 .notes_list li:hover {
   background-color: #e1e1e1;
 }
-/* line 108, ../scss/screen.scss */
-.notes_list li .playing {
-  background-color: #d5d5d5;
-}
-/* line 112, ../scss/screen.scss */
+/* line 125, ../scss/screen.scss */
 .notes_list li .time {
   font-size: 8px;
   opacity: 0.3;
 }
-/* line 116, ../scss/screen.scss */
+/* line 129, ../scss/screen.scss */
 .notes_list li .num {
   font-size: 16px;
+}
+
+/* line 135, ../scss/screen.scss */
+.playing {
+  background-color: #d5d5d5;
+}
+
+/* line 139, ../scss/screen.scss */
+.label {
+  position: absolute;
+  color: rgba(88, 88, 88, 0.5);
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 8px;
+}
+
+/* line 148, ../scss/screen.scss */
+i {
+  margin-left: 5px;
+  margin-right: 0px;
+  margin-top: 3px;
+}
+
+/* line 153, ../scss/screen.scss */
+i.fa-circle {
+  color: #cc0000;
 }

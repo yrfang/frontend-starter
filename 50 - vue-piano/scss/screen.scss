@@ -9,6 +9,8 @@
 * {
   vertical-align: top;
   font-family: 微軟正黑體;
+  backface-visibility: hidden;
+  user-select: none;
 }
 
 $key_width: 44px;
@@ -40,16 +42,18 @@ html, body {
 
 h2 {
   margin-bottom: 30px;
+  color: $color_black;
 }
 
 button {
   background-color: transparent;
-  border:none;
+  outline:none;
   border: solid 1px;
   padding: 4px 12px;
   border-radius: 4px;
   transition: 0.5s;
   cursor: pointer;
+  vertical-align: middle;
   &:hover {
     background-color: $color_black;
     color: #fff;
@@ -57,7 +61,7 @@ button {
 }
 
 .keyboard {
-  box-shadow: 0px 0px 40px -5px rgba(#000, 0.4);
+  box-shadow: 0px 0px 40px -5px rgba(0,0,0,0.4);
   display: inline-block;
   margin-bottom: 30px;
 }
@@ -71,10 +75,16 @@ button {
 .white {
   @include size($key_width, $key_height);
   border: solid 1px $color_white;
+  transform: translate(-3px,-3px);
+  z-index: 0;
+  transition: 0.1s;
   &:hover {
-    // transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
     background-color: $color_white;
   }
+  &.playing {
+  background-color: darken($color_white,10);
+  transform: translate(0px,0px);}
 }
 
 .black {
@@ -92,6 +102,13 @@ button {
     transform: translate(0px,0px);
     background-color: darken($color_black,10);
   }
+  &:active {
+    background-color: #aaa;
+  }
+  &.playing {
+    background-color: lighten($color_black,10);
+    transform: translate(0px,0px);
+  }
 }
 
 .notes_list {
@@ -105,10 +122,6 @@ button {
       background-color: darken($color_white, 5);
     }
 
-    .playing {
-      background-color: darken($color_white, 10);
-    }
-
     .time {
       font-size: 8px;
       opacity: 0.3;
@@ -117,4 +130,26 @@ button {
       font-size: 16px;
     }
   }
+}
+
+.playing {
+  background-color: darken($color_white, 10);
+}
+
+.label {
+  position: absolute;
+  color: rgba($color_black, 0.5);
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 8px;
+}
+
+i {
+  margin-left: 5px;
+  margin-right: 0px;
+  margin-top: 3px;
+}
+i.fa-circle {
+  color: darken(red, 10);
 }
