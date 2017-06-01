@@ -5,3 +5,116 @@
 
 // @import "compass/reset";
 @charset "UTF-8";
+
+* {
+  vertical-align: top;
+  font-family: 微軟正黑體;
+}
+
+$key_width: 44px;
+$key_height: 300px;
+
+$color_white: #eee;
+$color_black: #585858;
+
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+html, body {
+  @include size(100%, 100%);
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.center_box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  width: 100%;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: transparent;
+  border:none;
+  border: solid 1px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  transition: 0.5s;
+  cursor: pointer;
+  &:hover {
+    background-color: $color_black;
+    color: #fff;
+  }
+}
+
+.keyboard {
+  box-shadow: 0px 0px 40px -5px rgba(#000, 0.4);
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.pianokey {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.white {
+  @include size($key_width, $key_height);
+  border: solid 1px $color_white;
+  &:hover {
+    // transform: translate(0px, 0px);
+    background-color: $color_white;
+  }
+}
+
+.black {
+  position: absolute;
+  top: 0px;
+  width: $key_width/2;
+  height: $key_height*0.55;
+  background-color: $color_black;
+  margin-left: -$key_width/4;
+  margin-right: -$key_width/4;
+  z-index: 20;
+  transform: translate(-3px,-3px);
+  transition: 0.1s;
+  &:hover {
+    transform: translate(0px,0px);
+    background-color: darken($color_black,10);
+  }
+}
+
+.notes_list {
+  li {
+    display: inline-block;
+    border-right: solid 1px;
+    padding: 2px 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      background-color: darken($color_white, 5);
+    }
+
+    .playing {
+      background-color: darken($color_white, 10);
+    }
+
+    .time {
+      font-size: 8px;
+      opacity: 0.3;
+    }
+    .num {
+      font-size: 16px;
+    }
+  }
+}

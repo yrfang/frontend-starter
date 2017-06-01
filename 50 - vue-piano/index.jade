@@ -9,16 +9,34 @@ head
   link(rel="stylesheet", href="css/screen.css")
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
   script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
-  script(src="https://unpkg.com/vue/dist/vue.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.min.js")
   script(src="piano.js")
   title Vue.js Piano
 body
   #app
     .audioplayer(v-for="s in soundData")
-      label {{s.number}}
-      audio(v-bind:data-num="s.number" controls)
+      //- label {{s.number}}
+      audio(v-bind:data-num="s.number")
         source(v-bind:src="s.url", type="audio/ogg")
+    .center_box
+      h2 Vue.js Piano Project
+      .keyboard
+        .pianokey(v-for="s in display_keys")
+          .white(v-if='s.type==\"white\"' 
+                  v-on:click="playnote(s.num, 1)")
+          .black(v-if='s.type==\"black\"'
+                  v-on:click="playnote(s.num, 1)")
+      br
+      .controls
+        ul.notes_list(v-if="notes.length>0")
+          li(v-for="note in notes")
+            .num {{note.num}}
+            .time {{note.time}}
+        button(v-on:click="playnext(1)") Playnext
+        button(v-if="playing_time<=0" v-on:click="startplay") Startplay
+        button(v-if="playing_time>=1" v-on:click="stopplay") Stopplay
         
+        h4 {{playing_time}}
         
         
       
