@@ -60,10 +60,13 @@ $(document).ready(function() {
         }
       },
       playnext: function(volume) {
-        var play_note = this.notes[this.now_note_id].num;
-        console.log(play_note);
-        this.playnote(play_note, volume);
-        this.now_note_id += 1;
+        var vobj = this;
+        if (vobj.notes.length>0) {
+          var play_note = this.notes[this.now_note_id].num;
+          console.log(play_note);
+          this.playnote(play_note, volume);
+          this.now_note_id += 1;
+        }
 
         if (this.now_note_id >= this.notes.length) {
           clearInterval(this.player);
@@ -85,14 +88,19 @@ $(document).ready(function() {
         this.now_note_id=0;
         this.playing_time=0;
         this.next_note_id=0;
-        var vobj=this;
-        this.player=setInterval(function(){
-          if (vobj.playing_time>=vobj.notes[vobj.next_note_id].time){
-            vobj.playnext(1);
-            vobj.next_note_id++;
-          }
-          vobj.playing_time++;
-        },2);
+        var vobj=this; //代表取得vue vm內的物件
+
+        // console.log(vobj.notes.length);
+
+        if (vobj.notes.length>0) {
+          this.player=setInterval(function(){
+            if (vobj.playing_time>=vobj.notes[vobj.next_note_id].time){
+              vobj.playnext(1); //volume=1
+              vobj.next_note_id++;
+            }
+            vobj.playing_time++;
+          },2);
+        }
       },
       stopplay: function() {
         clearInterval(this.player);
@@ -138,7 +146,8 @@ $(document).ready(function() {
     console.log(key);
     for (var i=0; i<vm.display_keys.length; i++) {
       if (key == vm.display_keys[i].key) {
-        vm.addnote(vm.display_keys[i].num, 1);
+        vm.addnote(vm.display_keys[i].num);
+        // vm.playnote(vm.display_keys[i].num,1);
       }
     }
   });
