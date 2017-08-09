@@ -23,6 +23,10 @@ header {
   color: #fff;
 }
 
+a {
+  margin-left: 10px;
+}
+
 a:hover {
 	color: #cc2ad5;
 }
