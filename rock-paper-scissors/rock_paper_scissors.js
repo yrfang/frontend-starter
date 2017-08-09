@@ -44,7 +44,7 @@ $(document).ready(function() {
     }, 500);
 
     setTimeout(function() {
-      $('#again').html('<a href="index.html">Play again?</a>');
+      $('#again').html('<a href="rock-paper-scissors.html">Play again?</a>');
     }, 2000);
   }
 
