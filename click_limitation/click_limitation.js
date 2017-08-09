@@ -68,7 +68,7 @@ $(document).ready(function() {
         $('#result').text('That\'s ' + speed + ' clicks per minute.');
       }
 
-      $('#try').html('<a href="index.html">Try Again?</a>');
+      $('#try').html('<a href="click_limitation.html">Try Again?</a>');
 
     }, 15000);
 
